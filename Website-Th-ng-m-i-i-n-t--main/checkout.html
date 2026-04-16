@@ -1,0 +1,225 @@
+<!-- File: checkout.html - Trang thanh toán và hoàn tất đơn hàng tại Kính Xanh -->
+<!DOCTYPE html>
+
+<html class="light" lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Thanh Toán | Kính Xanh</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="js/tailwind-config.js"></script>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <meta
+        content="Trang thanh toán Kính Xanh với thông tin giao hàng, toa kính, phương thức thanh toán và tóm tắt đơn hàng."
+        name="description" />
+</head>
+
+<body class="bg-background text-on-surface page-fade">
+    <!-- Thanh điều hướng (Header) -->
+    <header
+        class="bg-[#f8f9fa] opacity-70 backdrop-blur-md fixed top-0 w-full z-50 flex justify-between items-center px-10 py-4 max-w-[1920px] mx-auto">
+        <a class="text-2xl font-extrabold tracking-tighter text-[#002366] hover:opacity-80 transition-opacity"
+            href="index.html">Kính Xanh</a>
+        <div class="flex items-center gap-6">
+            <span class="text-[#00113a] font-['Inter'] text-sm font-medium">Checkout Progress: 80%</span>
+            <div class="w-32 h-1 bg-surface-variant rounded-full overflow-hidden">
+                <div class="w-[80%] h-full bg-secondary"></div>
+            </div>
+        </div>
+    </header>
+    <main class="pt-24 pb-20 px-4 md:px-10 max-w-7xl mx-auto">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <div class="flex-1 space-y-8">
+                <section class="bg-surface-container-lowest p-8 rounded-xl" data-aos="fade-up">
+                    <!-- Thông tin giao hàng -->
+                    <h2 class="font-headline text-2xl font-bold text-primary mb-6">Thông tin giao hàng</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex flex-col gap-2">
+                            <label class="text-label-md font-semibold text-on-surface-variant">Họ và Tên</label>
+                            <input
+                                class="bg-surface-container-high border-none rounded-md px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all"
+                                id="shipping-name" placeholder="Nguyễn Văn A" type="text" />
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="text-label-md font-semibold text-on-surface-variant">Số điện thoại</label>
+                            <input
+                                class="bg-surface-container-high border-none rounded-md px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all"
+                                id="shipping-phone" placeholder="090 123 4567" type="tel" />
+                        </div>
+                        <div class="flex flex-col gap-2 md:col-span-2">
+                            <label class="text-label-md font-semibold text-on-surface-variant">Địa chỉ giao hàng</label>
+                            <input
+                                class="bg-surface-container-high border-none rounded-md px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all"
+                                id="shipping-address" placeholder="Số nhà, tên đường, phường/xã..." type="text" />
+                        </div>
+                    </div>
+                </section>
+                <section class="bg-surface-container-lowest p-8 rounded-xl" data-aos="fade-up">
+                    <!-- Thông tin toa kính -->
+                    <div class="flex items-center gap-2 mb-6">
+                        <h2 class="font-headline text-2xl font-bold text-primary">Thông tin toa kính</h2>
+                        <span
+                            class="bg-primary-container text-on-primary-container text-[10px] uppercase tracking-widest px-2 py-1 rounded">Clinical
+                            Note</span>
+                    </div>
+                    <p class="text-sm text-on-surface-variant mb-4 italic">Vui lòng cung cấp thông số mắt hoặc ghi chú
+                        đặc biệt cho kỹ thuật viên phòng Lab.</p>
+                    <textarea
+                        class="w-full bg-surface-container-high border-none rounded-md px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all"
+                        placeholder="VD: Mắt phải -2.25, Mắt trái -2.50. Gọng xi vàng mờ..." rows="4"></textarea>
+                </section>
+                <section class="bg-surface-container-lowest p-8 rounded-xl" data-aos="fade-up">
+                    <!-- Phương thức thanh toán -->
+                    <h2 class="font-headline text-2xl font-bold text-primary mb-6">Phương thức thanh toán</h2>
+                    <div class="space-y-4">
+                        <label
+                            class="flex items-center gap-4 p-4 border-2 border-primary rounded-xl cursor-pointer bg-primary-fixed/10 transition-all">
+                            <input checked="" class="text-primary focus:ring-primary" name="payment" type="radio" />
+                            <div class="flex-1 flex items-center justify-between">
+                                <div class="flex flex-col">
+                                    <span class="font-bold text-primary">Thanh toán khi nhận hàng (COD)</span>
+                                    <span class="text-xs text-on-surface-variant">Kiểm tra hàng trước khi thanh
+                                        toán</span>
+                                </div>
+                                <span class="material-symbols-outlined text-primary">local_shipping</span>
+                            </div>
+                        </label>
+                        <label
+                            class="flex items-center gap-4 p-4 border-2 border-transparent hover:border-outline-variant rounded-xl cursor-pointer bg-surface-container transition-all">
+                            <input class="text-primary focus:ring-primary" name="payment" type="radio" />
+                            <div class="flex-1 flex items-center justify-between">
+                                <div class="flex flex-col">
+                                    <span class="font-bold text-on-surface">Chuyển khoản Ngân hàng</span>
+                                    <span class="text-xs text-on-surface-variant">Tặng ngay voucher 20k cho đơn
+                                        sau</span>
+                                </div>
+                                <span class="material-symbols-outlined text-on-surface-variant">account_balance</span>
+                            </div>
+                        </label>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <label
+                                class="flex items-center gap-4 p-4 border-2 border-transparent hover:border-outline-variant rounded-xl cursor-pointer bg-surface-container transition-all">
+                                <input class="text-primary focus:ring-primary" name="payment" type="radio" />
+                                <div class="flex items-center gap-3">
+                                    <div
+                                        class="w-8 h-8 bg-[#a50064] rounded-lg flex items-center justify-center text-white text-[10px] font-bold">
+                                        MoMo</div>
+                                    <span class="font-bold text-on-surface">Ví MoMo</span>
+                                </div>
+                            </label>
+                            <label
+                                class="flex items-center gap-4 p-4 border-2 border-transparent hover:border-outline-variant rounded-xl cursor-pointer bg-surface-container transition-all">
+                                <input class="text-primary focus:ring-primary" name="payment" type="radio" />
+                                <div class="flex items-center gap-3">
+                                    <div
+                                        class="w-8 h-8 bg-[#0068ff] rounded-lg flex items-center justify-center text-white text-[10px] font-bold">
+                                        Zalo</div>
+                                    <span class="font-bold text-on-surface">ZaloPay</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <aside class="w-full lg:w-[400px]">
+                <div class="sticky top-24 space-y-6">
+                    <div class="bg-surface-container p-8 rounded-xl shadow-sm">
+                        <!-- Tóm tắt đơn hàng -->
+                        <h3 class="font-headline text-xl font-bold text-primary mb-6">Tóm tắt đơn hàng</h3>
+                        <div class="space-y-4 mb-6" id="checkout-items-container">
+                            <div class="text-sm text-on-surface-variant">Đang tải sản phẩm thanh toán...</div>
+                        </div>
+                        <div class="space-y-3 pt-6 border-t border-outline-variant" id="checkout-summary-pricing">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-on-surface-variant">Tạm tính</span>
+                                <span class="font-medium" id="checkout-subtotal">0₫</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-on-surface-variant">VAT (8%)</span>
+                                <span class="font-medium" id="checkout-vat">0₫</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-on-surface-variant">Phí vận chuyển</span>
+                                <span class="font-medium text-secondary">Miễn phí</span>
+                            </div>
+                            <div class="flex justify-between pt-4">
+                                <span class="font-headline font-bold text-lg">Tổng cộng</span>
+                                <span class="font-headline font-extrabold text-xl text-primary"
+                                    id="checkout-total">0₫</span>
+                            </div>
+                        </div>
+                        <button
+                            class="w-full mt-8 bg-gradient-to-r from-secondary to-secondary-container text-on-secondary-fixed font-bold py-4 rounded-xl shadow-lg hover:opacity-90 active:scale-[0.98] transition-all flex items-center justify-center gap-2"
+                            id="checkout-complete-btn">
+                            <span>HOÀN TẤT ĐẶT HÀNG</span>
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </button>
+                        <p class="text-[10px] text-center mt-4 text-on-surface-variant uppercase tracking-widest">Giao
+                            hàng dự kiến: 2-3 ngày làm việc</p>
+                    </div>
+                    <div class="bg-surface-container-low p-6 rounded-xl flex flex-col gap-4">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-secondary"
+                                style="font-variation-settings: 'FILL' 1;">verified_user</span>
+                            <div>
+                                <p class="text-xs font-bold text-primary">Thanh toán bảo mật</p>
+                                <p class="text-[10px] text-on-surface-variant">Mã hóa SSL 256-bit chuẩn quốc tế</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-secondary"
+                                style="font-variation-settings: 'FILL' 1;">bookmark_bag</span>
+                            <div>
+                                <p class="text-xs font-bold text-primary">30 Ngày đổi trả</p>
+                                <p class="text-[10px] text-on-surface-variant">Hoàn tiền 100% nếu sản phẩm lỗi</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-secondary"
+                                style="font-variation-settings: 'FILL' 1;">clinical_notes</span>
+                            <div>
+                                <p class="text-xs font-bold text-primary">Chứng nhận Y khoa</p>
+                                <p class="text-[10px] text-on-surface-variant">Đội ngũ kỹ thuật viên 10 năm kinh nghiệm
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <!-- Chân trang (Footer) -->
+    <footer
+        class="w-full border-t border-[#e1e3e4]/20 bg-[#edeeef] text-[#002366] flex flex-col md:flex-row justify-between items-center px-10 py-12 space-y-4 md:space-y-0">
+        <div class="font-['Inter'] text-xs uppercase tracking-widest opacity-60">© 2026 Kính Xanh Optical. Premium
+            Vision Care.</div>
+        <div class="flex gap-8">
+            <a class="font-['Inter'] text-xs uppercase tracking-widest text-[#191c1d] opacity-60 hover:opacity-100 transition-opacity"
+                href="privacy.html">Chính Sách Bảo Mật</a>
+            <a class="font-['Inter'] text-xs uppercase tracking-widest text-[#191c1d] opacity-60 hover:opacity-100 transition-opacity"
+                href="terms.html">Điều Khoản Dịch Vụ</a>
+            <a class="font-['Inter'] text-xs uppercase tracking-widest text-[#191c1d] opacity-60 hover:opacity-100 transition-opacity"
+                href="guide.html">Hướng dẫn đo mắt</a>
+            <a class="font-['Inter'] text-xs uppercase tracking-widest text-[#191c1d] opacity-60 hover:opacity-100 transition-opacity"
+                href="support.html">Liên Hệ</a>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/checkout-api.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true, offset: 50 });</script>
+</body>
+
+</html>
+<!-- Kính Xanh - Thanh toán -->

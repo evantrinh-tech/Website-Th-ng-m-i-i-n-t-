@@ -1,0 +1,360 @@
+<!-- File: product-detail.html - Chi tiết sản phẩm kính mắt tại Kính Xanh -->
+<!DOCTYPE html>
+
+<html class="light" lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="js/tailwind-config.js"></script>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>Kính Xanh | Chi tiết sản phẩm</title>
+    <meta content="Trang chi tiết sản phẩm kính mắt với hình ảnh, thông số, tuỳ chọn tròng kính và đánh giá khách hàng."
+        name="description" />
+</head>
+
+<body class="bg-background text-on-background font-body page-fade">
+    <!-- Thanh điều hướng (Header) -->
+    <nav class="fixed top-0 w-full z-50 glass-nav flex justify-between items-center px-10 py-4 max-w-[1920px] mx-auto">
+        <a class="text-2xl font-extrabold tracking-tighter text-[#002366] dark:text-[#fdc003] font-headline hover:opacity-80 transition-opacity"
+            href="index.html">Kính
+            Xanh</a>
+        <div class="hidden md:flex space-x-8 font-headline font-bold text-lg">
+            <a class="text-[#002366] dark:text-[#fdc003] border-b-2 border-[#002366] dark:border-[#fdc003] pb-1"
+                href="products.html">Gọng kính</a>
+            <a class="text-[#191c1d] dark:text-[#e1e3e4] opacity-80 hover:text-[#785900] transition-colors duration-300"
+                href="products.html">Tròng kính</a>
+            <a class="text-[#191c1d] dark:text-[#e1e3e4] opacity-80 hover:text-[#785900] transition-colors duration-300"
+                href="stores.html">Phòng khám</a>
+        </div>
+        <div class="flex items-center space-x-6">
+            <a class="material-symbols-outlined text-primary scale-95 active:duration-150 inline-block"
+                href="cart.html">shopping_cart</a>
+            <a class="material-symbols-outlined text-primary scale-95 active:duration-150 inline-block"
+                href="login.html">account_circle</a>
+        </div>
+    </nav>
+    <main class="pt-24 pb-32 max-w-7xl mx-auto px-6 lg:px-10">
+        <!-- Đường dẫn (Breadcrumb) -->
+        <nav class="flex items-center space-x-2 text-xs font-label uppercase tracking-widest text-outline mb-8">
+            <a class="hover:text-primary" href="index.html">Trang chủ</a>
+            <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+            <a class="hover:text-primary" href="products.html">Gọng Kính</a>
+            <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+            <span class="text-on-surface">KX-8801 Titanium Luxe</span>
+        </nav>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <!-- Khu vực bộ sưu tập hình ảnh -->
+            <div class="lg:col-span-7">
+                <div class="grid grid-cols-12 gap-4">
+                    <!-- Hình ảnh nhỏ (Thumbnails) -->
+                    <div class="col-span-2 space-y-4">
+                        <div
+                            class="aspect-square bg-surface-container rounded-xl overflow-hidden cursor-pointer ring-2 ring-primary">
+                            <img alt="close up front view of premium black titanium eyeglasses frame on light grey background"
+                                class="w-full h-full object-cover"
+                                data-alt="close up front view of premium black titanium eyeglasses frame on light grey background"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0inxkL9BYNzeVIaR2PHeGhNsmBuVogkbfGacRSHN85_n5GcaHzUD6zhx0wYj06kf8XzBUZjZk534v5gkoW_JJXKntQDFawlc646r3vCoLCK5W8v7H27VIliM5NvQB28DPgxwAHPoy4rdtZv1XuRQkirCkTatcxIBXBJIKjSb-Gtr_mF3MZ-Bgx8AyQDaM7-ukIt7ldIzlflQTqesW94YFe0RE0caPx-BaTrclNJpJQ3HgeT8a6qKJi741DN9x1X2ubZV0IuehEv0" />
+                        </div>
+                        <div
+                            class="aspect-square bg-surface-container rounded-xl overflow-hidden cursor-pointer opacity-60 hover:opacity-100 transition-opacity">
+                            <img alt="side view profile of slim titanium eyeglass temple showing high quality hinge detail"
+                                class="w-full h-full object-cover"
+                                data-alt="side view profile of slim titanium eyeglass temple showing high quality hinge detail"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq-LeE2dGDQ6rxrI9UB3wTveK_ltg3s_fQdK30ORhkaU0McMm9OOlnvYh6Q8dsmHgc32MPNSLDVTY7N8u54vxqGCuUiQbajtAxc3Gb3T1Ffl46IH0KCmVQjPPjvsAlQy0LuHFLoy5ShYCH0sMK61svOjRaIJ_tAFwVZytw6cDN5jHumZS5aPbvecimnz8vZrgBhGdALR4x76LOkxINGjPjK4jlOwYXFZ0zHO0Kz5eW2FwCPK7ie13ch3PvFC0wZr3zg_YGE4kq1fU" />
+                        </div>
+                        <div
+                            class="aspect-square bg-surface-container rounded-xl overflow-hidden cursor-pointer opacity-60 hover:opacity-100 transition-opacity">
+                            <img alt="lifestyle shot of a professional man wearing elegant titanium glasses in a bright office"
+                                class="w-full h-full object-cover"
+                                data-alt="lifestyle shot of a professional man wearing elegant titanium glasses in a bright office"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFZACRjRmwlLwDtBoSPUhNp2GhpRMx1DNMcgtdbBZNzDZfhzJDZFYLbSNa0b88L95W_JVQG44R9d88v9PY0KoxS-5vjSq6k5C_ObAiR1nrum22UoXKot5c3xuZhDeKIVfV7l8IXYDYs1cA0hn9fqMd8Ozf3490nBwawxqJK9vm3ylKpQSbKJz31JlXLCNWRQEPRFNHE9M1uX-CnY172Iz4EYx3k8cN7xJHz-uY-0ATR5YN1G0H8qi5gg61NEuzAeclzAbhzQ_EV6g" />
+                        </div>
+                    </div>
+                    <!-- Hình ảnh chính -->
+                    <div class="col-span-10 relative group" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="aspect-[4/5] bg-surface-container-low rounded-xl overflow-hidden">
+                            <img alt="high fashion studio shot of premium titanium eyeglasses with clear lenses on minimalist background"
+                                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                                data-alt="high fashion studio shot of premium titanium eyeglasses with clear lenses on minimalist background"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOqjFzLS9YydE0WIc13S8Q9vKflwC0KU2jN9K-WlXJeEIB9hKB7OMG2NPpHAiwZw0Z0gfLQYtvR63pYjyMsIFTkJQqwj9m8aAXXx9c4d7Ko_z6rlW5S0T7uhHCJpWfHSC8dGUeWplfzI23A6aX573tDft8DcWEtH_PpFy4PdWqsFECGMapxGASaFP-6mqgVY4pvB89agVffopptLr3NMUgMQrXtgU5YxZg44Ejb1BXoW6Fmj-ogiWarZvVnwEsIUU6PUNjhfvaNjM" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Khu vực thông tin sản phẩm -->
+            <div class="lg:col-span-5 flex flex-col">
+                <div class="flex justify-between items-start mb-2">
+                    <span class="text-xs font-label uppercase tracking-widest text-secondary font-bold">New
+                        Collection</span>
+                    <span class="text-xs font-label text-outline">SKU: KX-8801</span>
+                </div>
+                <h1 class="text-4xl lg:text-5xl font-headline font-extrabold text-primary tracking-tight mb-4">KX-8801
+                    Titanium Luxe</h1>
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="flex items-center text-secondary-container">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined"
+                            style="font-variation-settings: 'FILL' 1;">star_half</span>
+                        <span class="ml-2 text-on-surface font-bold">4.9</span>
+                    </div>
+                    <span class="text-outline">|</span>
+                    <span class="text-sm font-body text-on-surface-variant underline cursor-pointer">128 đánh giá</span>
+                </div>
+                <div class="flex items-baseline space-x-4 mb-8">
+                    <span class="text-3xl font-headline font-bold text-primary">1.200.000₫</span>
+                    <span class="text-xl font-headline text-outline line-through">1.500.000₫</span>
+                    <span
+                        class="bg-error-container text-on-error-container px-3 py-1 rounded-full text-xs font-bold uppercase">-28%</span>
+                </div>
+                <div class="flex flex-wrap gap-2 mb-10">
+                    <span
+                        class="px-4 py-2 bg-surface-container text-on-surface text-xs font-label rounded-full flex items-center">
+                        <span class="material-symbols-outlined text-sm mr-2">verified</span> UV400
+                    </span>
+                    <span
+                        class="px-4 py-2 bg-surface-container text-on-surface text-xs font-label rounded-full flex items-center">
+                        <span class="material-symbols-outlined text-sm mr-2">visibility</span> Anti-blue light
+                    </span>
+                    <span
+                        class="px-4 py-2 bg-surface-container text-on-surface text-xs font-label rounded-full flex items-center">
+                        <span class="material-symbols-outlined text-sm mr-2">weight</span> Lightweight Titanium
+                    </span>
+                </div>
+                <!-- Khu vực lựa chọn tuỳ biến -->
+                <div class="space-y-8 mb-10">
+                    <!-- Color Selection -->
+                    <div>
+                        <label class="block text-sm font-bold font-headline mb-4">Màu sắc gọng: <span
+                                class="text-secondary">Black</span></label>
+                        <div class="flex space-x-4">
+                            <button class="w-10 h-10 rounded-full bg-black ring-2 ring-offset-2 ring-primary"></button>
+                            <button
+                                class="w-10 h-10 rounded-full bg-[#D4AF37] ring-1 ring-offset-1 ring-outline-variant hover:ring-primary transition-all"></button>
+                            <button
+                                class="w-10 h-10 rounded-full bg-[#C0C0C0] ring-1 ring-offset-1 ring-outline-variant hover:ring-primary transition-all"></button>
+                        </div>
+                    </div>
+                    <!-- Lens Selection -->
+                    <div>
+                        <label class="block text-sm font-bold font-headline mb-4">Loại tròng kính</label>
+                        <div class="grid grid-cols-2 gap-3">
+                            <button
+                                class="p-4 border-2 border-primary rounded-xl text-left bg-surface-container-lowest">
+                                <p class="font-bold text-sm">Tròng mẫu</p>
+                                <p class="text-xs text-outline">0₫ - Không độ</p>
+                            </button>
+                            <button
+                                class="p-4 border-2 border-transparent bg-surface-container rounded-xl text-left hover:border-primary transition-all">
+                                <p class="font-bold text-sm">Tròng cận/loạn</p>
+                                <p class="text-xs text-outline">Từ 500.000₫</p>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Prescription Upload -->
+                    <div
+                        class="p-6 bg-surface-container-low rounded-2xl border border-dashed border-outline-variant flex flex-col items-center text-center">
+                        <span class="material-symbols-outlined text-3xl text-outline mb-2">upload_file</span>
+                        <p class="font-headline font-bold text-sm mb-1">Tải lên đơn thuốc của bạn</p>
+                        <p class="text-xs text-on-surface-variant mb-4">Hoặc chúng tôi sẽ liên hệ sau khi đặt hàng</p>
+                        <button
+                            class="text-xs font-label uppercase tracking-widest text-primary font-bold hover:underline">Chọn
+                            tập tin</button>
+                    </div>
+                </div>
+                <!-- Các nút hành động (Mua hàng) -->
+                <div class="grid grid-cols-2 gap-4">
+                    <button
+                        class="add-to-cart-btn py-4 rounded-xl border-2 border-primary text-primary font-headline font-bold text-lg hover:bg-surface-container transition-colors"
+                        data-cart-action="add-to-cart">
+                        Thêm vào giỏ
+                    </button>
+                    <button
+                        class="py-4 rounded-xl bg-gradient-to-br from-secondary to-secondary-container text-on-secondary-fixed font-headline font-bold text-lg shadow-lg hover:shadow-xl transition-all"
+                        data-action="buy-now" id="buy-now-btn">
+                        Mua ngay
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Khu vực tab chi tiết sản phẩm -->
+        <section class="mt-24" data-aos="fade-up">
+            <div class="flex border-b border-surface-container-highest mb-10 overflow-x-auto custom-scrollbar">
+                <button
+                    class="px-8 py-4 font-headline font-bold text-primary border-b-2 border-primary whitespace-nowrap">Mô
+                    tả sản phẩm</button>
+                <button
+                    class="px-8 py-4 font-headline font-bold text-outline hover:text-on-surface whitespace-nowrap">Thông
+                    số kỹ thuật</button>
+                <button
+                    class="px-8 py-4 font-headline font-bold text-outline hover:text-on-surface whitespace-nowrap">Chế
+                    độ bảo hành</button>
+                <button
+                    class="px-8 py-4 font-headline font-bold text-outline hover:text-on-surface whitespace-nowrap">Đánh
+                    giá (128)</button>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-3xl font-headline font-extrabold text-primary">Sự hoàn hảo trong từng milimet</h2>
+                    <p class="text-on-surface-variant leading-relaxed">
+                        KX-8801 là biểu tượng của sự tinh tế và công nghệ hiện đại. Được chế tác từ chất liệu Titanium
+                        nguyên khối, gọng kính mang lại độ bền vượt trội cùng trọng lượng siêu nhẹ, tạo cảm giác thoải
+                        mái tối đa cho người đeo suốt cả ngày dài.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3">
+                            <span class="material-symbols-outlined text-secondary">check_circle</span>
+                            <span>Chống ăn mòn tuyệt đối với môi trường biển và mồ hôi.</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="material-symbols-outlined text-secondary">check_circle</span>
+                            <span>Càng kính linh hoạt, phù hợp với nhiều khuôn mặt.</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="material-symbols-outlined text-secondary">check_circle</span>
+                            <span>Đệm mũi silicone y tế cao cấp không để lại vết hằn.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="rounded-3xl overflow-hidden shadow-2xl">
+                    <img alt="artistic close-up of eyeglasses on a wooden table with dappled morning sunlight and bokeh background"
+                        class="w-full h-full object-cover"
+                        data-alt="artistic close-up of eyeglasses on a wooden table with dappled morning sunlight and bokeh background"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKOp9oSj_SPNRPvwUHtcH4YvKER74D4x-EVf4hnsYAhtaXYPpuzCmc4Pn6TFvUmGMwMqAb7lAbKxichBmBWZQoJ-HjwnsZJqiAg_eCvg3tV0vbw-6cQX_AzenQ4I0l66PaOo-MBINjF9pv_N_NR_nUc1E4JPv_cD-Vh_vFJObtFL-t0zKdPOlzVRPGq9XJM0FluvHQnaFu5N9jrjfYhvj5WuIphRNwJQlQeplECseUE74f7pJTeUtF6e-RRP9iI4_IypYRQUowqm0" />
+                </div>
+            </div>
+        </section>
+        <!-- Sản phẩm liên quan -->
+        <section class="mt-32" data-aos="fade-up">
+            <h3 class="text-2xl font-headline font-extrabold text-primary mb-12 uppercase tracking-tight">Sản phẩm liên
+                quan</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Related Card 1 -->
+                <div class="group cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="aspect-[4/5] bg-surface-container rounded-2xl overflow-hidden mb-4 relative">
+                        <img alt="stylish tortoiseshell pattern eyeglasses on minimalist background"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            data-alt="stylish tortoiseshell pattern eyeglasses on minimalist background"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfGvFHrMlgBnGEgtvQE7EFl5_fXkXFwDM4X0rnLd22myb1Pf3bJb58woxgOWtI6D--vd_ckkQnNlM9YXOrubo4SVpYDBpt03lJ_FSTC_jp3aLiul-vETgdSehB2UFqnOxcl-2PWS6qzZqlwAlPPE6ewzQCb6MZ67V8XQgPExIxMmOdLwbTXvCD8OwuUn4g6VCwTyCv4lD1_pG1OhP7I45DCASt9VLuYl8hSuaZ3qS56ebcu-sn6tRDZO97kw4i_kVaPHZ51zacQZU" />
+                        <button
+                            class="absolute top-4 right-4 w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="material-symbols-outlined text-sm">favorite</span>
+                        </button>
+                    </div>
+                    <p class="font-bold font-headline text-primary">KX-2024 Aviator</p>
+                    <p class="text-sm text-secondary font-bold">1.800.000₫</p>
+                </div>
+                <!-- Related Card 2 -->
+                <div class="group cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="aspect-[4/5] bg-surface-container rounded-2xl overflow-hidden mb-4 relative">
+                        <img alt="modern matte black square frame eyeglasses"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            data-alt="modern matte black square frame eyeglasses"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_9lCrMI7TPB98IGuqNj0h8W58AVuP2K4lBQaShIXkn1hq-SBeOJ_nQQxSgriI-x2FLGFlora21x_5W1TvYAW1KZTY1Ur4-DIH2gaLV-UGTCkfKSCZP7zLy8vgbuK2If9N0xJfRFCQd8EK7HWxD77Ob51K7pKZUV7oFCZPXYrH6rs0RtletU6Af5A8DoWBtD_xl2hSm_a7r7fi7-ZSaRh8KMXFBlfxuC8OAt3yOokEFv09wuSNnyyO8tKRqetfkrROzx9ma1BOmx4" />
+                        <button
+                            class="absolute top-4 right-4 w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="material-symbols-outlined text-sm">favorite</span>
+                        </button>
+                    </div>
+                    <p class="font-bold font-headline text-primary">KX-9001 Urban</p>
+                    <p class="text-sm text-secondary font-bold">1.500.000₫</p>
+                </div>
+                <!-- Related Card 3 -->
+                <div class="group cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="aspect-[4/5] bg-surface-container rounded-2xl overflow-hidden mb-4 relative">
+                        <img alt="classic thin gold rimmed circular glasses"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            data-alt="classic thin gold rimmed circular glasses"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsU4JdAobVe5oSAym4gDfRWQ1iW7R8g5zAKOvOjttwtNMlLge1JLZ8F1aJ0Ar5Gak6_aaWKAeMtqzRw6Jkr-Mi9vfm16k4spSqSYEk9HkYod-FjLtQ5NsHv3JuPv5HNjPywGelDVVrdYlyF0CpuCdFKeOOySRQ6rhGx7bqLW091wKD_Wsj3ho6cGeTk-nSCxCVDaSl16akf8iVy78bxaoQnzxysHixn58ZdC5jGdJ1pjIWoqeJvBNNg4LHY6_VHSvIzdUUqPmFv00" />
+                        <button
+                            class="absolute top-4 right-4 w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="material-symbols-outlined text-sm">favorite</span>
+                        </button>
+                    </div>
+                    <p class="font-bold font-headline text-primary">KX-Retro Circular</p>
+                    <p class="text-sm text-secondary font-bold">1.450.000₫</p>
+                </div>
+                <!-- Related Card 4 -->
+                <div class="group cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="aspect-[4/5] bg-surface-container rounded-2xl overflow-hidden mb-4 relative">
+                        <img alt="luxury silver titanium rimless eyeglasses"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            data-alt="luxury silver titanium rimless eyeglasses"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4yMV63R9RS3rsNeS9xVqYCQNg0tRtJ9EKyma7EHp8oOIumVQyLdx0-QW7iuMDzrwamLidRsVzcMZ-YxaSdy1HbXRFeG4N2tXYhUcti_eOxn3JnAwyxGk-ajrkeA4467c38s8TcU_bFSdO-jxEPCIYzOeu0MCeBS7aLjfTFhrs9UsB--UuW5xLPELERtVT5E39g3u6szBX0omfe5yqNbm_PLQXDkgc7NAYMzuClS69jEees19dATyDBJrJqfdRT8oUnMcXEQeZlO8" />
+                        <button
+                            class="absolute top-4 right-4 w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="material-symbols-outlined text-sm">favorite</span>
+                        </button>
+                    </div>
+                    <p class="font-bold font-headline text-primary">KX-8802 Titanium Slim</p>
+                    <p class="text-sm text-secondary font-bold">1.200.000₫</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Thanh mua hàng cố định (Mobile/Bottom) -->
+    <div
+        class="fixed bottom-0 w-full z-40 bg-white/90 backdrop-blur-xl border-t border-surface-container py-4 px-6 md:px-10 flex items-center justify-between shadow-[0_-10px_30px_rgba(0,0,0,0.05)]">
+        <div class="hidden md:flex items-center space-x-4">
+            <div class="w-12 h-12 rounded-lg overflow-hidden bg-surface-container">
+                <img alt="small thumbnail of black titanium glasses" class="w-full h-full object-cover"
+                    data-alt="small thumbnail of black titanium glasses"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW9H_1cA5ijqHVsH7QLuQnKkYJ5rxMym9uwcg9Wnl-abqJaqkLIExECjJ-_K72OdGr8wJzzjEHU4JJHVaKMAW-RXfVZKlXFULxiHez8CPfA_M97b3M7aapAimG3FKQvgvBm0wDMKIzGIM15Shjn-us3DDbaltQOZMjPSgEa7rSE_zMsdCNleBk9XzqIGKIThEasoGNH3FlKl1j6gNSxjR64J3oh2sOtnU9RumpbymOc2GS9ZpIK4daE9ECE22vdATpOD_hCjOZZb8" />
+            </div>
+            <div>
+                <p class="font-headline font-bold text-primary text-sm">KX-8801 Titanium Luxe</p>
+                <p class="text-xs text-outline">Đã chọn: Black / Tròng mẫu</p>
+            </div>
+        </div>
+        <div class="flex items-center space-x-6 w-full md:w-auto">
+            <div class="text-right flex-1 md:flex-none">
+                <p class="text-primary font-headline font-bold text-lg">1.200.000₫</p>
+                <p class="text-xs text-outline line-through">1.500.000₫</p>
+            </div>
+            <button
+                class="flex-1 md:flex-none bg-primary text-white px-8 py-3 rounded-full font-headline font-bold hover:bg-primary-container transition-all"
+                data-cart-action="add-to-cart">
+                Thêm vào giỏ
+            </button>
+        </div>
+    </div>
+    <!-- Chân trang (Footer) -->
+    <footer
+        class="w-full border-t border-[#e1e3e4]/20 bg-[#edeeef] dark:bg-[#191c1d] flex flex-col md:flex-row justify-between items-center px-10 py-12 space-y-4 md:space-y-0 pb-32">
+        <div class="font-['Inter'] text-xs uppercase tracking-widest text-[#002366] dark:text-[#fdc003]">
+            Kính Xanh Optical
+        </div>
+        <div class="flex space-x-8">
+            <a class="font-['Inter'] text-xs uppercase tracking-widest text-[#191c1d] dark:text-[#e1e3e4] opacity-60 hover:opacity-100 transition-opacity"
+                href="privacy.html">Chính Sách Bảo Mật</a>
+            <a class="font-['Inter'] text-xs uppercase tracking-widest text-[#191c1d] dark:text-[#e1e3e4] opacity-60 hover:opacity-100 transition-opacity"
+                href="terms.html">Điều Khoản Dịch Vụ</a>
+            <a class="font-['Inter'] text-xs uppercase tracking-widest text-[#191c1d] dark:text-[#e1e3e4] opacity-60 hover:opacity-100 transition-opacity"
+                href="guide.html">Hướng dẫn đo mắt</a>
+            <a class="font-['Inter'] text-xs uppercase tracking-widest text-[#191c1d] dark:text-[#e1e3e4] opacity-60 hover:opacity-100 transition-opacity"
+                href="support.html">Liên Hệ</a>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/product-api.js"></script>
+    <script src="js/add-to-cart.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true, offset: 50 });</script>
+</body>
+
+</html>
+<!-- Kính Xanh - Chi tiết sản phẩm -->

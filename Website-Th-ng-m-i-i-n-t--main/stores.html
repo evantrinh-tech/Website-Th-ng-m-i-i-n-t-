@@ -1,0 +1,138 @@
+<!-- File: stores.html - Danh sách hệ thống cửa hàng và địa chỉ các chi nhánh Kính Xanh -->
+<!-- Design System -->
+<!DOCTYPE html>
+
+<html class="light" lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Hệ Thống Cửa Hàng | Kính Xanh</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="js/tailwind-config.js"></script>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <meta content="Thông tin hệ thống cửa hàng, địa chỉ và chỉ đường đến các chi nhánh Kính Xanh." name="description" />
+</head>
+
+<body class="bg-surface text-on-surface font-body leading-relaxed page-fade">
+    <!-- Thanh điều hướng (Header) -->
+    <header
+        class="bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl docked full-width top-0 sticky z-50 shadow-sm dark:shadow-none flex justify-between items-center px-8 py-4 max-w-[1440px] mx-auto w-full">
+        <div class="flex items-center gap-8">
+            <a class="text-2xl font-black tracking-tighter text-[#002366] dark:text-blue-400 font-['Manrope']"
+                href="index.html">Kính Xanh</a>
+            <nav class="hidden xl:flex items-center gap-6">
+                <a class="text-slate-600 hover:text-[#00113a] transition-colors" href="products.html">Bộ sưu tập</a>
+                <a class="text-slate-600 hover:text-[#00113a] transition-colors" href="index.html#flash-sale">Khuyến
+                    mãi</a>
+                <a class="text-slate-600 hover:text-[#00113a] transition-colors" href="brands.html">Thương hiệu</a>
+                <a class="text-slate-600 hover:text-[#00113a] transition-colors" href="support.html">Hỗ trợ</a>
+            </nav>
+        </div>
+        <div class="flex items-center gap-6">
+            <div class="flex items-center gap-4 text-[#00113a] dark:text-blue-200">
+                <a class="hover:bg-[#edeeef] p-2 rounded-full inline-block" href="cart.html">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                </a>
+                <a class="hover:bg-[#edeeef] p-2 rounded-full inline-block" href="login.html">
+                    <span class="material-symbols-outlined">person</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="max-w-[800px] mx-auto px-8 pt-12 pb-24 min-h-[70vh]">
+        <div class="mb-12" data-aos="fade-up">
+            <nav class="flex items-center gap-2 text-sm mb-6 text-on-surface-variant font-semibold">
+                <a class="hover:text-primary transition-colors" href="index.html">Trang chủ</a>
+                <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+                <span class="text-primary font-bold">Hệ Thống Cửa Hàng</span>
+            </nav>
+            <h1 class="text-4xl font-headline font-bold text-primary mb-4">Trạm Đo Khúc Xạ Kính Xanh</h1>
+            <p class="text-on-surface-variant">Làm việc từ 8:00 đến 22:00 tất cả các ngày trong tuần</p>
+        </div>
+        <div class="grid gap-6" data-aos="fade-up" data-aos-delay="100">
+            <!-- Cửa hàng 1 -->
+            <div
+                class="p-6 bg-surface-container-low rounded-2xl border border-outline-variant/30 flex flex-col md:flex-row gap-6 items-start md:items-center">
+                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-3xl text-primary">storefront</span>
+                </div>
+                <div class="flex-grow">
+                    <h3 class="text-xl font-bold text-primary mb-1">Kính Xanh Quang Trung (Gò Vấp)</h3>
+                    <p class="text-on-surface-variant flex items-center gap-1"><span
+                            class="material-symbols-outlined text-[16px]">location_on</span> 123 Quang Trung, Phường 10,
+                        Q.Gò Vấp, TP.HCM</p>
+                    <p class="text-on-surface-variant mt-2 text-sm"><span class="font-bold">Hotline:</span> 090 123 4567
+                    </p>
+                </div>
+                <a class="px-5 py-2 ring-1 ring-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-colors"
+                    href="https://www.google.com/maps/search/?api=1&amp;query=123+Quang+Trung+Ph%C6%B0%E1%BB%9Dng+10+G%C3%B2+V%E1%BA%A5p+TP.HCM"
+                    rel="noopener noreferrer" target="_blank">Chỉ Đường</a>
+            </div>
+            <!-- Cửa hàng 2 -->
+            <div
+                class="p-6 bg-surface-container-low rounded-2xl border border-outline-variant/30 flex flex-col md:flex-row gap-6 items-start md:items-center">
+                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-3xl text-primary">storefront</span>
+                </div>
+                <div class="flex-grow">
+                    <h3 class="text-xl font-bold text-primary mb-1">Kính Xanh Lê Quang Định (Bình Thạnh)</h3>
+                    <p class="text-on-surface-variant flex items-center gap-1"><span
+                            class="material-symbols-outlined text-[16px]">location_on</span> 398 Lê Quang Định, Phường
+                        11, Q.Bình Thạnh, TP.HCM</p>
+                    <p class="text-on-surface-variant mt-2 text-sm"><span class="font-bold">Hotline:</span> 090 987 6543
+                    </p>
+                </div>
+                <a class="px-5 py-2 ring-1 ring-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-colors"
+                    href="https://www.google.com/maps/search/?api=1&amp;query=398+L%C3%AA+Quang+%C4%90%E1%BB%8Bnh+Ph%C6%B0%E1%BB%9Dng+11+B%C3%ACnh+Th%E1%BA%A1nh+TP.HCM"
+                    rel="noopener noreferrer" target="_blank">Chỉ Đường</a>
+            </div>
+            <!-- Cửa hàng 3 -->
+            <div
+                class="p-6 bg-surface-container-low rounded-2xl border border-outline-variant/30 flex flex-col md:flex-row gap-6 items-start md:items-center">
+                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-3xl text-primary">storefront</span>
+                </div>
+                <div class="flex-grow">
+                    <h3 class="text-xl font-bold text-primary mb-1">Kính Xanh Cầu Giấy (Hà Nội)</h3>
+                    <p class="text-on-surface-variant flex items-center gap-1"><span
+                            class="material-symbols-outlined text-[16px]">location_on</span> 45 Xuân Thủy, Dịch Vọng
+                        Hậu, Q.Cầu Giấy, Hà Nội</p>
+                    <p class="text-on-surface-variant mt-2 text-sm"><span class="font-bold">Hotline:</span> 098 765 4321
+                    </p>
+                </div>
+                <a class="px-5 py-2 ring-1 ring-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-colors"
+                    href="https://www.google.com/maps/search/?api=1&amp;query=45+Xu%C3%A2n+Th%E1%BB%A7y+D%E1%BB%8Bch+V%E1%BB%8Dng+H%E1%BA%ADu+C%E1%BA%A7u+Gi%E1%BA%A5y+H%C3%A0+N%E1%BB%99i"
+                    rel="noopener noreferrer" target="_blank">Chỉ Đường</a>
+            </div>
+            <div class="h-64 mt-6 bg-slate-200 rounded-2xl overflow-hidden relative border border-outline-variant/30">
+                <img alt="clean minimalist map graphic showing street grid of a central metropolitan area with a navy blue location pin"
+                    class="w-full h-full object-cover"
+                    data-alt="clean minimalist map graphic showing street grid of a central metropolitan area with a navy blue location pin"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2ForZPBHX7rTe39O9sm20fm_bCH9SlN3HDOw6ko7VPcCPE0HhSeN0-r1UT4wzDYoTDgz5d1rKRiNGxJk4l6iMYh8705JB7TAwVtwF4fKmPT6HcbkRpQQQbfrStXvg_68auYHb7Mwyb0cSgEK0mTRPuv_MwNdwqGc8hZ9a7uLGn8Nad_JQXtBv_xuzUOM2MzrXSTzN8kFzwEchyx3Qo8RPYjGllauDco-AuJF9Sep63ohEfoqcjKCiKwGKL2eGBsVyFRHcVcwZbGw" />
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <span class="bg-black/60 backdrop-blur-md text-white font-bold px-6 py-2 rounded-full">Google Maps
+                        Interactive Map</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Chân trang (Footer) -->
+    <footer class="bg-[#edeeef] full-width border-t border-[#e1e3e4]">
+        <div class="py-8 text-center text-slate-500 text-sm font-['Inter']">
+            © 2026 Kính Xanh Optical. See the world in detail.
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true, offset: 50 });</script>
+</body>
+
+</html>

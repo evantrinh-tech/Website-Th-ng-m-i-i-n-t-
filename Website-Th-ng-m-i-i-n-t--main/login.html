@@ -1,0 +1,169 @@
+<!-- File: login.html - Trang đăng nhập và quản lý tài khoản khách hàng tại Kính Xanh -->
+<!DOCTYPE html>
+
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Đăng nhập | Kính Xanh</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="js/tailwind-config.js"></script>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <meta content="Trang đăng nhập tài khoản Kính Xanh dành cho khách hàng truy cập hồ sơ và đơn hàng."
+        name="description" />
+</head>
+
+<body
+    class="bg-background text-on-background font-body min-h-screen flex items-center justify-center p-4 md:p-0 page-fade">
+    <main
+        class="w-full max-w-[1200px] h-full md:h-[800px] bg-surface-container-lowest shadow-2xl rounded-xl overflow-hidden flex flex-col md:flex-row">
+        <!-- Bên trái: Hình ảnh thương hiệu -->
+        <section class="hidden md:flex md:w-1/2 relative bg-primary-container overflow-hidden" data-aos="fade-up">
+            <img alt="High-end eyewear photography"
+                class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-60"
+                data-alt="Close-up of luxury designer glasses on a minimal pedestal with soft studio lighting and deep navy shadows"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd78-O7lxolagpaaRIUjIzRWSkaqNtPR_e9_XxLfPqdWY14x-vOAkRQoDVX2COKTtyoOnzTfoHcUJW7NVZSNhF8B5x7PcWWpiRiGC4GhZRiIPNFpj0W2830XX1PMXFdjMF8SbURZoWRwBlGX5sK_fkzxdFI6CTGaVQ40xzEDzxTNGfhpfqFqpy4hbC_B1WNPuAPWb_J1deTuGfKod279Sb9T-hTL5XQFl8wAjpJi7vZtVr5J-dDLTIzko8ms8Nc3FQ_v-Q8EaTt8Y" />
+            <div class="relative z-10 p-16 flex flex-col justify-between h-full text-white">
+                <div>
+                    <a class="font-headline font-extrabold text-4xl tracking-tighter text-secondary-container hover:opacity-80 transition-opacity inline-block"
+                        href="index.html">Kính
+                        Xanh</a>
+                    <p class="mt-6 font-headline text-5xl leading-tight">
+                        Tầm nhìn sắc nét.<br />
+                        <span class="text-secondary-fixed">Phong cách đỉnh cao.</span>
+                    </p>
+                </div>
+                <div class="glass-panel p-8 rounded-xl border border-white/10">
+                    <p class="font-body text-lg italic opacity-90">"Khám phá bộ sưu tập kính mắt cao cấp được tuyển chọn
+                        bởi các chuyên gia nhãn khoa hàng đầu."</p>
+                    <div class="mt-4 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center">
+                            <span class="material-symbols-outlined text-primary"
+                                style="font-variation-settings: 'FILL' 1;">verified</span>
+                        </div>
+                        <span class="font-label text-sm uppercase tracking-widest">Chứng nhận lâm sàng</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Bên phải: Biểu mẫu đăng nhập -->
+        <section class="w-full md:w-1/2 flex items-center justify-center p-8 md:p-16 bg-surface-container-low"
+            data-aos="fade-up">
+            <div class="w-full max-w-[400px] space-y-8">
+                <div class="text-center md:text-left">
+                    <h2 class="font-headline text-3xl font-bold text-primary">Chào mừng trở lại</h2>
+                    <p class="text-on-surface-variant mt-2">Vui lòng đăng nhập vào tài khoản Kính Xanh của bạn.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <button
+                            class="flex items-center justify-center gap-3 py-3 px-4 bg-surface-container-lowest border border-outline-variant rounded-lg hover:bg-surface-variant transition-colors group">
+                            <svg class="w-5 h-5" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20s20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"
+                                    fill="#FFC107"></path>
+                                <path
+                                    d="m6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C16.318 4 9.656 8.337 6.306 14.691z"
+                                    fill="#FF3D00"></path>
+                                <path
+                                    d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"
+                                    fill="#4CAF50"></path>
+                                <path
+                                    d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"
+                                    fill="#1976D2"></path>
+                            </svg>
+                            <span
+                                class="font-label text-xs font-semibold uppercase tracking-wider text-on-surface">Google</span>
+                        </button>
+                        <button
+                            class="flex items-center justify-center gap-3 py-3 px-4 bg-surface-container-lowest border border-outline-variant rounded-lg hover:bg-surface-variant transition-colors group">
+                            <svg class="w-5 h-5" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 5A19 19 0 1 0 24 43A19 19 0 1 0 24 5Z" fill="#039be5"></path>
+                                <path
+                                    d="M26.572 29.036h4.917l0.772-4.995h-5.69v-2.73c0-2.075 0.678-3.915 2.619-3.915h3.119v-4.359c-0.548-0.074-1.707-0.236-3.897-0.236-4.573 0-7.254 2.415-7.254 7.917v3.323h-4.701v4.995h4.701v13.729C22.089 42.905 23.032 43 24 43c0.875 0 1.729-0.08 2.572-0.194V29.036z"
+                                    fill="#fff"></path>
+                            </svg>
+                            <span
+                                class="font-label text-xs font-semibold uppercase tracking-wider text-on-surface">Facebook</span>
+                        </button>
+                    </div>
+                    <div class="relative flex items-center py-4">
+                        <div class="flex-grow border-t border-outline-variant/30"></div>
+                        <span
+                            class="flex-shrink mx-4 text-outline font-label text-[10px] uppercase tracking-[0.2em]">Hoặc
+                            với Email</span>
+                        <div class="flex-grow border-t border-outline-variant/30"></div>
+                    </div>
+                    <form class="space-y-6" id="login-form">
+                        <div class="space-y-1.5">
+                            <label class="font-label text-xs font-bold text-primary uppercase tracking-wider ml-1"
+                                for="email">Địa chỉ Email</label>
+                            <input
+                                class="w-full bg-surface-container-high border-none rounded-lg py-4 px-5 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all placeholder:text-outline/60 text-on-surface"
+                                id="email" placeholder="example@vision.com" type="email" />
+                        </div>
+                        <div class="space-y-1.5">
+                            <div class="flex justify-between items-center px-1">
+                                <label class="font-label text-xs font-bold text-primary uppercase tracking-wider"
+                                    for="password">Mật khẩu</label>
+                                <a class="text-secondary font-label text-[10px] font-bold uppercase hover:underline"
+                                    href="login.html">Quên mật khẩu?</a>
+                            </div>
+                            <input
+                                class="w-full bg-surface-container-high border-none rounded-lg py-4 px-5 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all placeholder:text-outline/60 text-on-surface"
+                                id="password" placeholder="••••••••" type="password" />
+                        </div>
+                        <button
+                            class="w-full py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline font-bold rounded-lg shadow-lg hover:shadow-xl transition-all active:scale-[0.98]"
+                            id="login-submit-btn" type="submit">
+                            Đăng nhập
+                        </button>
+                    </form>
+                </div>
+                <div class="pt-6 text-center">
+                    <p class="text-on-surface-variant text-sm">
+                        Chưa có tài khoản?
+                        <a class="text-primary font-bold hover:text-secondary transition-colors underline decoration-secondary/30 underline-offset-4"
+                            href="register.html">Đăng ký ngay</a>
+                    </p>
+                </div>
+                <div class="flex items-center justify-center gap-6 pt-4 border-t border-outline-variant/20">
+                    <div class="flex items-center gap-2 text-outline">
+                        <span class="material-symbols-outlined text-sm">verified_user</span>
+                        <span class="text-[10px] uppercase font-bold tracking-widest">Bảo mật SSL</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-outline">
+                        <span class="material-symbols-outlined text-sm">visibility</span>
+                        <span class="text-[10px] uppercase font-bold tracking-widest">Vision Care</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Chân trang (Liên kết chính sách) -->
+    <footer class="fixed bottom-6 w-full text-center hidden md:block">
+        <nav class="flex justify-center gap-8">
+            <a class="font-label text-[10px] text-outline uppercase tracking-widest hover:text-primary transition-colors"
+                href="privacy.html">Chính sách bảo mật</a>
+            <a class="font-label text-[10px] text-outline uppercase tracking-widest hover:text-primary transition-colors"
+                href="terms.html">Điều khoản dịch vụ</a>
+            <a class="font-label text-[10px] text-outline uppercase tracking-widest hover:text-primary transition-colors"
+                href="support.html">Liên hệ hỗ trợ</a>
+        </nav>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/auth-api.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true, offset: 50 });</script>
+</body>
+
+</html>
+<!-- Kính Xanh - Trang Đăng nhập -->

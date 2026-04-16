@@ -1,0 +1,23 @@
+# Environment - KHÔNG commit file .env thật
+.env
+
+# Composer vendor (cài lại bằng composer install)
+backend/vendor/
+
+# GitNexus folder (không liên quan đến project)
+GitNexus-main/
+GitNexus-main.zip
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# PHP cache
+*.cache

@@ -1,0 +1,280 @@
+<!-- File: support.html - Trang hỗ trợ khách hàng, giải đáp thắc mắc và liên hệ Kính Xanh -->
+<!-- Design System -->
+<!DOCTYPE html>
+
+<html class="light" lang="vi">
+
+<head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+                rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+                rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+                rel="stylesheet" />
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <script src="js/tailwind-config.js"></script>
+        <link href="css/style.css" rel="stylesheet" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+        <title>Kính Xanh | Hỗ trợ khách hàng</title>
+        <meta content="Trang hỗ trợ khách hàng của Kính Xanh với câu hỏi thường gặp, liên hệ và chính sách sau bán hàng."
+                name="description" />
+</head>
+
+<body class="bg-surface text-on-surface font-body leading-relaxed page-fade">
+        <!-- Phần 1: Thanh thông báo trên cùng -->
+        <div class="bg-primary text-on-primary py-2.5 px-4 text-center text-sm font-semibold tracking-wide">
+                Giảm giá 20% cho đơn hàng đầu tiên. Mã: <span class="text-secondary-container">KINHXANH20</span>
+        </div>
+        <!-- Phần 2: Thanh điều hướng (Header) -->
+        <header
+                class="bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl docked full-width top-0 sticky z-50 shadow-sm dark:shadow-none flex justify-between items-center px-8 py-4 max-w-[1440px] mx-auto w-full">
+                <div class="flex items-center gap-8">
+                        <a class="text-2xl font-black tracking-tighter text-[#002366] dark:text-blue-400 font-['Manrope']"
+                                href="index.html">Kính Xanh</a>
+                        <nav class="hidden xl:flex items-center gap-6">
+                                <a class="text-[#002366] dark:text-blue-300 font-bold border-b-2 border-[#fdc003] pb-1 font-['Manrope'] tracking-tight"
+                                        href="products.html">Bộ sưu tập</a>
+                                <a class="text-slate-600 dark:text-slate-400 hover:text-[#00113a] dark:hover:text-blue-100 transition-colors font-['Manrope'] tracking-tight"
+                                        href="products.html">Bán chạy</a>
+                                <a class="text-slate-600 dark:text-slate-400 hover:text-[#00113a] dark:hover:text-blue-100 transition-colors font-['Manrope'] tracking-tight"
+                                        href="index.html#flash-sale">Khuyến mãi</a>
+                                <a class="text-slate-600 hover:text-[#00113a] transition-colors cursor-pointer"
+                                        href="brands.html">Thương hiệu</a>
+                                <a class="text-slate-600 hover:text-[#00113a] transition-colors cursor-pointer"
+                                        href="support.html">Hỗ trợ</a>
+                        </nav>
+                </div>
+                <div class="flex items-center gap-6">
+                        <div class="hidden md:flex items-center bg-surface-container-high rounded-full px-4 py-2 w-64">
+                                <span class="material-symbols-outlined text-outline text-sm">search</span>
+                                <input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-outline"
+                                        data-product-search="true" placeholder="Tìm kiếm sản phẩm..." type="text" />
+                        </div>
+                        <div class="flex items-center gap-4 text-[#00113a] dark:text-blue-200">
+                                <button
+                                        class="hover:bg-[#edeeef] dark:hover:bg-slate-800 transition-all duration-300 p-2 rounded-full scale-95 active:scale-90 transition-transform">
+                                        <span class="material-symbols-outlined">favorite</span>
+                                </button>
+                                <div class="relative flex items-center">
+                                        <a class="hover:bg-[#edeeef] dark:hover:bg-slate-800 transition-all duration-300 p-2 rounded-full scale-95 active:scale-90 transition-transform inline-block"
+                                                href="cart.html">
+                                                <span class="material-symbols-outlined">shopping_cart</span>
+                                        </a>
+                                        <span class="absolute top-0 right-0 bg-secondary text-on-secondary text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center pointer-events-none"
+                                                data-cart-count="true">2</span>
+                                </div>
+                                <a class="hover:bg-[#edeeef] dark:hover:bg-slate-800 transition-all duration-300 p-2 rounded-full scale-95 active:scale-90 transition-transform inline-block"
+                                        href="login.html">
+                                        <span class="material-symbols-outlined">person</span>
+                                </a>
+                        </div>
+                </div>
+        </header>
+        <main class="max-w-[1000px] mx-auto px-8 pt-12 pb-24 min-h-[70vh]">
+                <div class="text-center mb-16" data-aos="fade-up">
+                        <nav
+                                class="flex items-center justify-center gap-2 text-sm mb-6 text-on-surface-variant font-semibold">
+                                <a class="hover:text-primary transition-colors" href="index.html">Trang chủ</a>
+                                <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+                                <span class="text-primary font-bold">Hỗ trợ khách hàng</span>
+                        </nav>
+                        <h1 class="text-5xl font-headline font-bold text-primary mb-4">Hỗ trợ khách hàng</h1>
+                        <p class="text-on-surface-variant max-w-2xl mx-auto">Kính Xanh luôn sẵn lòng lắng nghe và hỗ trợ
+                                giải quyết
+                                mọi vấn đề liên quan đến sản phẩm, đo khám mắt hay khiếu nại dịch vụ.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <div data-aos="fade-right">
+                                <h3 class="text-2xl font-bold text-primary mb-6">Liên hệ trực tiếp với Cửa Hàng</h3>
+                                <div class="space-y-6">
+                                        <div class="flex items-start gap-4 p-4 bg-surface-container-low rounded-2xl">
+                                                <div
+                                                        class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm">
+                                                        <span
+                                                                class="material-symbols-outlined text-secondary text-2xl">location_on</span>
+                                                </div>
+                                                <div>
+                                                        <h4 class="font-bold text-primary">Địa chỉ Trụ sở</h4>
+                                                        <p class="text-on-surface-variant text-sm mt-1">323A Lê Quang
+                                                                Định, Phường 5, Bình Thạnh, Thành phố Hồ Chí Minh
+                                                        </p>
+                                                </div>
+                                        </div>
+                                        <div class="flex items-start gap-4 p-4 bg-surface-container-low rounded-2xl">
+                                                <div
+                                                        class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm">
+                                                        <span
+                                                                class="material-symbols-outlined text-secondary text-2xl">call</span>
+                                                </div>
+                                                <div>
+                                                        <h4 class="font-bold text-primary">Hotline</h4>
+                                                        <p class="text-on-surface-variant text-sm mt-1">1800 6688 -
+                                                                Nhánh số 1 <br /><span
+                                                                        class="text-xs text-slate-400">(Mở cửa 8h00 -
+                                                                        22h00 hàng ngày)</span></p>
+                                                </div>
+                                        </div>
+                                        <div class="flex items-start gap-4 p-4 bg-surface-container-low rounded-2xl">
+                                                <div
+                                                        class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm">
+                                                        <span
+                                                                class="material-symbols-outlined text-secondary text-2xl">mail</span>
+                                                </div>
+                                                <div>
+                                                        <h4 class="font-bold text-primary">Hỗ trợ qua hộp thư điện tử
+                                                        </h4>
+                                                        <p class="text-on-surface-variant text-sm mt-1">
+                                                                support@kinhxanh.vn</p>
+                                                </div>
+                                        </div>
+                                </div>
+                                <h3 class="text-2xl font-bold text-primary mb-6 mt-12">Câu hỏi thường gặp</h3>
+                                <div class="space-y-4">
+                                        <details class="bg-surface-container-low rounded-xl p-4 cursor-pointer group">
+                                                <summary
+                                                        class="font-bold text-primary outline-none flex justify-between items-center select-none">
+                                                        Bao lâu tôi nhận được kính? <span
+                                                                class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                                                </summary>
+                                                <p
+                                                        class="text-sm text-on-surface-variant mt-4 leading-relaxed border-t border-outline-variant/20 pt-4">
+                                                        Đối với đơn kính nội thành Hà Nội &amp; TP.HCM, quý khách sẽ
+                                                        nhận được ngay trong 24h. Đối với
+                                                        hàng ngoại tỉnh thời gian vận chuyển sẽ từ 2-4 ngày làm việc.
+                                                </p>
+                                        </details>
+                                        <details class="bg-surface-container-low rounded-xl p-4 cursor-pointer group">
+                                                <summary
+                                                        class="font-bold text-primary outline-none flex justify-between items-center select-none">
+                                                        Chính sách bảo hành như thế nào? <span
+                                                                class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                                                </summary>
+                                                <p
+                                                        class="text-sm text-on-surface-variant mt-4 leading-relaxed border-t border-outline-variant/20 pt-4">
+                                                        Trong thời gian 12 tháng, Kính Xanh bảo hành 100% chi phí sửa
+                                                        chữa các vấn đề: lỏng vít, gãy
+                                                        càng tay, mốc tròng do lỗi nhà sản xuất.</p>
+                                        </details>
+                                </div>
+                        </div>
+                        <div class="bg-surface-container-lowest p-8 rounded-3xl shadow-xl border border-outline-variant/20"
+                                data-aos="fade-left">
+                                <h3 class="text-2xl font-bold text-primary mb-6 flex items-center gap-2"><span
+                                                class="material-symbols-outlined">forum</span> Gửi yêu cầu Form</h3>
+                                <form class="space-y-5" id="support-form">
+                                        <div>
+                                                <label class="block text-sm font-bold text-primary mb-2">Họ và tên của
+                                                        bạn</label>
+                                                <input class="w-full bg-surface-container px-4 py-3.5 rounded-xl border-none focus:ring-2 focus:ring-primary/20 text-sm font-semibold"
+                                                        placeholder="Nguyễn Văn A" required="" type="text" />
+                                        </div>
+                                        <div>
+                                                <label class="block text-sm font-bold text-primary mb-2">Số điện thoại
+                                                        liên hệ</label>
+                                                <input class="w-full bg-surface-container px-4 py-3.5 rounded-xl border-none focus:ring-2 focus:ring-primary/20 text-sm font-semibold"
+                                                        placeholder="09xx xxx xxx" required="" type="tel" />
+                                        </div>
+                                        <div>
+                                                <label class="block text-sm font-bold text-primary mb-2">Chi tiết nội
+                                                        dung cần khiếu nại / hỗ
+                                                        trợ?</label>
+                                                <textarea
+                                                        class="w-full bg-surface-container px-4 py-4 rounded-xl border-none focus:ring-2 focus:ring-primary/20 text-sm font-semibold h-40 resize-none leading-relaxed"
+                                                        placeholder="Chúng tôi có thể giúp gì cho nhãn quan của bạn..."
+                                                        required=""></textarea>
+                                        </div>
+                                        <button class="w-full font-bold bg-primary text-white py-4 rounded-xl hover:opacity-90 transition-opacity active:scale-95 shadow-md flex items-center justify-center gap-2"
+                                                type="submit">
+                                                Gửi Yêu Cầu Cho Chúng Tôi <span
+                                                        class="material-symbols-outlined text-sm">send</span>
+                                        </button>
+                                </form>
+                        </div>
+                </div>
+        </main>
+        <footer class="bg-[#edeeef] dark:bg-slate-950 full-width mt-20 border-t border-[#e1e3e4] dark:border-slate-800">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-[1440px] mx-auto">
+                        <div>
+                                <a class="text-xl font-extrabold text-[#002366] dark:text-blue-400 font-['Inter'] mb-6 block"
+                                        href="index.html">Kính Xanh</a>
+                                <p class="text-slate-500 dark:text-slate-400 text-[0.875rem] mb-6 leading-relaxed">
+                                        Hệ thống cửa hàng mắt kính uy tín hàng đầu, chuyên cung cấp các giải pháp thị
+                                        lực toàn diện và phong
+                                        cách thời trang kính mắt hiện đại.
+                                </p>
+                                <div class="flex gap-4">
+                                        <a class="w-10 h-10 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center hover:bg-secondary-container transition-colors"
+                                                href="https://www.facebook.com/" rel="noopener noreferrer"
+                                                target="_blank">
+                                                <span
+                                                        class="material-symbols-outlined text-primary text-xl">share</span>
+                                        </a>
+                                        <a class="w-10 h-10 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center hover:bg-secondary-container transition-colors"
+                                                href="support.html">
+                                                <span
+                                                        class="material-symbols-outlined text-primary text-xl">contact_mail</span>
+                                        </a>
+                                </div>
+                        </div>
+                        <div>
+                                <h4 class="font-bold text-primary dark:text-blue-300 mb-6 font-['Inter']">Khám Phá</h4>
+                                <ul class="space-y-4">
+                                        <li><a class="text-slate-500 dark:text-slate-400 hover:text-[#002366] dark:hover:text-blue-300 underline transition-all font-['Inter'] text-[0.875rem]"
+                                                        href="about.html">Về Kính Xanh</a></li>
+                                        <li><a class="text-slate-500 dark:text-slate-400 hover:text-[#002366] dark:hover:text-blue-300 underline transition-all font-['Inter'] text-[0.875rem]"
+                                                        href="guide.html">Cẩm Nang Nhãn Khoa</a></li>
+                                        <li><a class="text-slate-500 dark:text-slate-400 hover:text-[#002366] dark:hover:text-blue-300 underline transition-all font-['Inter'] text-[0.875rem]"
+                                                        href="stores.html">Hệ Thống Cửa Hàng</a></li>
+                                </ul>
+                        </div>
+                        <div>
+                                <h4 class="font-bold text-primary dark:text-blue-300 mb-6 font-['Inter']">Hỗ Trợ Khách
+                                        Hàng</h4>
+                                <ul class="space-y-4">
+                                        <li><a class="text-slate-500 dark:text-slate-400 hover:text-[#002366] dark:hover:text-blue-300 underline transition-all font-['Inter'] text-[0.875rem]"
+                                                        href="terms.html">Điều Khoản Dịch Vụ</a></li>
+                                        <li><a class="text-slate-500 dark:text-slate-400 hover:text-[#002366] dark:hover:text-blue-300 underline transition-all font-['Inter'] text-[0.875rem]"
+                                                        href="support.html">Liên Hệ Hỗ Trợ</a></li>
+                                        <li><a class="text-slate-500 dark:text-slate-400 hover:text-[#002366] dark:hover:text-blue-300 underline transition-all font-['Inter'] text-[0.875rem]"
+                                                        href="privacy.html">Chính Sách Bảo Mật</a></li>
+                                </ul>
+                        </div>
+                        <div class="h-48 bg-white dark:bg-slate-900 rounded-2xl overflow-hidden relative">
+                                <div class="absolute inset-0 bg-slate-200" data-location="Ho Chi Minh City">
+                                        <img alt="clean minimalist map graphic showing street grid of a central metropolitan area with a navy blue location pin"
+                                                class="w-full h-full object-cover"
+                                                data-alt="clean minimalist map graphic showing street grid of a central metropolitan area with a navy blue location pin"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2ForZPBHX7rTe39O9sm20fm_bCH9SlN3HDOw6ko7VPcCPE0HhSeN0-r1UT4wzDYoTDgz5d1rKRiNGxJk4l6iMYh8705JB7TAwVtwF4fKmPT6HcbkRpQQQbfrStXvg_68auYHb7Mwyb0cSgEK0mTRPuv_MwNdwqGc8hZ9a7uLGn8Nad_JQXtBv_xuzUOM2MzrXSTzN8kFzwEchyx3Qo8RPYjGllauDco-AuJF9Sep63ohEfoqcjKCiKwGKL2eGBsVyFRHcVcwZbGw" />
+                                </div>
+                        </div>
+                </div>
+                <div
+                        class="max-w-[1440px] mx-auto px-8 py-8 border-t border-[#e1e3e4] dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+                        <p class="text-slate-500 dark:text-slate-400 text-[0.875rem] font-['Inter']">© 2026 Kính Xanh
+                                Optical. See
+                                the world in detail.</p>
+                        <div class="flex gap-6">
+                                <img alt="Visa payment provider logo icon"
+                                        class="h-6 opacity-60 hover:opacity-100 transition-opacity"
+                                        data-alt="Visa payment provider logo icon"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg_1eK-pKf2-DdLjWBx8mgoG1MtWZX_Vp1owYyy5X2rQyKq9ObGxKE1vS51MT0Cl5MWRBm8UuEjfdYnWVglUrxwDcXVaE9ru1nae8P8mr6GV9q0lG1Ie9sLBz7XvYmkoZTT9zfU3NTnC8mgRI942rkzj3dgz3oh9v2sqPU_OG85kRAhCQfuVHfVaNJ7Flta7pLYOPlomWUfY2qZFrS4y7alnsBLvULgkN2zXfu8GYVIIbnEVtn1ezUbnP0AkqqMf3X7DUm8s_AmGc" />
+                                <img alt="Mastercard payment provider logo icon"
+                                        class="h-6 opacity-60 hover:opacity-100 transition-opacity"
+                                        data-alt="Mastercard payment provider logo icon"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6ikNVn4wu6fnectVfs1EjrU7HHxQA5gpcHzdp1h8i41UrRiAhM2VAZfKvM_bO_lz1CFiW1c2tp44gtYdiaMWX2Sj2aPU06XsETgnIE5GrVYzpGpbXQWKRk-_Br_VbEPIHgwF2wG6JyEGXWzxVWQXCmWo1ebkoNdRTaAiX0tJlNW_hY4LsOTuFk5vsH0vseLkkhu2yoLBqUfCHncTOHJFAXjv1_8jZFjy5G0l5sgCngyRn_2qpqcp585TLv4CJkjEnoixwya9R-Rw" />
+                                <img alt="Momo e-wallet payment provider logo icon"
+                                        class="h-6 opacity-60 hover:opacity-100 transition-opacity"
+                                        data-alt="Momo e-wallet payment provider logo icon"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcYqOPZXjlpqB5a-f0uvfdlyTM2apJIkULOVBtzQYqCS1081CZks9fMrtwGikCuE_QtW9ZgHGwxI9kKogMZlZ8Zu1lFcOXPrAaizllFxAyaqpYfcj2Byg9BzWUOpI3HBcXj1QxgG3lBfrT_k7cLJ4k1q6ODYw0fi9xqmxUX10aAQQGndIfUZWDFGen3W6zG3L6V_peTsV_SkcPMJVsaalECB1RvvsWUSP_RXc5YS4aq23xGQ4gqn1Cc2Z2F9j8GC5hFvqseZtkY6Q" />
+                        </div>
+                </div>
+        </footer>
+        <script src="js/main.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>AOS.init({ duration: 800, once: true, offset: 50 });</script>
+</body>
+
+</html>
+<!-- Kính Xanh - Trang Hỗ trợ -->

@@ -1,0 +1,67 @@
+/* Material Symbols Outlined settings */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.fill-icon {
+    font-variation-settings: 'FILL' 1;
+}
+
+/* Glassmorphism Classes */
+.glass-nav {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: rgba(248, 249, 250, 0.7);
+}
+.glass-panel {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+.glass-header {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+.custom-glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+/* Scrollbars */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f3f4f5; }
+::-webkit-scrollbar-thumb { background: #c5c6d2; border-radius: 10px; }
+
+.custom-scrollbar::-webkit-scrollbar { width: 4px; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: #c5c6d2; border-radius: 10px; }
+
+/* Grid Utilities */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 300px);
+    gap: 1.5rem;
+}
+
+/* PAGE TRANSITION */
+.page-fade {
+    animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+.page-fade-out {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.5s ease-in;
+}
+
+/* AI Scanline Animation */
+@keyframes scanning {
+    0% { top: 0% }
+    50% { top: 100% }
+    100% { top: 0% }
+}
+.ai-scanline {
+    animation: scanning 4s linear infinite;
+}

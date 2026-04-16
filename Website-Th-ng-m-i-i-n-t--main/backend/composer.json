@@ -1,0 +1,17 @@
+{
+    "name": "kinhxanh/ecommerce-backend",
+    "description": "Backend PHP cho website Kính Xanh - dùng MongoDB",
+    "type": "project",
+    "require": {
+        "php": ">=8.0",
+        "mongodb/mongodb": "~1.15.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "KinhXanh\\": "src/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true
+    }
+}
