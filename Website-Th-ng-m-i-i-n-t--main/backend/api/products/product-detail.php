@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
 
-require_once __DIR__ . '/../config/database.php';
-require_once __DIR__ . '/../lib/response.php';
+require_once __DIR__ . '/../../config/database.php';
+require_once __DIR__ . '/../../lib/response.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     jsonResponse(['success' => true, 'message' => 'Preflight OK']);
@@ -93,7 +93,19 @@ try {
         }
     }
     $productArr['main_image'] = $mainImage;
-    unset($productArr['images']); // không gửi trùng
+    unset($productArr['images']);
+
+     $variants = getCollection('product_variants');
+    $productOid = toObjectId($productArr['id']);
+    if ($productOid) {
+        $firstVariant = $variants->findOne(
+            ['product_id' => $productOid],
+            ['sort' => ['_id' => 1]]
+        );
+        if ($firstVariant) {
+            $productArr['first_variant_id'] = (string)$firstVariant['_id'];
+        }
+    }
 
     jsonResponse([
         'success' => true,

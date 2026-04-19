@@ -363,3 +363,52 @@ echo "📦 Danh sách sản phẩm:\n";
 foreach ($products as $slug => [$pid, $vid]) {
     echo "   - $slug\n";
 }
+// ── THÊM VARIANTS MÀU CHO MỖI SẢN PHẨM ─────────────────────
+$colorSets = [
+    ['color' => 'Black',     'color_hex' => '#1a1a1a'],
+    ['color' => 'Gold',      'color_hex' => '#D4AF37'],
+    ['color' => 'Silver',    'color_hex' => '#C0C0C0'],
+    ['color' => 'Tortoise',  'color_hex' => '#8B4513'],
+    ['color' => 'Rose Gold', 'color_hex' => '#B76E79'],
+    ['color' => 'Navy',      'color_hex' => '#003153'],
+];
+
+// Map màu gốc → hex
+$colorHexMap = array_column($colorSets, 'color_hex', 'color');
+
+$variantCount = 0;
+foreach ($products as $slug => [$pid, $vid]) {
+    $existing = $variantsCol->findOne(['_id' => $vid]);
+    if (!$existing) continue;
+
+    $existingColor = $existing['color'] ?? '';
+    $basePrice     = $existing['price'] ?? 0;
+    $baseSize      = $existing['size']  ?? '52mm';
+
+    // Update color_hex cho variant gốc
+    $variantsCol->updateOne(
+        ['_id' => $vid],
+        ['$set' => ['color_hex' => $colorHexMap[$existingColor] ?? '#ccc']]
+    );
+
+    // Lấy 2 màu khác
+    $otherColors = array_values(array_filter($colorSets, fn($c) => $c['color'] !== $existingColor));
+    $picked = array_slice($otherColors, 0, 2);
+
+    foreach ($picked as $i => $c) {
+        $skuParts = explode('-', $existing['sku'] ?? '');
+        $skuBase  = implode('-', array_slice($skuParts, 0, 2));
+
+        $variantsCol->insertOne([
+            'product_id' => $pid,
+            'sku'        => $skuBase . '-' . strtoupper(str_replace(' ', '', $c['color'])) . '-' . ($i + 2),
+            'price'      => $basePrice,
+            'stock'      => rand(5, 20),
+            'color'      => $c['color'],
+            'color_hex'  => $c['color_hex'],
+            'size'       => $baseSize,
+        ]);
+        $variantCount++;
+    }
+}
+echo "✅ Thêm $variantCount variants màu mới.\n";

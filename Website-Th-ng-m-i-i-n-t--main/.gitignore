@@ -3,6 +3,10 @@
 
 # Composer vendor (cài lại bằng composer install)
 backend/vendor/
+vendor/
+
+# Momo config
+momo.json
 
 # GitNexus folder (không liên quan đến project)
 GitNexus-main/

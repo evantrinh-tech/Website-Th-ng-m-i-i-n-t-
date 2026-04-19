@@ -42,8 +42,15 @@ try {
         jsonResponse(['success' => false, 'message' => 'Email hoặc mật khẩu không chính xác.'], 401);
     }
 
+    // $userArr = docToArray($user);
+    // $token   = generateToken($userArr['id']);
+
     $userArr = docToArray($user);
-    $token   = generateToken($userArr['id']);
+
+    // fix MongoDB _id
+    $userId = (string)($userArr['id'] ?? $user['_id']);
+
+$token = generateToken($userId);
 
     jsonResponse([
         'success' => true,

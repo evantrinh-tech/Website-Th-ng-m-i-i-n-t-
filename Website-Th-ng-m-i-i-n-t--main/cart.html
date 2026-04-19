@@ -1,191 +1,313 @@
 <!-- File: cart.html - Trang giỏ hàng của khách hàng tại Kính Xanh -->
-<!DOCTYPE html>
+<!doctype html>
 
 <html class="light" lang="vi">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
     <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
     <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
     <script src="js/tailwind-config.js"></script>
     <link href="css/style.css" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>Kính Xanh | Giỏ hàng</title>
-    <meta content="Giỏ hàng Kính Xanh cho phép kiểm tra sản phẩm, số lượng, mã giảm giá và tổng chi phí đơn hàng."
-        name="description" />
-</head>
+    <meta
+      content="Giỏ hàng Kính Xanh cho phép kiểm tra sản phẩm, số lượng, mã giảm giá và tổng chi phí đơn hàng."
+      name="description"
+    />
+  </head>
 
-<body
-    class="bg-background text-on-background font-body selection:bg-secondary-container selection:text-on-secondary-container page-fade">
+  <body
+    class="bg-background text-on-background font-body selection:bg-secondary-container selection:text-on-secondary-container page-fade"
+  >
     <!-- Thanh điều hướng (Header) -->
     <nav class="fixed top-0 w-full z-50 glass-nav">
-        <div class="flex justify-between items-center px-10 py-4 max-w-[1920px] mx-auto">
-            <a class="text-2xl font-extrabold tracking-tighter text-[#002366] dark:text-[#fdc003] font-headline hover:opacity-80 transition-opacity"
-                href="index.html">Kính Xanh</a>
-            <div class="hidden md:flex space-x-8">
-                <a class="font-headline font-bold text-lg text-[#191c1d] opacity-80 hover:text-[#785900] transition-colors duration-300"
-                    href="products.html">Gọng kính</a>
-                <a class="font-headline font-bold text-lg text-[#191c1d] opacity-80 hover:text-[#785900] transition-colors duration-300"
-                    href="products.html">Tròng kính</a>
-                <a class="font-headline font-bold text-lg text-[#191c1d] opacity-80 hover:text-[#785900] transition-colors duration-300"
-                    href="product-detail.html">Thử kính ảo</a>
-                <a class="font-headline font-bold text-lg text-[#191c1d] opacity-80 hover:text-[#785900] transition-colors duration-300"
-                    href="stores.html">Phòng khám</a>
-            </div>
-            <div class="flex items-center space-x-6 text-primary">
-                <a class="hover:text-secondary transition-colors inline-block" href="cart.html"><span
-                        class="material-symbols-outlined block">shopping_cart</span></a>
-                <a class="hover:text-secondary transition-colors inline-block" href="login.html"><span
-                        class="material-symbols-outlined block">account_circle</span></a>
-            </div>
+      <div
+        class="flex justify-between items-center px-10 py-4 max-w-[1920px] mx-auto"
+      >
+        <a
+          class="text-2xl font-extrabold tracking-tighter text-[#002366] dark:text-[#fdc003] font-headline hover:opacity-80 transition-opacity"
+          href="index.html"
+          >Kính Xanh</a
+        >
+        <div class="hidden md:flex space-x-8">
+          <a
+            class="font-headline font-bold text-lg text-[#191c1d] opacity-80 hover:text-[#785900] transition-colors duration-300"
+            href="products.html"
+            >Gọng kính</a
+          >
+          <a
+            class="font-headline font-bold text-lg text-[#191c1d] opacity-80 hover:text-[#785900] transition-colors duration-300"
+            href="products.html"
+            >Tròng kính</a
+          >
+          <a
+            class="font-headline font-bold text-lg text-[#191c1d] opacity-80 hover:text-[#785900] transition-colors duration-300"
+            href="product-detail.html"
+            >Thử kính ảo</a
+          >
+          <a
+            class="font-headline font-bold text-lg text-[#191c1d] opacity-80 hover:text-[#785900] transition-colors duration-300"
+            href="stores.html"
+            >Phòng khám</a
+          >
         </div>
+        <div class="flex items-center space-x-6 text-primary">
+          <a
+            class="hover:text-secondary transition-colors inline-block relative"
+            href="cart.html"
+          >
+            <span class="material-symbols-outlined block">shopping_cart</span>
+            <span
+              data-cart-count
+              class="absolute -top-2 -right-2 bg-secondary text-on-secondary text-[10px] font-bold w-5 h-5 rounded-full items-center justify-content-center hidden"
+            >
+              0
+            </span>
+          </a>
+          <a
+            class="hover:text-secondary transition-colors inline-block"
+            href="login.html"
+            ><span class="material-symbols-outlined block"
+              >account_circle</span
+            ></a
+          >
+        </div>
+      </div>
     </nav>
     <main class="pt-32 pb-20 px-6 md:px-10 max-w-7xl mx-auto">
-        <header class="mb-12">
-            <h1 class="font-headline text-5xl font-extrabold tracking-tight text-primary mb-2">Giỏ hàng</h1>
-            <p class="text-on-surface-variant font-medium">Bạn có 1 sản phẩm trong giỏ hàng</p>
-        </header>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            <!-- Khu vực danh sách sản phẩm -->
-            <div class="lg:col-span-8 space-y-8">
-                <!-- Danh sách sản phẩm trong giỏ -->
-                <div class="space-y-4" id="cart-items-container">
-                    <!-- Items will be injected by JavaScript -->
+      <header class="mb-12">
+        <h1
+          class="font-headline text-5xl font-extrabold tracking-tight text-primary mb-2"
+        >
+          Giỏ hàng
+        </h1>
+        <p class="text-on-surface-variant font-medium">
+          Bạn có 1 sản phẩm trong giỏ hàng
+        </p>
+      </header>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <!-- Khu vực danh sách sản phẩm -->
+        <div class="lg:col-span-8 space-y-8">
+          <!-- Danh sách sản phẩm trong giỏ -->
+          <div class="space-y-4" id="cart-items-container">
+            <!-- Items will be injected by JavaScript -->
+          </div>
+          <!-- Sản phẩm gợi ý thêm -->
+          <section
+            class="pt-10 border-t border-outline-variant/20"
+            data-aos="fade-up"
+          >
+            <h2 class="font-headline text-2xl font-bold text-primary mb-6">
+              Đề xuất cho bạn
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Upsell 1 -->
+              <div
+                class="bg-surface-container-low p-4 rounded-xl flex items-center gap-4"
+              >
+                <div
+                  class="w-20 h-20 bg-surface-container-lowest rounded-lg overflow-hidden flex items-center justify-center p-2"
+                >
+                  <img
+                    alt="Bottle of professional optical lens cleaner spray with micro-mist nozzle on a clean white surface"
+                    class="w-full h-full object-contain"
+                    data-alt="Bottle of professional optical lens cleaner spray with micro-mist nozzle on a clean white surface"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvXxKzD3UIlKrsTwt_l8NUtUJvwVJ828MWeBdpVVC66ak4L77UaNEEsQwvhvI7hcrBBZZe9iig9ddhKm08GbnME8fppKWHjdJJ_Max1qsBzsjmZlZYY0Af8KrFotjsEb7hzYMYqIQxZGFEfuZnCUmYSnpsE3se1V8Qme7VgKM25je4-r1oqIRxtwfuG5eF6rqRxjyyjDSwZgqu18t7BNEx6PLpBXbEgWsAbMjNzKXUfMBBtNNgfhFtEG9ZrN-CAn6NOlHHiHCfT0U"
+                  />
                 </div>
-                <!-- Sản phẩm gợi ý thêm -->
-                <section class="pt-10 border-t border-outline-variant/20" data-aos="fade-up">
-                    <h2 class="font-headline text-2xl font-bold text-primary mb-6">Đề xuất cho bạn</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <!-- Upsell 1 -->
-                        <div class="bg-surface-container-low p-4 rounded-xl flex items-center gap-4">
-                            <div
-                                class="w-20 h-20 bg-surface-container-lowest rounded-lg overflow-hidden flex items-center justify-center p-2">
-                                <img alt="Bottle of professional optical lens cleaner spray with micro-mist nozzle on a clean white surface"
-                                    class="w-full h-full object-contain"
-                                    data-alt="Bottle of professional optical lens cleaner spray with micro-mist nozzle on a clean white surface"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvXxKzD3UIlKrsTwt_l8NUtUJvwVJ828MWeBdpVVC66ak4L77UaNEEsQwvhvI7hcrBBZZe9iig9ddhKm08GbnME8fppKWHjdJJ_Max1qsBzsjmZlZYY0Af8KrFotjsEb7hzYMYqIQxZGFEfuZnCUmYSnpsE3se1V8Qme7VgKM25je4-r1oqIRxtwfuG5eF6rqRxjyyjDSwZgqu18t7BNEx6PLpBXbEgWsAbMjNzKXUfMBBtNNgfhFtEG9ZrN-CAn6NOlHHiHCfT0U" />
-                            </div>
-                            <div class="flex-grow">
-                                <h4 class="font-bold text-primary text-sm uppercase tracking-tight">Nước rửa kính chuyên
-                                    dụng</h4>
-                                <p class="text-primary font-extrabold text-md">150.000₫</p>
-                            </div>
-                            <button class="bg-primary text-on-primary p-2 rounded-lg hover:scale-95 transition-all"
-                                data-cart-action="add-to-cart">
-                                <span class="material-symbols-outlined">add_shopping_cart</span>
-                            </button>
-                        </div>
-                        <!-- Upsell 2 -->
-                        <div class="bg-surface-container-low p-4 rounded-xl flex items-center gap-4">
-                            <div
-                                class="w-20 h-20 bg-surface-container-lowest rounded-lg overflow-hidden flex items-center justify-center p-2">
-                                <img alt="Soft microfiber anti-fog cloth for spectacles folded neatly on a textured fabric background"
-                                    class="w-full h-full object-contain"
-                                    data-alt="Soft microfiber anti-fog cloth for spectacles folded neatly on a textured fabric background"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcb2ZB8vCeqGEXc4RuvduOsSbwENouhNbIYYKK3GpuQ1ILHlv6I5-LStzwpovDE5SPOKvLKIYVAUuSeocs7mjOmy89_u5zIxr1uGuVOZlWsL7nZXQpvqZrQkh7Q07tvAbqFq0ma2gIUujhw_xbUob8BSgH45Z3rbx15FAddmMD_HX1wKyxQtEAxgJ6zecg8QRT3pV0iuOuXDFuAm2ccWlCghSSw5Wlx16rRAFfHmyi79DxEXHFMy-_frWh52PlCPrF3GU6Ax1MaBk" />
-                            </div>
-                            <div class="flex-grow">
-                                <h4 class="font-bold text-primary text-sm uppercase tracking-tight">Khăn lau chống bám
-                                    hơi sương</h4>
-                                <p class="text-primary font-extrabold text-md">80.000₫</p>
-                            </div>
-                            <button class="bg-primary text-on-primary p-2 rounded-lg hover:scale-95 transition-all"
-                                data-cart-action="add-to-cart">
-                                <span class="material-symbols-outlined">add_shopping_cart</span>
-                            </button>
-                        </div>
-                    </div>
-                </section>
+                <div class="flex-grow">
+                  <h4
+                    class="font-bold text-primary text-sm uppercase tracking-tight"
+                  >
+                    Nước rửa kính chuyên dụng
+                  </h4>
+                  <p class="text-primary font-extrabold text-md">150.000₫</p>
+                </div>
+                <button
+                  class="bg-primary text-on-primary p-2 rounded-lg hover:scale-95 transition-all"
+                  data-cart-action="add-to-cart"
+                >
+                  <span class="material-symbols-outlined"
+                    >add_shopping_cart</span
+                  >
+                </button>
+              </div>
+              <!-- Upsell 2 -->
+              <div
+                class="bg-surface-container-low p-4 rounded-xl flex items-center gap-4"
+              >
+                <div
+                  class="w-20 h-20 bg-surface-container-lowest rounded-lg overflow-hidden flex items-center justify-center p-2"
+                >
+                  <img
+                    alt="Soft microfiber anti-fog cloth for spectacles folded neatly on a textured fabric background"
+                    class="w-full h-full object-contain"
+                    data-alt="Soft microfiber anti-fog cloth for spectacles folded neatly on a textured fabric background"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcb2ZB8vCeqGEXc4RuvduOsSbwENouhNbIYYKK3GpuQ1ILHlv6I5-LStzwpovDE5SPOKvLKIYVAUuSeocs7mjOmy89_u5zIxr1uGuVOZlWsL7nZXQpvqZrQkh7Q07tvAbqFq0ma2gIUujhw_xbUob8BSgH45Z3rbx15FAddmMD_HX1wKyxQtEAxgJ6zecg8QRT3pV0iuOuXDFuAm2ccWlCghSSw5Wlx16rRAFfHmyi79DxEXHFMy-_frWh52PlCPrF3GU6Ax1MaBk"
+                  />
+                </div>
+                <div class="flex-grow">
+                  <h4
+                    class="font-bold text-primary text-sm uppercase tracking-tight"
+                  >
+                    Khăn lau chống bám hơi sương
+                  </h4>
+                  <p class="text-primary font-extrabold text-md">80.000₫</p>
+                </div>
+                <button
+                  class="bg-primary text-on-primary p-2 rounded-lg hover:scale-95 transition-all"
+                  data-cart-action="add-to-cart"
+                >
+                  <span class="material-symbols-outlined"
+                    >add_shopping_cart</span
+                  >
+                </button>
+              </div>
             </div>
-            <!-- Cột tổng kết đơn hàng -->
-            <aside class="lg:col-span-4 sticky top-32">
-                <div class="bg-surface-container p-8 rounded-xl space-y-6">
-                    <h2 class="font-headline text-2xl font-bold text-primary">Tổng cộng</h2>
-                    <div class="space-y-4">
-                        <div class="flex justify-between items-center text-on-surface-variant">
-                            <span class="font-medium">Tạm tính</span>
-                            <span class="font-bold" id="cart-tam-tinh">0₫</span>
-                        </div>
-                        <div class="flex justify-between items-center text-on-surface-variant">
-                            <span class="font-medium">Thuế (VAT 8%)</span>
-                            <span class="font-bold" id="cart-vat">0₫</span>
-                        </div>
-                        <div class="flex justify-between items-center text-on-surface-variant">
-                            <span class="font-medium">Phí vận chuyển</span>
-                            <span class="text-secondary font-bold">Miễn phí</span>
-                        </div>
-                        <div class="pt-4 border-t border-outline-variant/30">
-                            <div class="flex justify-between items-end">
-                                <span class="font-headline font-bold text-primary text-xl">Thành tiền</span>
-                                <span class="font-headline font-extrabold text-primary text-3xl tracking-tighter"
-                                    id="cart-thanh-tien">0₫</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="space-y-3">
-                        <label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Mã giảm
-                            giá</label>
-                        <div class="flex gap-2">
-                            <input
-                                class="flex-grow bg-surface-container-highest border-none rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-outline"
-                                placeholder="Nhập mã của bạn" type="text" />
-                            <button
-                                class="bg-primary text-on-primary px-4 py-3 rounded-lg font-bold text-sm uppercase hover:opacity-90 transition-opacity">Áp
-                                dụng</button>
-                        </div>
-                    </div>
-                    <button
-                        class="w-full bg-gradient-to-br from-secondary to-secondary-container text-on-secondary-fixed py-5 rounded-xl font-headline font-extrabold text-lg shadow-lg shadow-secondary/20 hover:scale-[1.02] active:scale-95 transition-all"
-                        id="cart-checkout-btn">
-                        Tiến hành thanh toán
-                    </button>
-                    <div class="pt-4 flex items-center justify-center gap-4 text-outline-variant">
-                        <span class="material-symbols-outlined text-[32px]">payments</span>
-                        <span class="material-symbols-outlined text-[32px]">credit_card</span>
-                        <span class="material-symbols-outlined text-[32px]">account_balance</span>
-                    </div>
-                </div>
-                <div class="mt-6 flex items-center justify-center gap-2 text-on-surface-variant text-sm font-medium">
-                    <span class="material-symbols-outlined text-sm">lock</span>
-                    Thanh toán an toàn &amp; bảo mật
-                </div>
-            </aside>
+          </section>
         </div>
+        <!-- Cột tổng kết đơn hàng -->
+        <aside class="lg:col-span-4 sticky top-32">
+          <div class="bg-surface-container p-8 rounded-xl space-y-6">
+            <h2 class="font-headline text-2xl font-bold text-primary">
+              Tổng cộng
+            </h2>
+            <div class="space-y-4">
+              <div
+                class="flex justify-between items-center text-on-surface-variant"
+              >
+                <span class="font-medium">Tạm tính</span>
+                <span class="font-bold" id="cart-tam-tinh">0₫</span>
+              </div>
+              <div
+                class="flex justify-between items-center text-on-surface-variant"
+              >
+                <span class="font-medium">Thuế (VAT 8%)</span>
+                <span class="font-bold" id="cart-vat">0₫</span>
+              </div>
+              <div
+                class="flex justify-between items-center text-on-surface-variant"
+              >
+                <span class="font-medium">Phí vận chuyển</span>
+                <span class="text-secondary font-bold">Miễn phí</span>
+              </div>
+              <div class="pt-4 border-t border-outline-variant/30">
+                <div class="flex justify-between items-end">
+                  <span class="font-headline font-bold text-primary text-xl"
+                    >Thành tiền</span
+                  >
+                  <span
+                    class="font-headline font-extrabold text-primary text-3xl tracking-tighter"
+                    id="cart-thanh-tien"
+                    >0₫</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="space-y-3">
+              <label
+                class="text-xs font-bold uppercase tracking-widest text-on-surface-variant"
+                >Mã giảm giá</label
+              >
+              <div class="flex gap-2">
+                <input
+                  class="flex-grow bg-surface-container-highest border-none rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-outline"
+                  placeholder="Nhập mã của bạn"
+                  type="text"
+                />
+                <button
+                  class="bg-primary text-on-primary px-4 py-3 rounded-lg font-bold text-sm uppercase hover:opacity-90 transition-opacity"
+                >
+                  Áp dụng
+                </button>
+              </div>
+            </div>
+            <button
+              class="w-full bg-gradient-to-br from-secondary to-secondary-container text-on-secondary-fixed py-5 rounded-xl font-headline font-extrabold text-lg shadow-lg shadow-secondary/20 hover:scale-[1.02] active:scale-95 transition-all"
+              id="cart-checkout-btn"
+              disabled
+            >
+              Tiến hành thanh toán
+            </button>
+            <div
+              class="pt-4 flex items-center justify-center gap-4 text-outline-variant"
+            >
+              <span class="material-symbols-outlined text-[32px]"
+                >payments</span
+              >
+              <span class="material-symbols-outlined text-[32px]"
+                >credit_card</span
+              >
+              <span class="material-symbols-outlined text-[32px]"
+                >account_balance</span
+              >
+            </div>
+          </div>
+          <div
+            class="mt-6 flex items-center justify-center gap-2 text-on-surface-variant text-sm font-medium"
+          >
+            <span class="material-symbols-outlined text-sm">lock</span>
+            Thanh toán an toàn &amp; bảo mật
+          </div>
+        </aside>
+      </div>
     </main>
     <!-- Chân trang (Footer) -->
-    <footer class="w-full border-t border-[#e1e3e4]/20 bg-[#edeeef] dark:bg-[#191c1d]">
+    <footer
+      class="w-full border-t border-[#e1e3e4]/20 bg-[#edeeef] dark:bg-[#191c1d]"
+    >
+      <div
+        class="flex flex-col md:flex-row justify-between items-center px-10 py-12 space-y-4 md:space-y-0 max-w-[1920px] mx-auto"
+      >
         <div
-            class="flex flex-col md:flex-row justify-between items-center px-10 py-12 space-y-4 md:space-y-0 max-w-[1920px] mx-auto">
-            <div class="font-['Inter'] text-xs uppercase tracking-widest text-[#002366] dark:text-[#fdc003]">
-                © 2026 Kính Xanh Optical. Premium Vision Care.
-            </div>
-            <div class="flex space-x-8">
-                <a class="font-['Inter'] text-xs uppercase tracking-widest text-[#191c1d] dark:text-[#e1e3e4] opacity-60 hover:opacity-100 transition-opacity"
-                    href="privacy.html">Chính Sách Bảo Mật</a>
-                <a class="font-['Inter'] text-xs uppercase tracking-widest text-[#191c1d] dark:text-[#e1e3e4] opacity-60 hover:opacity-100 transition-opacity"
-                    href="terms.html">Điều Khoản Dịch Vụ</a>
-                <a class="font-['Inter'] text-xs uppercase tracking-widest text-[#191c1d] dark:text-[#e1e3e4] opacity-60 hover:opacity-100 transition-opacity"
-                    href="guide.html">Hướng dẫn đo mắt</a>
-                <a class="font-['Inter'] text-xs uppercase tracking-widest text-[#191c1d] dark:text-[#e1e3e4] opacity-60 hover:opacity-100 transition-opacity"
-                    href="support.html">Liên Hệ</a>
-            </div>
+          class="font-['Inter'] text-xs uppercase tracking-widest text-[#002366] dark:text-[#fdc003]"
+        >
+          © 2026 Kính Xanh Optical. Premium Vision Care.
         </div>
+        <div class="flex space-x-8">
+          <a
+            class="font-['Inter'] text-xs uppercase tracking-widest text-[#191c1d] dark:text-[#e1e3e4] opacity-60 hover:opacity-100 transition-opacity"
+            href="privacy.html"
+            >Chính Sách Bảo Mật</a
+          >
+          <a
+            class="font-['Inter'] text-xs uppercase tracking-widest text-[#191c1d] dark:text-[#e1e3e4] opacity-60 hover:opacity-100 transition-opacity"
+            href="terms.html"
+            >Điều Khoản Dịch Vụ</a
+          >
+          <a
+            class="font-['Inter'] text-xs uppercase tracking-widest text-[#191c1d] dark:text-[#e1e3e4] opacity-60 hover:opacity-100 transition-opacity"
+            href="guide.html"
+            >Hướng dẫn đo mắt</a
+          >
+          <a
+            class="font-['Inter'] text-xs uppercase tracking-widest text-[#191c1d] dark:text-[#e1e3e4] opacity-60 hover:opacity-100 transition-opacity"
+            href="support.html"
+            >Liên Hệ</a
+          >
+        </div>
+      </div>
     </footer>
     <script src="js/main.js"></script>
     <script src="js/add-to-cart.js"></script>
     <script src="js/cart-api.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init({ duration: 800, once: true, offset: 50 });</script>
-</body>
-
+    <script>
+      AOS.init({ duration: 800, once: true, offset: 50 });
+    </script>
+    <!-- <script src="js/cart-checkout.js"></script> -->
+  </body>
 </html>
 <!-- Kính Xanh - Giỏ hàng -->

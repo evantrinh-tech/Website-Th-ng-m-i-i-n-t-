@@ -1,495 +1,903 @@
 <!-- File: index.html - Trang chủ của Kính Xanh -->
 <!-- Design System -->
-<!DOCTYPE html>
+<!doctype html>
 
 <html class="light" lang="vi">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
     <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
     <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script src="js/tailwind-config.js"></script>
     <link href="css/style.css" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>Kính Xanh | Trang chủ</title>
     <meta
-        content="Trang chủ Kính Xanh với bộ sưu tập kính mắt, khuyến mại, thương hiệu nổi bật và thông tin hỗ trợ khách hàng."
-        name="description" />
-</head>
+      content="Trang chủ Kính Xanh với bộ sưu tập kính mắt, khuyến mại, thương hiệu nổi bật và thông tin hỗ trợ khách hàng."
+      name="description"
+    />
+  </head>
 
-<body class="bg-surface text-on-surface font-body leading-relaxed page-fade">
+  <body class="bg-surface text-on-surface font-body leading-relaxed page-fade">
     <!-- Phần 1: Thanh thông báo trên cùng -->
-    <div class="bg-primary text-on-primary py-2.5 px-4 text-center text-sm font-semibold tracking-wide">
-        Giảm giá 20% cho đơn hàng đầu tiên. Mã: <span class="text-secondary-container">KINHXANH20</span>
+    <div
+      class="bg-primary text-on-primary py-2.5 px-4 text-center text-sm font-semibold tracking-wide"
+    >
+      Giảm giá 20% cho đơn hàng đầu tiên. Mã:
+      <span class="text-secondary-container">KINHXANH20</span>
     </div>
     <!-- Phần 2: Thanh điều hướng (Header) -->
     <header
-        class="bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl docked full-width top-0 sticky z-50 shadow-sm dark:shadow-none flex justify-between items-center px-8 py-4 max-w-[1440px] mx-auto w-full">
-        <div class="flex items-center gap-8">
-            <a class="text-2xl font-black tracking-tighter text-[#002366] dark:text-blue-400 font-['Manrope']"
-                href="index.html">Kính Xanh</a>
-            <nav class="hidden xl:flex items-center gap-6">
-                <a class="text-[#002366] dark:text-blue-300 font-bold border-b-2 border-[#fdc003] pb-1 font-['Manrope'] tracking-tight"
-                    href="products.html">Bộ sưu tập</a>
-                <a class="text-slate-600 dark:text-slate-400 hover:text-[#00113a] dark:hover:text-blue-100 transition-colors font-['Manrope'] tracking-tight"
-                    href="products.html">Bán chạy</a>
-                <a class="text-slate-600 dark:text-slate-400 hover:text-[#00113a] dark:hover:text-blue-100 transition-colors font-['Manrope'] tracking-tight"
-                    href="index.html#flash-sale">Khuyến mãi</a>
-                <a class="text-slate-600 hover:text-[#00113a] transition-colors cursor-pointer"
-                    href="brands.html">Thương hiệu</a>
-                <a class="text-slate-600 hover:text-[#00113a] transition-colors cursor-pointer" href="support.html">Hỗ
-                    trợ</a>
-            </nav>
+      class="bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl docked full-width top-0 sticky z-50 shadow-sm dark:shadow-none flex justify-between items-center px-8 py-4 max-w-[1440px] mx-auto w-full"
+    >
+      <div class="flex items-center gap-8">
+        <a
+          class="text-2xl font-black tracking-tighter text-[#002366] dark:text-blue-400 font-['Manrope']"
+          href="index.html"
+          >Kính Xanh</a
+        >
+        <nav class="hidden xl:flex items-center gap-6">
+          <a
+            class="text-[#002366] dark:text-blue-300 font-bold border-b-2 border-[#fdc003] pb-1 font-['Manrope'] tracking-tight"
+            href="products.html"
+            >Bộ sưu tập</a
+          >
+          <a
+            class="text-slate-600 dark:text-slate-400 hover:text-[#00113a] dark:hover:text-blue-100 transition-colors font-['Manrope'] tracking-tight"
+            href="products.html"
+            >Bán chạy</a
+          >
+          <a
+            class="text-slate-600 dark:text-slate-400 hover:text-[#00113a] dark:hover:text-blue-100 transition-colors font-['Manrope'] tracking-tight"
+            href="index.html#flash-sale"
+            >Khuyến mãi</a
+          >
+          <a
+            class="text-slate-600 hover:text-[#00113a] transition-colors cursor-pointer"
+            href="brands.html"
+            >Thương hiệu</a
+          >
+          <a
+            class="text-slate-600 hover:text-[#00113a] transition-colors cursor-pointer"
+            href="support.html"
+            >Hỗ trợ</a
+          >
+        </nav>
+      </div>
+      <div class="flex items-center gap-6">
+        <div
+          class="hidden md:flex items-center bg-surface-container-high rounded-full px-4 py-2 w-64"
+        >
+          <span class="material-symbols-outlined text-outline text-sm"
+            >search</span
+          >
+          <input
+            class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-outline"
+            data-product-search="true"
+            placeholder="Tìm kiếm sản phẩm..."
+            type="text"
+          />
         </div>
-        <div class="flex items-center gap-6">
-            <div class="hidden md:flex items-center bg-surface-container-high rounded-full px-4 py-2 w-64">
-                <span class="material-symbols-outlined text-outline text-sm">search</span>
-                <input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-outline"
-                    data-product-search="true" placeholder="Tìm kiếm sản phẩm..." type="text" />
-            </div>
-            <div class="flex items-center gap-4 text-[#00113a] dark:text-blue-200">
-                <button
-                    class="hover:bg-[#edeeef] dark:hover:bg-slate-800 transition-all duration-300 p-2 rounded-full scale-95 active:scale-90 transition-transform">
-                    <span class="material-symbols-outlined">favorite</span>
-                </button>
-                <div class="relative flex items-center">
-                    <a class="hover:bg-[#edeeef] dark:hover:bg-slate-800 transition-all duration-300 p-2 rounded-full scale-95 active:scale-90 transition-transform inline-block"
-                        href="cart.html">
-                        <span class="material-symbols-outlined">shopping_cart</span>
-                    </a>
-                    <span
-                        class="absolute top-0 right-0 bg-secondary text-on-secondary text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center pointer-events-none"
-                        data-cart-count="true">2</span>
-                </div>
-                <a class="hover:bg-[#edeeef] dark:hover:bg-slate-800 transition-all duration-300 p-2 rounded-full scale-95 active:scale-90 transition-transform inline-block"
-                    href="login.html">
-                    <span class="material-symbols-outlined">person</span>
-                </a>
-            </div>
+        <div class="flex items-center gap-4 text-[#00113a] dark:text-blue-200">
+          <button
+            class="hover:bg-[#edeeef] dark:hover:bg-slate-800 transition-all duration-300 p-2 rounded-full scale-95 active:scale-90 transition-transform"
+          >
+            <span class="material-symbols-outlined">favorite</span>
+          </button>
+          <div class="relative flex items-center">
+            <a
+              class="hover:bg-[#edeeef] dark:hover:bg-slate-800 transition-all duration-300 p-2 rounded-full scale-95 active:scale-90 transition-transform inline-block"
+              href="cart.html"
+            >
+              <span class="material-symbols-outlined">shopping_cart</span>
+            </a>
+            <span
+              class="absolute top-0 right-0 bg-secondary text-on-secondary text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center pointer-events-none"
+              data-cart-count="true"
+              >2</span
+            >
+          </div>
+          <a
+            class="hover:bg-[#edeeef] dark:hover:bg-slate-800 transition-all duration-300 p-2 rounded-full scale-95 active:scale-90 transition-transform inline-block"
+            href="login.html"
+            data-auth-link
+          >
+            <span class="material-symbols-outlined">person</span>
+          </a>
         </div>
+      </div>
     </header>
     <!-- Phần 3: Biểu ngữ chính (Hero Banner) -->
-    <section class="relative w-full h-[600px] overflow-hidden bg-surface-container" data-aos="fade-up">
-        <img alt="high-fashion editorial photography of a model wearing luxury sunglasses on a minimalist bright architectural background with soft shadows"
-            class="absolute inset-0 w-full h-full object-cover"
-            data-alt="high-fashion editorial photography of a model wearing luxury sunglasses on a minimalist bright architectural background with soft shadows"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKTe3L2VuOY9aEPHK4CQiYI1JydsmdGa7zwd2fPwTtUVUjA4Rpwv87TNElV1xDqgGQc7yfphtIeyiOKdLjKjqV-lA1MyKHes0fY5w7bVw8ue6SD29cyXK1dxWGdxazZlrDjkzwmkPnSz54hTkMVT2bwQ5uxDfirFat-kxfnTvcZRypY6uq49XXMt-fGXR_V680KhySll2wZaiwWiKmLfa_o0cO9tGIgGqH3LCYJU7mEOshsSqNWJImoORxkRAIz-Ps1oRmKpI0F48" />
-        <div class="absolute inset-0 bg-gradient-to-r from-primary/40 to-transparent"></div>
-        <div class="relative max-w-[1440px] mx-auto h-full flex flex-col justify-center px-8 md:px-20">
-            <span class="text-on-primary-container font-bold tracking-widest uppercase mb-4 text-sm">Exclusive
-                Release</span>
-            <h1 class="text-white font-headline text-5xl md:text-7xl font-extrabold max-w-2xl leading-tight mb-8">
-                See the World in Detail.<br />Bộ sưu tập Hè 2026.
-            </h1>
-            <div class="flex gap-4">
-                <button
-                    class="bg-gradient-to-br from-secondary to-secondary-container text-on-secondary-fixed px-8 py-4 rounded-xl font-bold shadow-lg hover:translate-y-[-2px] transition-all"
-                    onclick="window.location.href='products.html'">
-                    Mua Sắm Ngay
-                </button>
-                <button
-                    class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-xl font-bold hover:bg-white/20 transition-all"
-                    onclick="window.location.href='products.html'">
-                    Xem Bộ Sưu Tập
-                </button>
-            </div>
+    <section
+      class="relative w-full h-[600px] overflow-hidden bg-surface-container"
+      data-aos="fade-up"
+    >
+      <img
+        alt="high-fashion editorial photography of a model wearing luxury sunglasses on a minimalist bright architectural background with soft shadows"
+        class="absolute inset-0 w-full h-full object-cover"
+        data-alt="high-fashion editorial photography of a model wearing luxury sunglasses on a minimalist bright architectural background with soft shadows"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKTe3L2VuOY9aEPHK4CQiYI1JydsmdGa7zwd2fPwTtUVUjA4Rpwv87TNElV1xDqgGQc7yfphtIeyiOKdLjKjqV-lA1MyKHes0fY5w7bVw8ue6SD29cyXK1dxWGdxazZlrDjkzwmkPnSz54hTkMVT2bwQ5uxDfirFat-kxfnTvcZRypY6uq49XXMt-fGXR_V680KhySll2wZaiwWiKmLfa_o0cO9tGIgGqH3LCYJU7mEOshsSqNWJImoORxkRAIz-Ps1oRmKpI0F48"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-primary/40 to-transparent"
+      ></div>
+      <div
+        class="relative max-w-[1440px] mx-auto h-full flex flex-col justify-center px-8 md:px-20"
+      >
+        <span
+          class="text-on-primary-container font-bold tracking-widest uppercase mb-4 text-sm"
+          >Exclusive Release</span
+        >
+        <h1
+          class="text-white font-headline text-5xl md:text-7xl font-extrabold max-w-2xl leading-tight mb-8"
+        >
+          See the World in Detail.<br />Bộ sưu tập Hè 2026.
+        </h1>
+        <div class="flex gap-4">
+          <button
+            class="bg-gradient-to-br from-secondary to-secondary-container text-on-secondary-fixed px-8 py-4 rounded-xl font-bold shadow-lg hover:translate-y-[-2px] transition-all"
+            onclick="window.location.href = 'products.html'"
+          >
+            Mua Sắm Ngay
+          </button>
+          <button
+            class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-xl font-bold hover:bg-white/20 transition-all"
+            onclick="window.location.href = 'products.html'"
+          >
+            Xem Bộ Sưu Tập
+          </button>
         </div>
+      </div>
     </section>
     <!-- Phần 4: Danh mục nổi bật -->
     <section class="max-w-[1440px] mx-auto px-8 py-20" data-aos="fade-up">
-        <div class="flex items-end justify-between mb-12">
-            <div>
-                <h2 class="font-headline text-4xl font-bold text-primary mb-2">Danh mục nổi bật</h2>
-                <p class="text-on-surface-variant">Khám phá phong cách phù hợp với đôi mắt bạn</p>
-            </div>
+      <div class="flex items-end justify-between mb-12">
+        <div>
+          <h2 class="font-headline text-4xl font-bold text-primary mb-2">
+            Danh mục nổi bật
+          </h2>
+          <p class="text-on-surface-variant">
+            Khám phá phong cách phù hợp với đôi mắt bạn
+          </p>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
-            <div class="group cursor-pointer text-center" data-aos="zoom-in" data-aos-delay="100"
-                onclick="window.location.href='products.html'">
-                <div class="aspect-square bg-surface-container-high rounded-full mb-4 overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform duration-500"
-                    data-aos="zoom-in" data-aos-delay="100">
-                    <span class="material-symbols-outlined text-5xl text-primary"
-                        style="font-variation-settings: 'wght' 200;">visibility</span>
-                </div>
-                <h3 class="font-bold text-primary">Mắt Kính Cận</h3>
-            </div>
-            <div class="group cursor-pointer text-center" data-aos="zoom-in" data-aos-delay="100"
-                onclick="window.location.href='products.html'">
-                <div class="aspect-square bg-surface-container-high rounded-full mb-4 overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform duration-500"
-                    data-aos="zoom-in" data-aos-delay="100">
-                    <span class="material-symbols-outlined text-5xl text-primary"
-                        style="font-variation-settings: 'wght' 200;">wb_sunny</span>
-                </div>
-                <h3 class="font-bold text-primary">Kính Mát</h3>
-            </div>
-            <div class="group cursor-pointer text-center" data-aos="zoom-in" data-aos-delay="100"
-                onclick="window.location.href='products.html'">
-                <div class="aspect-square bg-surface-container-high rounded-full mb-4 overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform duration-500"
-                    data-aos="zoom-in" data-aos-delay="100">
-                    <span class="material-symbols-outlined text-5xl text-primary"
-                        style="font-variation-settings: 'wght' 200;">laptop_mac</span>
-                </div>
-                <h3 class="font-bold text-primary">Chống Ánh Sáng Xanh</h3>
-            </div>
-            <div class="group cursor-pointer text-center" data-aos="zoom-in" data-aos-delay="100"
-                onclick="window.location.href='products.html'">
-                <div class="aspect-square bg-surface-container-high rounded-full mb-4 overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform duration-500"
-                    data-aos="zoom-in" data-aos-delay="100">
-                    <span class="material-symbols-outlined text-5xl text-primary"
-                        style="font-variation-settings: 'wght' 200;">lens</span>
-                </div>
-                <h3 class="font-bold text-primary">Kính Áp Tròng</h3>
-            </div>
-            <div class="group cursor-pointer text-center" data-aos="zoom-in" data-aos-delay="100"
-                onclick="window.location.href='products.html'">
-                <div class="aspect-square bg-surface-container-high rounded-full mb-4 overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform duration-500"
-                    data-aos="zoom-in" data-aos-delay="100">
-                    <span class="material-symbols-outlined text-5xl text-primary"
-                        style="font-variation-settings: 'wght' 200;">cleaning_services</span>
-                </div>
-                <h3 class="font-bold text-primary">Phụ Kiện</h3>
-            </div>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+        <div
+          class="group cursor-pointer text-center"
+          data-aos="zoom-in"
+          data-aos-delay="100"
+          onclick="window.location.href = 'products.html'"
+        >
+          <div
+            class="aspect-square bg-surface-container-high rounded-full mb-4 overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform duration-500"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <span
+              class="material-symbols-outlined text-5xl text-primary"
+              style="font-variation-settings: &quot;wght&quot; 200"
+              >visibility</span
+            >
+          </div>
+          <h3 class="font-bold text-primary">Mắt Kính Cận</h3>
         </div>
+        <div
+          class="group cursor-pointer text-center"
+          data-aos="zoom-in"
+          data-aos-delay="100"
+          onclick="window.location.href = 'products.html'"
+        >
+          <div
+            class="aspect-square bg-surface-container-high rounded-full mb-4 overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform duration-500"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <span
+              class="material-symbols-outlined text-5xl text-primary"
+              style="font-variation-settings: &quot;wght&quot; 200"
+              >wb_sunny</span
+            >
+          </div>
+          <h3 class="font-bold text-primary">Kính Mát</h3>
+        </div>
+        <div
+          class="group cursor-pointer text-center"
+          data-aos="zoom-in"
+          data-aos-delay="100"
+          onclick="window.location.href = 'products.html'"
+        >
+          <div
+            class="aspect-square bg-surface-container-high rounded-full mb-4 overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform duration-500"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <span
+              class="material-symbols-outlined text-5xl text-primary"
+              style="font-variation-settings: &quot;wght&quot; 200"
+              >laptop_mac</span
+            >
+          </div>
+          <h3 class="font-bold text-primary">Chống Ánh Sáng Xanh</h3>
+        </div>
+        <div
+          class="group cursor-pointer text-center"
+          data-aos="zoom-in"
+          data-aos-delay="100"
+          onclick="window.location.href = 'products.html'"
+        >
+          <div
+            class="aspect-square bg-surface-container-high rounded-full mb-4 overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform duration-500"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <span
+              class="material-symbols-outlined text-5xl text-primary"
+              style="font-variation-settings: &quot;wght&quot; 200"
+              >lens</span
+            >
+          </div>
+          <h3 class="font-bold text-primary">Kính Áp Tròng</h3>
+        </div>
+        <div
+          class="group cursor-pointer text-center"
+          data-aos="zoom-in"
+          data-aos-delay="100"
+          onclick="window.location.href = 'products.html'"
+        >
+          <div
+            class="aspect-square bg-surface-container-high rounded-full mb-4 overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform duration-500"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <span
+              class="material-symbols-outlined text-5xl text-primary"
+              style="font-variation-settings: &quot;wght&quot; 200"
+              >cleaning_services</span
+            >
+          </div>
+          <h3 class="font-bold text-primary">Phụ Kiện</h3>
+        </div>
+      </div>
     </section>
     <!-- Phần 5: Sản phẩm khuyến mãi (Flash Sale) -->
     <section class="bg-primary py-20" data-aos="fade-up" id="flash-sale">
-        <div class="max-w-[1440px] mx-auto px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between mb-12 gap-6">
-                <div class="flex items-center gap-6">
-                    <h2 class="font-headline text-4xl font-bold text-white">Flash Sale</h2>
-                    <div class="flex items-center gap-3">
-                        <div class="bg-secondary text-on-secondary px-3 py-2 rounded-lg font-bold">02</div>
-                        <span class="text-white">:</span>
-                        <div class="bg-secondary text-on-secondary px-3 py-2 rounded-lg font-bold">14</div>
-                        <span class="text-white">:</span>
-                        <div class="bg-secondary text-on-secondary px-3 py-2 rounded-lg font-bold">55</div>
-                    </div>
-                </div>
-                <a class="text-secondary-fixed font-bold flex items-center gap-2 hover:underline"
-                    href="products.html">Xem tất cả
-                    <span class="material-symbols-outlined">arrow_forward</span></a>
+      <div class="max-w-[1440px] mx-auto px-8">
+        <div
+          class="flex flex-col md:flex-row items-center justify-between mb-12 gap-6"
+        >
+          <div class="flex items-center gap-6">
+            <h2 class="font-headline text-4xl font-bold text-white">
+              Flash Sale
+            </h2>
+            <div class="flex items-center gap-3">
+              <div
+                class="bg-secondary text-on-secondary px-3 py-2 rounded-lg font-bold"
+              >
+                02
+              </div>
+              <span class="text-white">:</span>
+              <div
+                class="bg-secondary text-on-secondary px-3 py-2 rounded-lg font-bold"
+              >
+                14
+              </div>
+              <span class="text-white">:</span>
+              <div
+                class="bg-secondary text-on-secondary px-3 py-2 rounded-lg font-bold"
+              >
+                55
+              </div>
             </div>
-            <div class="flex gap-6 overflow-x-auto pb-8 scrollbar-hide">
-                <div class="min-w-[280px] bg-white rounded-2xl p-4 group relative transition-all hover:shadow-2xl"
-                    data-aos="zoom-in" data-aos-delay="100" data-slug="ray-ban-classic-wayfarer">
-                    <div class="absolute top-4 left-4 bg-error text-white text-xs font-bold px-2 py-1 rounded-md z-10">
-                        -35%</div>
-                    <div class="aspect-[4/3] bg-surface-container rounded-xl overflow-hidden mb-4">
-                        <img alt="professional photo of sleek rectangular black acetate eye frames on a soft gray background"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                            data-alt="professional photo of sleek rectangular black acetate eye frames on a soft gray background"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_V3Xiu1TbquWhmxXfz3azP0M0E66qHnPcXeQtUQWlqCHtJKzauLrP2Lil9XToLuyn3R_EAYDPrzKQhTOAysTkBhE3yY7efJq4BKg0sIEmz_enTUGVGC4YUJR0VRJ41Dr2auSbigdqLHncVaYmkKw-qwx7NJDrhUfOJmIpdx4Olq9o0gUntQ1DoGej5dEEEthxbw6EoqgpemRclTkWUIGpss8BuNNu1gqQI0U-tjCNMyLJS7QKmbS22j6xB0asuDUVwTc_Czf_Yzs" />
-                    </div>
-                    <h3 class="font-bold text-primary truncate mb-1">Ray-Ban Classic Wayfarer</h3>
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="text-primary font-bold">1,450,000₫</span>
-                        <span class="text-outline line-through text-sm">2,230,000₫</span>
-                    </div>
-                    <button
-                        class="w-full py-3 bg-primary-container text-on-primary-container rounded-lg font-semibold hover:bg-primary transition-colors"
-                        data-cart-action="add-to-cart">Thêm
-                        vào giỏ</button>
-                </div>
-                <!-- Product 2 -->
-                <div class="min-w-[280px] bg-white rounded-2xl p-4 group relative transition-all hover:shadow-2xl"
-                    data-aos="zoom-in" data-aos-delay="100" data-slug="gucci-geometric-frame">
-                    <div class="absolute top-4 left-4 bg-error text-white text-xs font-bold px-2 py-1 rounded-md z-10">
-                        -20%</div>
-                    <div class="aspect-[4/3] bg-surface-container rounded-xl overflow-hidden mb-4">
-                        <img alt="modern round rose gold metal eye frames reflecting warm studio lighting"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                            data-alt="modern round rose gold metal eye frames reflecting warm studio lighting"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0pb9FsTSrn2s6c-IyUoFCNEG3P7O0YtYxZg0Ra4avbtNvdVnok-0afLFr9Z0dr5Zv9_BN6MP3BjTY1n81tFovVOekzqq_Xexa-14VJcJcL-cClTZx2wPbV1bDWW_XRlsWBz7h0ifI9bzODHRuiLFC5LFYN4_8m7Cclg2GWNAePz8F_vJ8t4xC_EhIcb76LQ05Oy0gFP8FZr05imCbmCzKkvVabKpo2gy2A2N_CSuyMnlsUfV5XUVtlytcQEQim749dqhsAZkhv3Q" />
-                    </div>
-                    <h3 class="font-bold text-primary truncate mb-1">Gucci Geometric Frame</h3>
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="text-primary font-bold">4,800,000₫</span>
-                        <span class="text-outline line-through text-sm">6,000,000₫</span>
-                    </div>
-                    <button
-                        class="w-full py-3 bg-primary-container text-on-primary-container rounded-lg font-semibold hover:bg-primary transition-colors"
-                        data-cart-action="add-to-cart">Thêm
-                        vào giỏ</button>
-                </div>
-                <!-- Product 3 -->
-                <div class="min-w-[280px] bg-white rounded-2xl p-4 group relative transition-all hover:shadow-2xl"
-                    data-aos="zoom-in" data-aos-delay="100" data-slug="oakley-holbrook-tortoise">
-                    <div class="absolute top-4 left-4 bg-error text-white text-xs font-bold px-2 py-1 rounded-md z-10">
-                        -15%</div>
-                    <div class="aspect-[4/3] bg-surface-container rounded-xl overflow-hidden mb-4">
-                        <img alt="stylist clear transparent eye frames for computer use with anti-blue light coating"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                            data-alt="stylist clear transparent eye frames for computer use with anti-blue light coating"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzc_0Op1NmjGRvbsQLJgIkbiF6c8cHQnawHDdcEQPF8V1QCqSwHaXbsVl9Gt-qmKbSf44W9ctFEqBOHy3Qkq1koDR4O6G1zsKTmp_AI0AKGWEXRd1SP4-W3wtNLDsaEkQ-TKBCqDJkpnsb6kZyvp5aLoOHHcSIlDYthSsR-RhzvcCXDOx8R8ofMvlCcfHxllqAB8omzUNAL5M7vwxD3G8r7xz2aZIokLqm-gKVAJ2OrmUJEuONMfWEciJJQ1xzO4FUBaNGM15VRhk" />
-                    </div>
-                    <h3 class="font-bold text-primary truncate mb-1">Oakley Holbrook Prizm</h3>
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="text-primary font-bold">3,120,000₫</span>
-                        <span class="text-outline line-through text-sm">3,670,000₫</span>
-                    </div>
-                    <button
-                        class="w-full py-3 bg-primary-container text-on-primary-container rounded-lg font-semibold hover:bg-primary transition-colors"
-                        data-cart-action="add-to-cart">Thêm
-                        vào giỏ</button>
-                </div>
-                <!-- Product 4 -->
-                <div class="min-w-[280px] bg-white rounded-2xl p-4 group relative transition-all hover:shadow-2xl"
-                    data-aos="zoom-in" data-aos-delay="100" data-slug="prada-heritage-black">
-                    <div class="absolute top-4 left-4 bg-error text-white text-xs font-bold px-2 py-1 rounded-md z-10">
-                        -50%</div>
-                    <div class="aspect-[4/3] bg-surface-container rounded-xl overflow-hidden mb-4">
-                        <img alt="minimalist frameless glasses with silver titanium temples on a clean white surface"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                            data-alt="minimalist frameless glasses with silver titanium temples on a clean white surface"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8CW2DrJm8w0LUIxF33frg3qZPy08HQUxhXk1I1zzcngLkpi3nLpwGbzO2qyF6wQHB7KHI3o28nZn6e5DMOeLV87eaZaYjqtk2iEbovGHopQcBYmITb6NK5aOTpwPJr2LEEjYPtUFUgAtC9m6dVOVHllDOLYvdub0DNXgpG03Y7QU2dUCZSKMGJ56OMDYepfDP4G3Q3tBhI9yPzOW_WQLSEp06Iy2qNGMPXKH9GE1dLRWnut_nYkcwActUP3nD9E-40TmvnuUecWA" />
-                    </div>
-                    <h3 class="font-bold text-primary truncate mb-1">Prada Heritage Black</h3>
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="text-primary font-bold">2,400,000₫</span>
-                        <span class="text-outline line-through text-sm">4,800,000₫</span>
-                    </div>
-                    <button
-                        class="w-full py-3 bg-primary-container text-on-primary-container rounded-lg font-semibold hover:bg-primary transition-colors"
-                        data-cart-action="add-to-cart">Thêm
-                        vào giỏ</button>
-                </div>
-            </div>
+          </div>
+          <a
+            class="text-secondary-fixed font-bold flex items-center gap-2 hover:underline"
+            href="products.html"
+            >Xem tất cả
+            <span class="material-symbols-outlined">arrow_forward</span></a
+          >
         </div>
+        <div class="flex gap-6 overflow-x-auto pb-8 scrollbar-hide">
+          <div
+            class="min-w-[280px] bg-white rounded-2xl p-4 group relative transition-all hover:shadow-2xl"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+            data-slug="ray-ban-classic-wayfarer"
+          >
+            <div
+              class="absolute top-4 left-4 bg-error text-white text-xs font-bold px-2 py-1 rounded-md z-10"
+            >
+              -35%
+            </div>
+            <div
+              class="aspect-[4/3] bg-surface-container rounded-xl overflow-hidden mb-4"
+            >
+              <img
+                alt="professional photo of sleek rectangular black acetate eye frames on a soft gray background"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                data-alt="professional photo of sleek rectangular black acetate eye frames on a soft gray background"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_V3Xiu1TbquWhmxXfz3azP0M0E66qHnPcXeQtUQWlqCHtJKzauLrP2Lil9XToLuyn3R_EAYDPrzKQhTOAysTkBhE3yY7efJq4BKg0sIEmz_enTUGVGC4YUJR0VRJ41Dr2auSbigdqLHncVaYmkKw-qwx7NJDrhUfOJmIpdx4Olq9o0gUntQ1DoGej5dEEEthxbw6EoqgpemRclTkWUIGpss8BuNNu1gqQI0U-tjCNMyLJS7QKmbS22j6xB0asuDUVwTc_Czf_Yzs"
+              />
+            </div>
+            <h3 class="font-bold text-primary truncate mb-1">
+              Ray-Ban Classic Wayfarer
+            </h3>
+            <div class="flex items-center gap-2 mb-4">
+              <span class="text-primary font-bold">1,450,000₫</span>
+              <span class="text-outline line-through text-sm">2,230,000₫</span>
+            </div>
+            <button
+              class="w-full py-3 bg-primary-container text-on-primary-container rounded-lg font-semibold hover:bg-primary transition-colors"
+              data-cart-action="add-to-cart"
+            >
+              Thêm vào giỏ
+            </button>
+          </div>
+          <!-- Product 2 -->
+          <div
+            class="min-w-[280px] bg-white rounded-2xl p-4 group relative transition-all hover:shadow-2xl"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+            data-slug="gucci-geometric-frame"
+          >
+            <div
+              class="absolute top-4 left-4 bg-error text-white text-xs font-bold px-2 py-1 rounded-md z-10"
+            >
+              -20%
+            </div>
+            <div
+              class="aspect-[4/3] bg-surface-container rounded-xl overflow-hidden mb-4"
+            >
+              <img
+                alt="modern round rose gold metal eye frames reflecting warm studio lighting"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                data-alt="modern round rose gold metal eye frames reflecting warm studio lighting"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0pb9FsTSrn2s6c-IyUoFCNEG3P7O0YtYxZg0Ra4avbtNvdVnok-0afLFr9Z0dr5Zv9_BN6MP3BjTY1n81tFovVOekzqq_Xexa-14VJcJcL-cClTZx2wPbV1bDWW_XRlsWBz7h0ifI9bzODHRuiLFC5LFYN4_8m7Cclg2GWNAePz8F_vJ8t4xC_EhIcb76LQ05Oy0gFP8FZr05imCbmCzKkvVabKpo2gy2A2N_CSuyMnlsUfV5XUVtlytcQEQim749dqhsAZkhv3Q"
+              />
+            </div>
+            <h3 class="font-bold text-primary truncate mb-1">
+              Gucci Geometric Frame
+            </h3>
+            <div class="flex items-center gap-2 mb-4">
+              <span class="text-primary font-bold">4,800,000₫</span>
+              <span class="text-outline line-through text-sm">6,000,000₫</span>
+            </div>
+            <button
+              class="w-full py-3 bg-primary-container text-on-primary-container rounded-lg font-semibold hover:bg-primary transition-colors"
+              data-cart-action="add-to-cart"
+            >
+              Thêm vào giỏ
+            </button>
+          </div>
+          <!-- Product 3 -->
+          <div
+            class="min-w-[280px] bg-white rounded-2xl p-4 group relative transition-all hover:shadow-2xl"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+            data-slug="oakley-holbrook-tortoise"
+          >
+            <div
+              class="absolute top-4 left-4 bg-error text-white text-xs font-bold px-2 py-1 rounded-md z-10"
+            >
+              -15%
+            </div>
+            <div
+              class="aspect-[4/3] bg-surface-container rounded-xl overflow-hidden mb-4"
+            >
+              <img
+                alt="stylist clear transparent eye frames for computer use with anti-blue light coating"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                data-alt="stylist clear transparent eye frames for computer use with anti-blue light coating"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzc_0Op1NmjGRvbsQLJgIkbiF6c8cHQnawHDdcEQPF8V1QCqSwHaXbsVl9Gt-qmKbSf44W9ctFEqBOHy3Qkq1koDR4O6G1zsKTmp_AI0AKGWEXRd1SP4-W3wtNLDsaEkQ-TKBCqDJkpnsb6kZyvp5aLoOHHcSIlDYthSsR-RhzvcCXDOx8R8ofMvlCcfHxllqAB8omzUNAL5M7vwxD3G8r7xz2aZIokLqm-gKVAJ2OrmUJEuONMfWEciJJQ1xzO4FUBaNGM15VRhk"
+              />
+            </div>
+            <h3 class="font-bold text-primary truncate mb-1">
+              Oakley Holbrook Prizm
+            </h3>
+            <div class="flex items-center gap-2 mb-4">
+              <span class="text-primary font-bold">3,120,000₫</span>
+              <span class="text-outline line-through text-sm">3,670,000₫</span>
+            </div>
+            <button
+              class="w-full py-3 bg-primary-container text-on-primary-container rounded-lg font-semibold hover:bg-primary transition-colors"
+              data-cart-action="add-to-cart"
+            >
+              Thêm vào giỏ
+            </button>
+          </div>
+          <!-- Product 4 -->
+          <div
+            class="min-w-[280px] bg-white rounded-2xl p-4 group relative transition-all hover:shadow-2xl"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+            data-slug="prada-heritage-black"
+          >
+            <div
+              class="absolute top-4 left-4 bg-error text-white text-xs font-bold px-2 py-1 rounded-md z-10"
+            >
+              -50%
+            </div>
+            <div
+              class="aspect-[4/3] bg-surface-container rounded-xl overflow-hidden mb-4"
+            >
+              <img
+                alt="minimalist frameless glasses with silver titanium temples on a clean white surface"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                data-alt="minimalist frameless glasses with silver titanium temples on a clean white surface"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8CW2DrJm8w0LUIxF33frg3qZPy08HQUxhXk1I1zzcngLkpi3nLpwGbzO2qyF6wQHB7KHI3o28nZn6e5DMOeLV87eaZaYjqtk2iEbovGHopQcBYmITb6NK5aOTpwPJr2LEEjYPtUFUgAtC9m6dVOVHllDOLYvdub0DNXgpG03Y7QU2dUCZSKMGJ56OMDYepfDP4G3Q3tBhI9yPzOW_WQLSEp06Iy2qNGMPXKH9GE1dLRWnut_nYkcwActUP3nD9E-40TmvnuUecWA"
+              />
+            </div>
+            <h3 class="font-bold text-primary truncate mb-1">
+              Prada Heritage Black
+            </h3>
+            <div class="flex items-center gap-2 mb-4">
+              <span class="text-primary font-bold">2,400,000₫</span>
+              <span class="text-outline line-through text-sm">4,800,000₫</span>
+            </div>
+            <button
+              class="w-full py-3 bg-primary-container text-on-primary-container rounded-lg font-semibold hover:bg-primary transition-colors"
+              data-cart-action="add-to-cart"
+            >
+              Thêm vào giỏ
+            </button>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- Phần 6: Sản phẩm bán chạy (Phong cách Bento) -->
     <section class="max-w-[1440px] mx-auto px-8 py-20" data-aos="fade-up">
-        <h2 class="font-headline text-4xl font-bold text-primary mb-12 text-center">Bestsellers</h2>
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-full md:h-[800px]">
-            <div class="md:col-span-8 bg-surface-container rounded-3xl relative overflow-hidden group"
-                data-aos="zoom-in" data-aos-delay="100">
-                <img alt="close-up editorial of a model wearing high-end tortoise shell glasses looking confidently into the camera"
-                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    data-alt="close-up editorial of a model wearing high-end tortoise shell glasses looking confidently into the camera"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsnfUDyXlMBBeMpMqD62SaRqFgnTbozxZDI3F2GLjk2ay2p0KAOfxWBBVxU9oHpWx88lLPuoy48Slj5-N-R09ddLJTzBvMOytblb1S6bNUO4Cy3ibeCiXpuHP6Ta1ag0hjH-qFSCNRQNJtOWcG-xBjv1YbHWJvJQ6O6XJXccwo01vm-bSVR6aU0EIxGk8INEq2S7cSqCJvLiDMdIpkOuhXu0D2RGDwsQaesSMu4D1Au8cqdB1KFhgj3GPyHmtIyK6q4hPbGvD3NyA" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
-            </div>
-            <div class="md:col-span-4 flex flex-col gap-6">
-                <div class="h-1/2 bg-secondary-container rounded-3xl p-8 relative overflow-hidden group"
-                    data-aos="zoom-in" data-aos-delay="100">
-                    <div class="relative z-10">
-                        <h3 class="text-2xl font-bold text-on-secondary-container mb-4">Mắt Kính Ray-Ban</h3>
-                        <p class="text-on-secondary-container/70 mb-6">Biểu tượng thời trang vượt thời gian</p>
-                        <button id="explore-rayban"
-                            class="bg-primary text-white px-5 py-2.5 rounded-lg text-sm font-bold">Khám phá</button>
-                    </div>
-                    <img alt="iconic rayban aviator sunglasses floating against a vibrant yellow background"
-                        class="absolute right-[-20%] bottom-[-10%] w-2/3 object-contain transition-transform group-hover:rotate-12 duration-500"
-                        data-alt="iconic rayban aviator sunglasses floating against a vibrant yellow background"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX82LkXzN4Pn04ZsmzXTqwASP3YCwFPGukZjdECTvDdN7ykJT6JcWnfNeb0ORC4-qh2qoMO-HVwru3YhKQLsV1JFmvF1rE8ogpHYYRwsiTn8WRjiveQwgO_YOxEAhiVn3yKPqT47Yh_dWisnW68XhHx8s0gvK5Hgafk-a1eiPuyycuJehdeTcBxd0gKd5Lgdfz4cDlhcObP2KGUwW_oHdT_uc_vnakY763t3CNAQw-EeRMNRYK5bEKbesIk1Q0-F9JS59AGCSU_fY" />
-                </div>
-                <div
-                    class="h-1/2 bg-white border border-outline-variant rounded-3xl p-8 flex flex-col justify-center items-center text-center">
-                    <span class="material-symbols-outlined text-5xl text-primary mb-4">stars</span>
-                    <h3 class="text-xl font-bold text-primary mb-2">Được yêu thích nhất</h3>
-                    <p class="text-on-surface-variant text-sm mb-6">Dựa trên 5,000+ đánh giá 5 sao từ khách hàng thực tế
-                    </p>
-                    <button class="text-primary font-bold border-b-2 border-primary">Xem bảng xếp hạng</button>
-                </div>
-            </div>
+      <h2
+        class="font-headline text-4xl font-bold text-primary mb-12 text-center"
+      >
+        Bestsellers
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-full md:h-[800px]">
+        <div
+          class="md:col-span-8 bg-surface-container rounded-3xl relative overflow-hidden group"
+          data-aos="zoom-in"
+          data-aos-delay="100"
+        >
+          <img
+            alt="close-up editorial of a model wearing high-end tortoise shell glasses looking confidently into the camera"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            data-alt="close-up editorial of a model wearing high-end tortoise shell glasses looking confidently into the camera"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsnfUDyXlMBBeMpMqD62SaRqFgnTbozxZDI3F2GLjk2ay2p0KAOfxWBBVxU9oHpWx88lLPuoy48Slj5-N-R09ddLJTzBvMOytblb1S6bNUO4Cy3ibeCiXpuHP6Ta1ag0hjH-qFSCNRQNJtOWcG-xBjv1YbHWJvJQ6O6XJXccwo01vm-bSVR6aU0EIxGk8INEq2S7cSqCJvLiDMdIpkOuhXu0D2RGDwsQaesSMu4D1Au8cqdB1KFhgj3GPyHmtIyK6q4hPbGvD3NyA"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"
+          ></div>
         </div>
+        <div class="md:col-span-4 flex flex-col gap-6">
+          <div
+            class="h-1/2 bg-secondary-container rounded-3xl p-8 relative overflow-hidden group"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <div class="relative z-10">
+              <h3 class="text-2xl font-bold text-on-secondary-container mb-4">
+                Mắt Kính Ray-Ban
+              </h3>
+              <p class="text-on-secondary-container/70 mb-6">
+                Biểu tượng thời trang vượt thời gian
+              </p>
+              <button
+                id="explore-rayban"
+                class="bg-primary text-white px-5 py-2.5 rounded-lg text-sm font-bold"
+              >
+                Khám phá
+              </button>
+            </div>
+            <img
+              alt="iconic rayban aviator sunglasses floating against a vibrant yellow background"
+              class="absolute right-[-20%] bottom-[-10%] w-2/3 object-contain transition-transform group-hover:rotate-12 duration-500"
+              data-alt="iconic rayban aviator sunglasses floating against a vibrant yellow background"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX82LkXzN4Pn04ZsmzXTqwASP3YCwFPGukZjdECTvDdN7ykJT6JcWnfNeb0ORC4-qh2qoMO-HVwru3YhKQLsV1JFmvF1rE8ogpHYYRwsiTn8WRjiveQwgO_YOxEAhiVn3yKPqT47Yh_dWisnW68XhHx8s0gvK5Hgafk-a1eiPuyycuJehdeTcBxd0gKd5Lgdfz4cDlhcObP2KGUwW_oHdT_uc_vnakY763t3CNAQw-EeRMNRYK5bEKbesIk1Q0-F9JS59AGCSU_fY"
+            />
+          </div>
+          <div
+            class="h-1/2 bg-white border border-outline-variant rounded-3xl p-8 flex flex-col justify-center items-center text-center"
+          >
+            <span class="material-symbols-outlined text-5xl text-primary mb-4"
+              >stars</span
+            >
+            <h3 class="text-xl font-bold text-primary mb-2">
+              Được yêu thích nhất
+            </h3>
+            <p class="text-on-surface-variant text-sm mb-6">
+              Dựa trên 5,000+ đánh giá 5 sao từ khách hàng thực tế
+            </p>
+            <button class="text-primary font-bold border-b-2 border-primary">
+              Xem bảng xếp hạng
+            </button>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Phần 11: Điểm nổi bật về chính sách -->
-    <section class="max-w-[1440px] mx-auto px-8 py-20 border-b border-surface-variant" data-aos="fade-up">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
-            <div class="flex flex-col items-center text-center">
-                <div class="w-16 h-16 bg-surface-container-high rounded-2xl flex items-center justify-center mb-6">
-                    <span class="material-symbols-outlined text-3xl text-secondary">local_shipping</span>
-                </div>
-                <h3 class="font-bold text-primary mb-2">Miễn phí vận chuyển</h3>
-                <p class="text-sm text-on-surface-variant">Cho đơn hàng từ 500k toàn quốc</p>
-            </div>
-            <div class="flex flex-col items-center text-center">
-                <div class="w-16 h-16 bg-surface-container-high rounded-2xl flex items-center justify-center mb-6">
-                    <span class="material-symbols-outlined text-3xl text-secondary">published_with_changes</span>
-                </div>
-                <h3 class="font-bold text-primary mb-2">Đổi trả 30 ngày</h3>
-                <p class="text-sm text-on-surface-variant">Lỗi là đổi, không cần lý do</p>
-            </div>
-            <div class="flex flex-col items-center text-center">
-                <div class="w-16 h-16 bg-surface-container-high rounded-2xl flex items-center justify-center mb-6">
-                    <span class="material-symbols-outlined text-3xl text-secondary">verified_user</span>
-                </div>
-                <h3 class="font-bold text-primary mb-2">Bảo hành trọn đời</h3>
-                <p class="text-sm text-on-surface-variant">Vệ sinh, thay ốc vít miễn phí</p>
-            </div>
-            <div class="flex flex-col items-center text-center">
-                <div class="w-16 h-16 bg-surface-container-high rounded-2xl flex items-center justify-center mb-6">
-                    <span class="material-symbols-outlined text-3xl text-secondary">health_and_safety</span>
-                </div>
-                <h3 class="font-bold text-primary mb-2">Kiểm tra thị lực</h3>
-                <p class="text-sm text-on-surface-variant">Bởi bác sĩ chuyên khoa mắt</p>
-            </div>
+    <section
+      class="max-w-[1440px] mx-auto px-8 py-20 border-b border-surface-variant"
+      data-aos="fade-up"
+    >
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div class="flex flex-col items-center text-center">
+          <div
+            class="w-16 h-16 bg-surface-container-high rounded-2xl flex items-center justify-center mb-6"
+          >
+            <span class="material-symbols-outlined text-3xl text-secondary"
+              >local_shipping</span
+            >
+          </div>
+          <h3 class="font-bold text-primary mb-2">Miễn phí vận chuyển</h3>
+          <p class="text-sm text-on-surface-variant">
+            Cho đơn hàng từ 500k toàn quốc
+          </p>
         </div>
+        <div class="flex flex-col items-center text-center">
+          <div
+            class="w-16 h-16 bg-surface-container-high rounded-2xl flex items-center justify-center mb-6"
+          >
+            <span class="material-symbols-outlined text-3xl text-secondary"
+              >published_with_changes</span
+            >
+          </div>
+          <h3 class="font-bold text-primary mb-2">Đổi trả 30 ngày</h3>
+          <p class="text-sm text-on-surface-variant">
+            Lỗi là đổi, không cần lý do
+          </p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <div
+            class="w-16 h-16 bg-surface-container-high rounded-2xl flex items-center justify-center mb-6"
+          >
+            <span class="material-symbols-outlined text-3xl text-secondary"
+              >verified_user</span
+            >
+          </div>
+          <h3 class="font-bold text-primary mb-2">Bảo hành trọn đời</h3>
+          <p class="text-sm text-on-surface-variant">
+            Vệ sinh, thay ốc vít miễn phí
+          </p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <div
+            class="w-16 h-16 bg-surface-container-high rounded-2xl flex items-center justify-center mb-6"
+          >
+            <span class="material-symbols-outlined text-3xl text-secondary"
+              >health_and_safety</span
+            >
+          </div>
+          <h3 class="font-bold text-primary mb-2">Kiểm tra thị lực</h3>
+          <p class="text-sm text-on-surface-variant">
+            Bởi bác sĩ chuyên khoa mắt
+          </p>
+        </div>
+      </div>
     </section>
     <!-- Phần 12: Đánh giá khách hàng -->
     <section class="max-w-[1440px] mx-auto px-8 py-20" data-aos="fade-up">
-        <h2 class="font-headline text-4xl font-bold text-primary mb-12">Khách hàng nói về chúng tôi</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <h2 class="font-headline text-4xl font-bold text-primary mb-12">
+        Khách hàng nói về chúng tôi
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div
+          class="bg-white p-8 rounded-3xl border border-outline-variant shadow-sm hover:shadow-md transition-all"
+        >
+          <div class="flex text-secondary mb-4">
+            <span
+              class="material-symbols-outlined"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >star</span
+            >
+            <span
+              class="material-symbols-outlined"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >star</span
+            >
+            <span
+              class="material-symbols-outlined"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >star</span
+            >
+            <span
+              class="material-symbols-outlined"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >star</span
+            >
+            <span
+              class="material-symbols-outlined"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >star</span
+            >
+          </div>
+          <p class="italic text-on-surface-variant mb-8">
+            "Dịch vụ rất chuyên nghiệp, đo mắt cực kỳ kỹ lưỡng. Gọng kính ở đây
+            mẫu mã đa dạng, trẻ trung mà giá lại rất hợp lý. Sẽ còn ủng hộ dài
+            dài!"
+          </p>
+          <div class="flex items-center gap-4">
             <div
-                class="bg-white p-8 rounded-3xl border border-outline-variant shadow-sm hover:shadow-md transition-all">
-                <div class="flex text-secondary mb-4">
-                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                </div>
-                <p class="italic text-on-surface-variant mb-8">"Dịch vụ rất chuyên nghiệp, đo mắt cực kỳ kỹ lưỡng. Gọng
-                    kính ở đây mẫu mã đa dạng, trẻ trung mà giá lại rất hợp lý. Sẽ còn ủng hộ dài dài!"</p>
-                <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container">
-                        <img alt="portrait of a smiling young woman wearing stylish glasses in a modern office setting"
-                            class="w-full h-full object-cover"
-                            data-alt="portrait of a smiling young woman wearing stylish glasses in a modern office setting"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAVDJkpdrHkhIBm7siv6LZMN7aff9cG-QCiS8jEbhw0s6XEkGxmgfSHzE639Wb3eyGbYBQdkA3tPLAlmzOEzKd6muhtvt0waT9pWiBILuwpvOMaYVdm2Dd6R0BurQ46ojyo0zWcO0itmPzh3OTBcEqs3AWRfIB55_6DYIUsXYYNIB-pqoJYyI-BR6tGzHFc7OgONwP_sIfMo5UBqUWuKw2FAO9TbrdWxRo6pq_pfE0XSvMEBLtn0EOe2zrtMUt64Am56GsfvYnsbg" />
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-primary">Minh Anh</h4>
-                        <p class="text-xs text-on-surface-variant">TP. Hồ Chí Minh</p>
-                    </div>
-                </div>
-            </div>
-            <div
-                class="bg-white p-8 rounded-3xl border border-outline-variant shadow-sm hover:shadow-md transition-all">
-                <div class="flex text-secondary mb-4">
-                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                </div>
-                <p class="italic text-on-surface-variant mb-8">"Lần đầu tiên mua kính online mà ưng ý như vậy. Kính nhận
-                    được y hệt hình, đóng gói cẩn thận. Nhân viên tư vấn dáng kính rất có tâm."</p>
-                <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container">
-                        <img alt="professional headshot of a man with glasses smiling against a blurred urban background"
-                            class="w-full h-full object-cover"
-                            data-alt="professional headshot of a man with glasses smiling against a blurred urban background"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe7e9e4wEVMdgUWaWLPD-fOEvNo-iLjuLajEVZfVOp3CZXgUNMwtMO6FVjxDdrYetVtjHpWqAxV_455bqx7ewgckHKVR92TrrFuIrgKOpWjgt7fCmIRyjVBZ5RfmenIeStu-oys3-UX-Y2ieJfkc13DecRGf8KLfOKI3aPqXcAxyiTUSZNz0o4kXeG1BqbYVM_zYJmK2rghXYUCo8WjK302L7BSZJGIBf94HP0-7_IREKXMCOUXtm8ZIzNYAKQHnfDc-s-4h6iqWA" />
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-primary">Hoàng Nam</h4>
-                        <p class="text-xs text-on-surface-variant">Hà Nội</p>
-                    </div>
-                </div>
-            </div>
-            <div
-                class="bg-white p-8 rounded-3xl border border-outline-variant shadow-sm hover:shadow-md transition-all">
-                <div class="flex text-secondary mb-4">
-                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                </div>
-                <p class="italic text-on-surface-variant mb-8">"Mình bị cận nặng nên rất khó tìm tròng kính mỏng. Kính
-                    Xanh đã tư vấn cho mình loại tròng chiết suất cao rất đẹp. Cảm ơn cửa hàng!"</p>
-                <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container">
-                        <img alt="smiling woman wearing trendy glasses outdoors in a sunlit garden"
-                            class="w-full h-full object-cover"
-                            data-alt="smiling woman wearing trendy glasses outdoors in a sunlit garden"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwMLh_YQ6vSx5GHOdlmaZZWa2C8DPlCW7Tuu5fK_2wMMMuVp01Xv2mMhpaRPPdcp4nHlfDOtt-wJjw5udXs0o_9uM1C8yXyccgQnB06claLgx83QRmA4BIkuJM97CXrMoUD02ARydiucoh6uQSVIxH8odARK06Rpr8wfGum0p_TtT7HInwiN9OpPvjSk4lO-8X1UNn2Gza8yU5RHezlCMewfB6Xf-gOUgVvw5khV4Et4WR3q--YvdVKbE11OcrX4q79eGqVXHfFEs" />
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-primary">Thanh Thảo</h4>
-                        <p class="text-xs text-on-surface-variant">Đà Nẵng</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Phần 14: Chân trang (Footer) -->
-    <footer class="bg-[#edeeef] dark:bg-slate-950 full-width mt-20 border-t border-[#e1e3e4] dark:border-slate-800">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-[1440px] mx-auto">
-            <div>
-                <a class="text-xl font-extrabold text-[#002366] dark:text-blue-400 font-['Inter'] mb-6 block"
-                    href="index.html">Kính Xanh</a>
-                <p class="text-slate-500 dark:text-slate-400 text-[0.875rem] mb-6 leading-relaxed">
-                    Hệ thống cửa hàng mắt kính uy tín hàng đầu, chuyên cung cấp các giải pháp thị lực toàn diện và phong
-                    cách thời trang kính mắt hiện đại.
-                </p>
-                <div class="flex gap-4">
-                    <a class="w-10 h-10 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center hover:bg-secondary-container transition-colors"
-                        href="https://www.facebook.com/" rel="noopener noreferrer" target="_blank">
-                        <span class="material-symbols-outlined text-primary text-xl">share</span>
-                    </a>
-                    <a class="w-10 h-10 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center hover:bg-secondary-container transition-colors"
-                        href="support.html">
-                        <span class="material-symbols-outlined text-primary text-xl">contact_mail</span>
-                    </a>
-                </div>
+              class="w-12 h-12 rounded-full overflow-hidden bg-surface-container"
+            >
+              <img
+                alt="portrait of a smiling young woman wearing stylish glasses in a modern office setting"
+                class="w-full h-full object-cover"
+                data-alt="portrait of a smiling young woman wearing stylish glasses in a modern office setting"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAVDJkpdrHkhIBm7siv6LZMN7aff9cG-QCiS8jEbhw0s6XEkGxmgfSHzE639Wb3eyGbYBQdkA3tPLAlmzOEzKd6muhtvt0waT9pWiBILuwpvOMaYVdm2Dd6R0BurQ46ojyo0zWcO0itmPzh3OTBcEqs3AWRfIB55_6DYIUsXYYNIB-pqoJYyI-BR6tGzHFc7OgONwP_sIfMo5UBqUWuKw2FAO9TbrdWxRo6pq_pfE0XSvMEBLtn0EOe2zrtMUt64Am56GsfvYnsbg"
+              />
             </div>
             <div>
-                <h4 class="font-bold text-primary dark:text-blue-300 mb-6 font-['Inter']">Khám Phá</h4>
-                <ul class="space-y-4">
-                    <li><a class="text-slate-500 dark:text-slate-400 hover:text-[#002366] dark:hover:text-blue-300 underline transition-all font-['Inter'] text-[0.875rem]"
-                            href="about.html">Về Kính Xanh</a></li>
-                    <li><a class="text-slate-500 dark:text-slate-400 hover:text-[#002366] dark:hover:text-blue-300 underline transition-all font-['Inter'] text-[0.875rem]"
-                            href="guide.html">Cẩm Nang Nhãn Khoa</a></li>
-                    <li><a class="text-slate-500 dark:text-slate-400 hover:text-[#002366] dark:hover:text-blue-300 underline transition-all font-['Inter'] text-[0.875rem]"
-                            href="stores.html">Hệ Thống Cửa Hàng</a></li>
-                </ul>
+              <h4 class="font-bold text-primary">Minh Anh</h4>
+              <p class="text-xs text-on-surface-variant">TP. Hồ Chí Minh</p>
             </div>
-            <div>
-                <h4 class="font-bold text-primary dark:text-blue-300 mb-6 font-['Inter']">Hỗ Trợ Khách Hàng</h4>
-                <ul class="space-y-4">
-                    <li><a class="text-slate-500 dark:text-slate-400 hover:text-[#002366] dark:hover:text-blue-300 underline transition-all font-['Inter'] text-[0.875rem]"
-                            href="terms.html">Điều Khoản Dịch Vụ</a></li>
-                    <li><a class="text-slate-500 dark:text-slate-400 hover:text-[#002366] dark:hover:text-blue-300 underline transition-all font-['Inter'] text-[0.875rem]"
-                            href="support.html">Liên Hệ Hỗ Trợ</a></li>
-                    <li><a class="text-slate-500 dark:text-slate-400 hover:text-[#002366] dark:hover:text-blue-300 underline transition-all font-['Inter'] text-[0.875rem]"
-                            href="privacy.html">Chính Sách Bảo Mật</a></li>
-                </ul>
-            </div>
-            <div class="h-48 bg-white dark:bg-slate-900 rounded-2xl overflow-hidden relative">
-                <div class="absolute inset-0 bg-slate-200" data-location="Ho Chi Minh City">
-                    <img alt="clean minimalist map graphic showing street grid of a central metropolitan area with a navy blue location pin"
-                        class="w-full h-full object-cover"
-                        data-alt="clean minimalist map graphic showing street grid of a central metropolitan area with a navy blue location pin"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2ForZPBHX7rTe39O9sm20fm_bCH9SlN3HDOw6ko7VPcCPE0HhSeN0-r1UT4wzDYoTDgz5d1rKRiNGxJk4l6iMYh8705JB7TAwVtwF4fKmPT6HcbkRpQQQbfrStXvg_68auYHb7Mwyb0cSgEK0mTRPuv_MwNdwqGc8hZ9a7uLGn8Nad_JQXtBv_xuzUOM2MzrXSTzN8kFzwEchyx3Qo8RPYjGllauDco-AuJF9Sep63ohEfoqcjKCiKwGKL2eGBsVyFRHcVcwZbGw" />
-                </div>
-            </div>
+          </div>
         </div>
         <div
-            class="max-w-[1440px] mx-auto px-8 py-8 border-t border-[#e1e3e4] dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-slate-500 dark:text-slate-400 text-[0.875rem] font-['Inter']">© 2026 Kính Xanh Optical. See
-                the world in detail.</p>
-            <div class="flex gap-6">
-                <img alt="Visa payment provider logo icon" class="h-6 opacity-60 hover:opacity-100 transition-opacity"
-                    data-alt="Visa payment provider logo icon"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg_1eK-pKf2-DdLjWBx8mgoG1MtWZX_Vp1owYyy5X2rQyKq9ObGxKE1vS51MT0Cl5MWRBm8UuEjfdYnWVglUrxwDcXVaE9ru1nae8P8mr6GV9q0lG1Ie9sLBz7XvYmkoZTT9zfU3NTnC8mgRI942rkzj3dgz3oh9v2sqPU_OG85kRAhCQfuVHfVaNJ7Flta7pLYOPlomWUfY2qZFrS4y7alnsBLvULgkN2zXfu8GYVIIbnEVtn1ezUbnP0AkqqMf3X7DUm8s_AmGc" />
-                <img alt="Mastercard payment provider logo icon"
-                    class="h-6 opacity-60 hover:opacity-100 transition-opacity"
-                    data-alt="Mastercard payment provider logo icon"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6ikNVn4wu6fnectVfs1EjrU7HHxQA5gpcHzdp1h8i41UrRiAhM2VAZfKvM_bO_lz1CFiW1c2tp44gtYdiaMWX2Sj2aPU06XsETgnIE5GrVYzpGpbXQWKRk-_Br_VbEPIHgwF2wG6JyEGXWzxVWQXCmWo1ebkoNdRTaAiX0tJlNW_hY4LsOTuFk5vsH0vseLkkhu2yoLBqUfCHncTOHJFAXjv1_8jZFjy5G0l5sgCngyRn_2qpqcp585TLv4CJkjEnoixwya9R-Rw" />
-                <img alt="Momo e-wallet payment provider logo icon"
-                    class="h-6 opacity-60 hover:opacity-100 transition-opacity"
-                    data-alt="Momo e-wallet payment provider logo icon"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcYqOPZXjlpqB5a-f0uvfdlyTM2apJIkULOVBtzQYqCS1081CZks9fMrtwGikCuE_QtW9ZgHGwxI9kKogMZlZ8Zu1lFcOXPrAaizllFxAyaqpYfcj2Byg9BzWUOpI3HBcXj1QxgG3lBfrT_k7cLJ4k1q6ODYw0fi9xqmxUX10aAQQGndIfUZWDFGen3W6zG3L6V_peTsV_SkcPMJVsaalECB1RvvsWUSP_RXc5YS4aq23xGQ4gqn1Cc2Z2F9j8GC5hFvqseZtkY6Q" />
+          class="bg-white p-8 rounded-3xl border border-outline-variant shadow-sm hover:shadow-md transition-all"
+        >
+          <div class="flex text-secondary mb-4">
+            <span
+              class="material-symbols-outlined"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >star</span
+            >
+            <span
+              class="material-symbols-outlined"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >star</span
+            >
+            <span
+              class="material-symbols-outlined"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >star</span
+            >
+            <span
+              class="material-symbols-outlined"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >star</span
+            >
+            <span
+              class="material-symbols-outlined"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >star</span
+            >
+          </div>
+          <p class="italic text-on-surface-variant mb-8">
+            "Lần đầu tiên mua kính online mà ưng ý như vậy. Kính nhận được y hệt
+            hình, đóng gói cẩn thận. Nhân viên tư vấn dáng kính rất có tâm."
+          </p>
+          <div class="flex items-center gap-4">
+            <div
+              class="w-12 h-12 rounded-full overflow-hidden bg-surface-container"
+            >
+              <img
+                alt="professional headshot of a man with glasses smiling against a blurred urban background"
+                class="w-full h-full object-cover"
+                data-alt="professional headshot of a man with glasses smiling against a blurred urban background"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe7e9e4wEVMdgUWaWLPD-fOEvNo-iLjuLajEVZfVOp3CZXgUNMwtMO6FVjxDdrYetVtjHpWqAxV_455bqx7ewgckHKVR92TrrFuIrgKOpWjgt7fCmIRyjVBZ5RfmenIeStu-oys3-UX-Y2ieJfkc13DecRGf8KLfOKI3aPqXcAxyiTUSZNz0o4kXeG1BqbYVM_zYJmK2rghXYUCo8WjK302L7BSZJGIBf94HP0-7_IREKXMCOUXtm8ZIzNYAKQHnfDc-s-4h6iqWA"
+              />
             </div>
+            <div>
+              <h4 class="font-bold text-primary">Hoàng Nam</h4>
+              <p class="text-xs text-on-surface-variant">Hà Nội</p>
+            </div>
+          </div>
         </div>
+        <div
+          class="bg-white p-8 rounded-3xl border border-outline-variant shadow-sm hover:shadow-md transition-all"
+        >
+          <div class="flex text-secondary mb-4">
+            <span
+              class="material-symbols-outlined"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >star</span
+            >
+            <span
+              class="material-symbols-outlined"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >star</span
+            >
+            <span
+              class="material-symbols-outlined"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >star</span
+            >
+            <span
+              class="material-symbols-outlined"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >star</span
+            >
+            <span
+              class="material-symbols-outlined"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >star</span
+            >
+          </div>
+          <p class="italic text-on-surface-variant mb-8">
+            "Mình bị cận nặng nên rất khó tìm tròng kính mỏng. Kính Xanh đã tư
+            vấn cho mình loại tròng chiết suất cao rất đẹp. Cảm ơn cửa hàng!"
+          </p>
+          <div class="flex items-center gap-4">
+            <div
+              class="w-12 h-12 rounded-full overflow-hidden bg-surface-container"
+            >
+              <img
+                alt="smiling woman wearing trendy glasses outdoors in a sunlit garden"
+                class="w-full h-full object-cover"
+                data-alt="smiling woman wearing trendy glasses outdoors in a sunlit garden"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwMLh_YQ6vSx5GHOdlmaZZWa2C8DPlCW7Tuu5fK_2wMMMuVp01Xv2mMhpaRPPdcp4nHlfDOtt-wJjw5udXs0o_9uM1C8yXyccgQnB06claLgx83QRmA4BIkuJM97CXrMoUD02ARydiucoh6uQSVIxH8odARK06Rpr8wfGum0p_TtT7HInwiN9OpPvjSk4lO-8X1UNn2Gza8yU5RHezlCMewfB6Xf-gOUgVvw5khV4Et4WR3q--YvdVKbE11OcrX4q79eGqVXHfFEs"
+              />
+            </div>
+            <div>
+              <h4 class="font-bold text-primary">Thanh Thảo</h4>
+              <p class="text-xs text-on-surface-variant">Đà Nẵng</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Phần 14: Chân trang (Footer) -->
+    <footer
+      class="bg-[#edeeef] dark:bg-slate-950 full-width mt-20 border-t border-[#e1e3e4] dark:border-slate-800"
+    >
+      <div
+        class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-[1440px] mx-auto"
+      >
+        <div>
+          <a
+            class="text-xl font-extrabold text-[#002366] dark:text-blue-400 font-['Inter'] mb-6 block"
+            href="index.html"
+            >Kính Xanh</a
+          >
+          <p
+            class="text-slate-500 dark:text-slate-400 text-[0.875rem] mb-6 leading-relaxed"
+          >
+            Hệ thống cửa hàng mắt kính uy tín hàng đầu, chuyên cung cấp các giải
+            pháp thị lực toàn diện và phong cách thời trang kính mắt hiện đại.
+          </p>
+          <div class="flex gap-4">
+            <a
+              class="w-10 h-10 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center hover:bg-secondary-container transition-colors"
+              href="https://www.facebook.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span class="material-symbols-outlined text-primary text-xl"
+                >share</span
+              >
+            </a>
+            <a
+              class="w-10 h-10 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center hover:bg-secondary-container transition-colors"
+              href="support.html"
+            >
+              <span class="material-symbols-outlined text-primary text-xl"
+                >contact_mail</span
+              >
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4
+            class="font-bold text-primary dark:text-blue-300 mb-6 font-['Inter']"
+          >
+            Khám Phá
+          </h4>
+          <ul class="space-y-4">
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-[#002366] dark:hover:text-blue-300 underline transition-all font-['Inter'] text-[0.875rem]"
+                href="about.html"
+                >Về Kính Xanh</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-[#002366] dark:hover:text-blue-300 underline transition-all font-['Inter'] text-[0.875rem]"
+                href="guide.html"
+                >Cẩm Nang Nhãn Khoa</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-[#002366] dark:hover:text-blue-300 underline transition-all font-['Inter'] text-[0.875rem]"
+                href="stores.html"
+                >Hệ Thống Cửa Hàng</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="font-bold text-primary dark:text-blue-300 mb-6 font-['Inter']"
+          >
+            Hỗ Trợ Khách Hàng
+          </h4>
+          <ul class="space-y-4">
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-[#002366] dark:hover:text-blue-300 underline transition-all font-['Inter'] text-[0.875rem]"
+                href="terms.html"
+                >Điều Khoản Dịch Vụ</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-[#002366] dark:hover:text-blue-300 underline transition-all font-['Inter'] text-[0.875rem]"
+                href="support.html"
+                >Liên Hệ Hỗ Trợ</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-[#002366] dark:hover:text-blue-300 underline transition-all font-['Inter'] text-[0.875rem]"
+                href="privacy.html"
+                >Chính Sách Bảo Mật</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div
+          class="h-48 bg-white dark:bg-slate-900 rounded-2xl overflow-hidden relative"
+        >
+          <div
+            class="absolute inset-0 bg-slate-200"
+            data-location="Ho Chi Minh City"
+          >
+            <img
+              alt="clean minimalist map graphic showing street grid of a central metropolitan area with a navy blue location pin"
+              class="w-full h-full object-cover"
+              data-alt="clean minimalist map graphic showing street grid of a central metropolitan area with a navy blue location pin"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2ForZPBHX7rTe39O9sm20fm_bCH9SlN3HDOw6ko7VPcCPE0HhSeN0-r1UT4wzDYoTDgz5d1rKRiNGxJk4l6iMYh8705JB7TAwVtwF4fKmPT6HcbkRpQQQbfrStXvg_68auYHb7Mwyb0cSgEK0mTRPuv_MwNdwqGc8hZ9a7uLGn8Nad_JQXtBv_xuzUOM2MzrXSTzN8kFzwEchyx3Qo8RPYjGllauDco-AuJF9Sep63ohEfoqcjKCiKwGKL2eGBsVyFRHcVcwZbGw"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="max-w-[1440px] mx-auto px-8 py-8 border-t border-[#e1e3e4] dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4"
+      >
+        <p
+          class="text-slate-500 dark:text-slate-400 text-[0.875rem] font-['Inter']"
+        >
+          © 2026 Kính Xanh Optical. See the world in detail.
+        </p>
+        <div class="flex gap-6">
+          <img
+            alt="Visa payment provider logo icon"
+            class="h-6 opacity-60 hover:opacity-100 transition-opacity"
+            data-alt="Visa payment provider logo icon"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg_1eK-pKf2-DdLjWBx8mgoG1MtWZX_Vp1owYyy5X2rQyKq9ObGxKE1vS51MT0Cl5MWRBm8UuEjfdYnWVglUrxwDcXVaE9ru1nae8P8mr6GV9q0lG1Ie9sLBz7XvYmkoZTT9zfU3NTnC8mgRI942rkzj3dgz3oh9v2sqPU_OG85kRAhCQfuVHfVaNJ7Flta7pLYOPlomWUfY2qZFrS4y7alnsBLvULgkN2zXfu8GYVIIbnEVtn1ezUbnP0AkqqMf3X7DUm8s_AmGc"
+          />
+          <img
+            alt="Mastercard payment provider logo icon"
+            class="h-6 opacity-60 hover:opacity-100 transition-opacity"
+            data-alt="Mastercard payment provider logo icon"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6ikNVn4wu6fnectVfs1EjrU7HHxQA5gpcHzdp1h8i41UrRiAhM2VAZfKvM_bO_lz1CFiW1c2tp44gtYdiaMWX2Sj2aPU06XsETgnIE5GrVYzpGpbXQWKRk-_Br_VbEPIHgwF2wG6JyEGXWzxVWQXCmWo1ebkoNdRTaAiX0tJlNW_hY4LsOTuFk5vsH0vseLkkhu2yoLBqUfCHncTOHJFAXjv1_8jZFjy5G0l5sgCngyRn_2qpqcp585TLv4CJkjEnoixwya9R-Rw"
+          />
+          <img
+            alt="Momo e-wallet payment provider logo icon"
+            class="h-6 opacity-60 hover:opacity-100 transition-opacity"
+            data-alt="Momo e-wallet payment provider logo icon"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcYqOPZXjlpqB5a-f0uvfdlyTM2apJIkULOVBtzQYqCS1081CZks9fMrtwGikCuE_QtW9ZgHGwxI9kKogMZlZ8Zu1lFcOXPrAaizllFxAyaqpYfcj2Byg9BzWUOpI3HBcXj1QxgG3lBfrT_k7cLJ4k1q6ODYw0fi9xqmxUX10aAQQGndIfUZWDFGen3W6zG3L6V_peTsV_SkcPMJVsaalECB1RvvsWUSP_RXc5YS4aq23xGQ4gqn1Cc2Z2F9j8GC5hFvqseZtkY6Q"
+          />
+        </div>
+      </div>
     </footer>
     <script src="js/main.js"></script>
     <script src="js/add-to-cart.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init({ duration: 800, once: true, offset: 50 });</script>
-</body>
-
+    <script>
+      AOS.init({ duration: 800, once: true, offset: 50 });
+    </script>
+  </body>
 </html>
 <!-- Kính Xanh - Trang chủ -->

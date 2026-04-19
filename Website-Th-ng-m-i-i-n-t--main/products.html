@@ -1,518 +1,960 @@
 <!-- File: products.html - Danh sách sản phẩm mắt kính tại Kính Xanh -->
-<!DOCTYPE html>
+<!doctype html>
 
 <html class="light" lang="vi">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Kính Xanh | Mắt Kính Cận Cao Cấp</title>
-    <!-- Material Symbols -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <!-- Google Fonts -->
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
     <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script src="js/tailwind-config.js"></script>
     <link href="css/style.css" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <meta content="Danh sách sản phẩm kính mắt Kính Xanh với bộ lọc, tìm kiếm, sắp xếp và thông tin giá bán rõ ràng."
-        name="description" />
-</head>
+    <meta
+      content="Danh sách sản phẩm kính mắt Kính Xanh với bộ lọc, tìm kiếm, sắp xếp và thông tin giá bán rõ ràng."
+      name="description"
+    />
+  </head>
 
-<body class="text-on-surface selection:bg-secondary-container page-fade">
-    <!-- Thanh thông báo trên cùng -->
-    <div class="bg-primary text-on-primary py-2 px-8 text-center text-sm font-label tracking-wide">
-        Miễn phí vận chuyển cho đơn hàng từ 1.000.000đ. Nhận mã giảm giá 10% cho thành viên mới!
+  <body class="text-on-surface selection:bg-secondary-container page-fade">
+    <div
+      class="bg-primary text-on-primary py-2 px-8 text-center text-sm font-label tracking-wide"
+    >
+      Miễn phí vận chuyển cho đơn hàng từ 1.000.000đ. Nhận mã giảm giá 10% cho
+      thành viên mới!
     </div>
-    <!-- Thanh điều hướng (Header) -->
+
     <header
-        class="bg-white/70 backdrop-blur-xl docked full-width top-0 sticky z-50 shadow-sm transition-all duration-300">
-        <div class="flex justify-between items-center px-8 py-4 max-w-[1440px] mx-auto w-full">
-            <!-- Logo thương hiệu -->
-            <a class="text-2xl font-black tracking-tighter text-[#002366] font-['Manrope']" href="index.html">Kính
-                Xanh</a>
-            <!-- Liên kết điều hướng -->
-            <nav class="hidden lg:flex items-center gap-8">
-                <a class="text-slate-600 hover:text-[#00113a] transition-colors font-['Manrope']"
-                    href="products.html">Bộ sưu tập</a>
-                <a class="text-[#002366] font-bold border-b-2 border-[#fdc003] pb-1 font-['Manrope']"
-                    href="products.html">Bán chạy</a>
-                <a class="text-slate-600 hover:text-[#00113a] transition-colors font-['Manrope']"
-                    href="index.html#flash-sale">Khuyến mãi</a>
-                <a class="text-slate-600 hover:text-[#00113a] transition-colors cursor-pointer"
-                    href="brands.html">Thương hiệu</a>
-                <a class="text-slate-600 hover:text-[#00113a] transition-colors cursor-pointer" href="support.html">Hỗ
-                    trợ</a>
-            </nav>
-            <!-- Các biểu tượng hành động -->
-            <div class="flex items-center gap-5">
-                <button class="scale-95 active:scale-90 transition-transform text-[#00113a]">
-                    <span class="material-symbols-outlined" data-icon="favorite">favorite</span>
-                </button>
-                <div class="relative flex items-center">
-                    <a class="scale-95 active:scale-90 transition-transform text-[#00113a] inline-block"
-                        href="cart.html">
-                        <span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
-                    </a>
-                    <span
-                        class="absolute -top-2 -right-2 bg-secondary text-on-secondary text-[10px] w-4 h-4 flex items-center justify-center rounded-full pointer-events-none"
-                        data-cart-count="true">3</span>
-                </div>
-                <a class="scale-95 active:scale-90 transition-transform text-[#00113a] inline-block" href="login.html">
-                    <span class="material-symbols-outlined" data-icon="person">person</span>
-                </a>
-                <!-- Nút menu di động -->
-                <button class="lg:hidden scale-95 active:scale-90 transition-transform text-[#00113a]">
-                    <span class="material-symbols-outlined">menu</span>
-                </button>
-            </div>
-        </div>
-    </header>
-    <!-- Nền mờ cho bộ lọc di động -->
-    <div class="fixed inset-0 bg-black/50 z-[60] opacity-0 pointer-events-none transition-opacity lg:hidden"
-        id="filter-backdrop"></div>
-    <!-- Ngăn kéo bộ lọc di động -->
-    <aside
-        class="fixed top-0 right-0 h-full w-80 bg-white z-[70] translate-x-full transition-transform duration-300 ease-in-out lg:hidden shadow-2xl flex flex-col"
-        id="mobile-filter-drawer">
-        <div class="p-6 border-b flex justify-between items-center">
-            <h2 class="text-lg font-bold text-primary">Filters</h2>
-            <button class="material-symbols-outlined"
-                onclick="document.getElementById('mobile-filter-drawer').classList.add('translate-x-full'); document.getElementById('filter-backdrop').classList.add('opacity-0', 'pointer-events-none');">close</button>
-        </div>
-        <div class="flex-1 overflow-y-auto p-6 space-y-8">
-            <!-- Filter contents will be duplicated here for mobile -->
-            <div class="space-y-6">
-                <!-- Reusing Filter Components Structure -->
-                <div class="space-y-3">
-                    <label class="flex items-center gap-2 text-primary font-semibold text-sm">Thương Hiệu</label>
-                    <div class="grid grid-cols-1 gap-2">
-                        <label class="flex items-center gap-3 text-sm text-slate-600"><input
-                                class="rounded border-outline-variant text-primary" type="checkbox" /> Ray-Ban</label>
-                        <label class="flex items-center gap-3 text-sm text-slate-600"><input
-                                class="rounded border-outline-variant text-primary" type="checkbox" /> Oakley</label>
-                    </div>
-                </div>
-                <!-- ... other filters ... -->
-            </div>
-        </div>
-        <div class="p-6 border-t">
-            <button class="w-full py-3 bg-primary text-white font-bold rounded-xl">Áp dụng</button>
-        </div>
-    </aside>
-    <main class="max-w-[1440px] mx-auto px-8 pt-8">
-        <!-- Đường dẫn (Breadcrumbs) -->
-        <nav class="flex items-center gap-2 text-sm mb-10 text-on-surface-variant font-label">
-            <a class="hover:text-primary transition-colors" href="index.html">Trang chủ</a>
-            <span class="material-symbols-outlined text-[16px]">chevron_right</span>
-            <span class="text-primary font-semibold">Mắt Kính Cận</span>
+      class="bg-white/70 backdrop-blur-xl docked full-width top-0 sticky z-50 shadow-sm transition-all duration-300"
+    >
+      <div
+        class="flex justify-between items-center px-8 py-4 max-w-[1440px] mx-auto w-full"
+      >
+        <a
+          class="text-2xl font-black tracking-tighter text-[#002366] font-['Manrope']"
+          href="index.html"
+          >Kính Xanh</a
+        >
+        <nav class="hidden lg:flex items-center gap-8">
+          <a
+            class="text-slate-600 hover:text-[#00113a] transition-colors font-['Manrope']"
+            href="products.html"
+            >Bộ sưu tập</a
+          >
+          <a
+            class="text-[#002366] font-bold border-b-2 border-[#fdc003] pb-1 font-['Manrope']"
+            href="products.html"
+            >Bán chạy</a
+          >
+          <a
+            class="text-slate-600 hover:text-[#00113a] transition-colors font-['Manrope']"
+            href="index.html#flash-sale"
+            >Khuyến mãi</a
+          >
+          <a
+            class="text-slate-600 hover:text-[#00113a] transition-colors cursor-pointer"
+            href="brands.html"
+            >Thương hiệu</a
+          >
+          <a
+            class="text-slate-600 hover:text-[#00113a] transition-colors cursor-pointer"
+            href="support.html"
+            >Hỗ trợ</a
+          >
         </nav>
-        <div class="flex gap-10 items-start">
-            <!-- Thanh lọc sản phẩm (Desktop) -->
-            <aside
-                class="hidden lg:flex flex-col w-72 h-auto p-6 gap-6 rounded-xl bg-[#f8f9fa] border-r-0 sticky top-24"
-                id="desktop-sidebar">
-                <div class="flex justify-between items-end mb-2">
-                    <div>
-                        <h2 class="text-lg font-bold text-[#191c1d] font-['Inter']">Filters</h2>
-                        <p class="text-xs text-slate-500">Refine your selection</p>
-                    </div>
-                    <button class="text-xs font-semibold text-primary underline underline-offset-4 cursor-pointer">Clear
-                        All</button>
-                </div>
-                <div class="space-y-6">
-                    <!-- Bộ lọc thương hiệu -->
-                    <div class="space-y-3">
-                        <label class="flex items-center gap-2 text-[#002366] font-semibold text-sm">
-                            <span class="material-symbols-outlined text-[20px]"
-                                data-icon="filter_list">filter_list</span>
-                            Thương Hiệu
-                        </label>
-                        <div class="grid grid-cols-1 gap-2">
-                            <label
-                                class="flex items-center gap-3 text-sm text-slate-600 hover:translate-x-1 transition-transform cursor-pointer">
-                                <input class="rounded border-outline-variant text-primary focus:ring-primary w-4 h-4"
-                                    data-brand="rayban" type="checkbox" />
-                                Ray-Ban
-                            </label>
-                            <label
-                                class="flex items-center gap-3 text-sm text-slate-600 hover:translate-x-1 transition-transform cursor-pointer">
-                                <input class="rounded border-outline-variant text-primary focus:ring-primary w-4 h-4"
-                                    data-brand="oakley" type="checkbox" />
-                                Oakley
-                            </label>
-                            <label
-                                class="flex items-center gap-3 text-sm text-slate-600 hover:translate-x-1 transition-transform cursor-pointer">
-                                <input class="rounded border-outline-variant text-primary focus:ring-primary w-4 h-4"
-                                    data-brand="gentlemonster" type="checkbox" />
-                                Gentle Monster
-                            </label>
-                            <label
-                                class="flex items-center gap-3 text-sm text-slate-600 hover:translate-x-1 transition-transform cursor-pointer">
-                                <input class="rounded border-outline-variant text-primary focus:ring-primary w-4 h-4"
-                                    data-brand="prada" type="checkbox" />
-                                Prada
-                            </label>
-                        </div>
-                    </div>
-                    <!-- Bộ lọc giá -->
-                    <div class="space-y-3">
-                        <label class="flex items-center gap-2 text-[#002366] font-semibold text-sm">
-                            <span class="material-symbols-outlined text-[20px]" data-icon="payments">payments</span>
-                            Khoảng Giá
-                        </label>
-                        <input
-                            class="w-full h-2 bg-surface-container rounded-lg appearance-none cursor-pointer accent-primary"
-                            max="10000000" min="0" step="500000" type="range" />
-                        <div class="flex justify-between text-[11px] text-slate-500 font-label">
-                            <span>0đ</span>
-                            <span>5.000.000đ</span>
-                        </div>
-                    </div>
-                    <!-- Bộ lọc giới tính -->
-                    <div class="space-y-3">
-                        <label class="flex items-center gap-2 text-[#002366] font-semibold text-sm">
-                            <span class="material-symbols-outlined text-[20px]" data-icon="wc">wc</span>
-                            Giới Tính
-                        </label>
-                        <div class="flex flex-wrap gap-2">
-                            <button
-                                class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white text-[#002366] hover:bg-surface-container transition-colors active-filter"
-                                data-gender="nam">Nam</button>
-                            <button
-                                class="px-3 py-1.5 rounded-lg text-xs text-slate-500 bg-surface-container-low hover:bg-surface-container transition-colors"
-                                data-gender="nu">Nữ</button>
-                            <button
-                                class="px-3 py-1.5 rounded-lg text-xs text-slate-500 bg-surface-container-low hover:bg-surface-container transition-colors"
-                                data-gender="unisex">Unisex</button>
-                        </div>
-                    </div>
-                    <!-- Loại tròng kính -->
-                    <div class="space-y-3">
-                        <label class="flex items-center gap-2 text-[#002366] font-semibold text-sm">
-                            <span class="material-symbols-outlined text-[20px]" data-icon="lens">lens</span>
-                            Loại Tròng
-                        </label>
-                        <div class="grid grid-cols-1 gap-2">
-                            <label
-                                class="flex items-center gap-3 text-sm text-slate-600 hover:translate-x-1 transition-transform cursor-pointer">
-                                <input class="rounded border-outline-variant text-primary focus:ring-primary w-4 h-4"
-                                    data-lens="uv" type="checkbox" />
-                                Chống tia UV
-                            </label>
-                            <label
-                                class="flex items-center gap-3 text-sm text-slate-600 hover:translate-x-1 transition-transform cursor-pointer">
-                                <input class="rounded border-outline-variant text-primary focus:ring-primary w-4 h-4"
-                                    data-lens="antiblue" type="checkbox" />
-                                Chống ánh sáng xanh
-                            </label>
-                        </div>
-                    </div>
-                    <!-- Chất liệu -->
-                    <div class="space-y-3">
-                        <label class="flex items-center gap-2 text-[#002366] font-semibold text-sm">
-                            <span class="material-symbols-outlined text-[20px]"
-                                data-icon="architecture">architecture</span>
-                            Chất Liệu
-                        </label>
-                        <div class="grid grid-cols-1 gap-2 text-slate-600 text-sm">
-                            <span class="cursor-pointer hover:text-primary transition-colors"
-                                data-material="kimloai">Kim loại</span>
-                            <span class="cursor-pointer hover:text-primary transition-colors" data-material="nhua">Nhựa
-                                cao cấp</span>
-                            <span class="font-bold text-[#002366] cursor-pointer active-filter"
-                                data-material="titan">Titanium</span>
-                        </div>
-                    </div>
-                </div>
-            </aside>
-            <!-- Khu vực nội dung bên phải -->
-            <section class="flex-1" data-aos="fade-up">
-                <!-- Thanh công cụ (Sắp xếp, Tìm kiếm) -->
-                <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
-                    <div>
-                        <h1 class="text-3xl font-headline font-bold text-primary mb-1">Mắt Kính Cận</h1>
-                        <p class="text-on-surface-variant font-label text-sm">Khám phá mẫu kính thời thượng &amp; bảo vệ
-                            mắt</p>
-                        <div class="flex items-center gap-2 text-[10px] font-bold text-slate-400 mt-1 uppercase tracking-wider py-1 px-2 bg-slate-50 rounded-lg w-fit"
-                            id="filter-result-count">
-                            <span class="material-symbols-outlined text-sm">visibility</span>
-                            Đang tải sản phẩm...
-                        </div>
-                    </div>
-                    <div class="flex flex-col sm:flex-row items-center gap-4">
-                        <!-- Nút kích hoạt bộ lọc di động -->
-                        <button
-                            class="lg:hidden w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2.5 bg-surface-container-high rounded-xl text-sm font-semibold text-primary"
-                            onclick="document.getElementById('mobile-filter-drawer').classList.remove('translate-x-full'); document.getElementById('filter-backdrop').classList.remove('opacity-0', 'pointer-events-none');">
-                            <span class="material-symbols-outlined text-lg">tune</span>
-                            Filters
-                        </button>
-                        <!-- Tìm kiếm trong danh mục -->
-                        <div class="relative w-full sm:w-64">
-                            <span
-                                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
-                            <input
-                                class="w-full pl-10 pr-4 py-2.5 bg-surface-container-high rounded-xl border-none focus:ring-2 focus:ring-primary/20 text-sm"
-                                data-product-search="true" placeholder="Tìm kiếm trong danh mục..." type="text" />
-                        </div>
-                        <!-- Sắp xếp sản phẩm -->
-                        <div class="relative w-full sm:w-48">
-                            <select
-                                class="w-full pl-4 pr-10 py-2.5 bg-surface-container-high rounded-xl border-none focus:ring-2 focus:ring-primary/20 text-sm appearance-none cursor-pointer">
-                                <option>Mới nhất</option>
-                                <option>Giá thấp đến cao</option>
-                                <option>Giá cao đến thấp</option>
-                                <option>Bán chạy nhất</option>
-                            </select>
-                            <span
-                                class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">expand_more</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Lưới sản phẩm -->
-                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-                    <!-- Thẻ sản phẩm 1 -->
-                    <div class="group relative bg-surface-container-lowest rounded-xl p-4 transition-all duration-500 hover:shadow-xl hover:-translate-y-1"
-                        data-aos="zoom-in" data-aos-delay="100" data-brand="gentlemonster" data-gender="unisex"
-                        data-lens="antiblue,premium" data-material="titan" data-price="1200000" data-slug="gentle-monster-milan-01-titanium">
-                        <div class="aspect-[4/3] bg-surface-variant rounded-xl mb-4 overflow-hidden relative">
-                            <img alt="Kính Cận Milan"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                src="https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=800&amp;q=80&amp;fit=crop" />
-                            <div
-                                class="absolute top-3 left-3 bg-secondary-container text-on-secondary-fixed text-[10px] font-black px-2 py-1 rounded-full uppercase tracking-widest shadow-sm">
-                                -30%</div>
-                            <button
-                                class="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full bg-white/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <span class="material-symbols-outlined text-primary text-[20px]"
-                                    data-icon="favorite">favorite</span>
-                            </button>
-                        </div>
-                        <div class="space-y-1.5">
-                            <p class="text-[10px] uppercase tracking-widest font-bold text-slate-400">Gentle Monster</p>
-                            <h3
-                                class="font-headline font-bold text-primary group-hover:text-secondary transition-colors">
-                                Milan 01 Titanium</h3>
-                            <!-- Tags Section -->
-                            <div class="flex flex-wrap gap-1.5 py-1">
-                                <span
-                                    class="px-2 py-0.5 bg-blue-50 text-blue-700 text-[10px] font-semibold rounded-full border border-blue-100">Anti-blue
-                                    light</span>
-                                <span
-                                    class="px-2 py-0.5 bg-green-50 text-green-700 text-[10px] font-semibold rounded-full border border-green-100">Lightweight</span>
-                                <span
-                                    class="px-2 py-0.5 bg-purple-50 text-purple-700 text-[10px] font-semibold rounded-full border border-purple-100">Premium
-                                    Lens</span>
-                            </div>
-                            <p class="text-xs text-on-surface-variant">Gọng Titan siêu nhẹ, kháng khuẩn</p>
-                            <div class="flex items-center gap-1">
-                                <span
-                                    class="material-symbols-outlined text-yellow-500 text-[14px] fill-icon">star</span>
-                                <span class="text-[11px] font-semibold">4.8 (124 đánh giá)</span>
-                            </div>
-                            <div class="flex items-baseline gap-3 pt-2">
-                                <span class="text-lg font-bold text-primary">1.200.000đ</span>
-                                <span class="text-xs text-slate-400 line-through">1.500.000đ</span>
-                            </div>
-                            <button
-                                class="w-full mt-4 flex items-center justify-center gap-2 py-3 bg-secondary-container text-on-secondary-fixed font-bold rounded-xl transition-all active:scale-95 hover:shadow-lg"
-                                data-cart-action="add-to-cart">
-                                <span class="material-symbols-outlined text-[20px]">shopping_cart</span>
-                                Thêm vào giỏ
-                            </button>
-                        </div>
-                    </div>
-                    <!-- Thẻ sản phẩm 2 -->
-                    <div class="group relative bg-surface-container-lowest rounded-xl p-4 transition-all duration-500 hover:shadow-xl hover:-translate-y-1"
-                        data-aos="zoom-in" data-aos-delay="100" data-brand="rayban" data-gender="nam" data-lens="uv,hmc"
-                        data-material="kimloai" data-price="1850000" data-slug="ray-ban-aviator-classic-gold">
-                        <div class="aspect-[4/3] bg-surface-variant rounded-xl mb-4 overflow-hidden relative">
-                            <img alt="Kính Cận Aviator"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=800&amp;q=80&amp;fit=crop" />
-                            <div
-                                class="absolute top-3 left-3 bg-primary text-white text-[10px] font-black px-2 py-1 rounded-full uppercase tracking-widest shadow-sm">
-                                Bestseller</div>
-                            <button
-                                class="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full bg-white/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <span class="material-symbols-outlined text-primary text-[20px]"
-                                    data-icon="favorite">favorite</span>
-                            </button>
-                        </div>
-                        <div class="space-y-1.5">
-                            <p class="text-[10px] uppercase tracking-widest font-bold text-slate-400">Ray-Ban</p>
-                            <h3
-                                class="font-headline font-bold text-primary group-hover:text-secondary transition-colors">
-                                Aviator Optics Gold</h3>
-                            <!-- Tags Section -->
-                            <div class="flex flex-wrap gap-1.5 py-1">
-                                <span
-                                    class="px-2 py-0.5 bg-yellow-50 text-yellow-700 text-[10px] font-semibold rounded-full border border-yellow-100">UV400</span>
-                                <span
-                                    class="px-2 py-0.5 bg-red-50 text-red-700 text-[10px] font-semibold rounded-full border border-red-100">Trendy
-                                    Style</span>
-                                <span
-                                    class="px-2 py-0.5 bg-purple-50 text-purple-700 text-[10px] font-semibold rounded-full border border-purple-100">Premium
-                                    Lens</span>
-                            </div>
-                            <p class="text-xs text-on-surface-variant">Phủ lớp chống phản quang HMC</p>
-                            <div class="flex items-center gap-1">
-                                <span
-                                    class="material-symbols-outlined text-yellow-500 text-[14px] fill-icon">star</span>
-                                <span class="text-[11px] font-semibold">4.9 (256 đánh giá)</span>
-                            </div>
-                            <div class="flex items-baseline gap-3 pt-2">
-                                <span class="text-lg font-bold text-primary">1.850.000đ</span>
-                            </div>
-                            <button
-                                class="w-full mt-4 flex items-center justify-center gap-2 py-3 bg-secondary-container text-on-secondary-fixed font-bold rounded-xl transition-all active:scale-95 hover:shadow-lg"
-                                data-cart-action="add-to-cart">
-                                <span class="material-symbols-outlined text-[20px]">shopping_cart</span>
-                                Thêm vào giỏ
-                            </button>
-                        </div>
-                    </div>
-                    <!-- Thẻ sản phẩm 3 -->
-                    <div class="group relative bg-surface-container-lowest rounded-xl p-4 transition-all duration-500 hover:shadow-xl hover:-translate-y-1"
-                        data-aos="zoom-in" data-aos-delay="100" data-brand="oakley" data-gender="nu"
-                        data-lens="uv,antiblue,acetate" data-material="nhua" data-price="1950000" data-slug="oakley-round-classic-tortoise">
-                        <div class="aspect-[4/3] bg-surface-variant rounded-xl mb-4 overflow-hidden relative">
-                            <img alt="Kính Cận Tròn"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                src="https://images.unsplash.com/photo-1508296695146-257a814070b4?w=800&amp;q=80&amp;fit=crop" />
-                            <div
-                                class="absolute top-3 left-3 bg-secondary-container text-on-secondary-fixed text-[10px] font-black px-2 py-1 rounded-full uppercase tracking-widest shadow-sm">
-                                -20%</div>
-                            <button
-                                class="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full bg-white/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <span class="material-symbols-outlined text-primary text-[20px]"
-                                    data-icon="favorite">favorite</span>
-                            </button>
-                        </div>
-                        <div class="space-y-1.5">
-                            <p class="text-[10px] uppercase tracking-widest font-bold text-slate-400">Oakley</p>
-                            <h3
-                                class="font-headline font-bold text-primary group-hover:text-secondary transition-colors">
-                                Round Classic Tortoise</h3>
-                            <!-- Tags Section -->
-                            <div class="flex flex-wrap gap-1.5 py-1">
-                                <span
-                                    class="px-2 py-0.5 bg-blue-50 text-blue-700 text-[10px] font-semibold rounded-full border border-blue-100">Anti-blue
-                                    light</span>
-                                <span
-                                    class="px-2 py-0.5 bg-red-50 text-red-700 text-[10px] font-semibold rounded-full border border-red-100">Trendy
-                                    Style</span>
-                                <span
-                                    class="px-2 py-0.5 bg-yellow-50 text-yellow-700 text-[10px] font-semibold rounded-full border border-yellow-100">UV400</span>
-                            </div>
-                            <p class="text-xs text-on-surface-variant">Chất liệu nhựa Acetate tự nhiên</p>
-                            <div class="flex items-center gap-1">
-                                <span
-                                    class="material-symbols-outlined text-yellow-500 text-[14px] fill-icon">star</span>
-                                <span class="text-[11px] font-semibold">4.7 (89 đánh giá)</span>
-                            </div>
-                            <div class="flex items-baseline gap-3 pt-2">
-                                <span class="text-lg font-bold text-primary">1.950.000đ</span>
-                                <span class="text-xs text-slate-400 line-through">2.450.000đ</span>
-                            </div>
-                            <button
-                                class="w-full mt-4 flex items-center justify-center gap-2 py-3 bg-secondary-container text-on-secondary-fixed font-bold rounded-xl transition-all active:scale-95 hover:shadow-lg"
-                                data-cart-action="add-to-cart">
-                                <span class="material-symbols-outlined text-[20px]">shopping_cart</span>
-                                Thêm vào giỏ
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Phân trang -->
-                <div class="mt-20 flex justify-center items-center gap-2">
-                    <button
-                        class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container text-slate-600 hover:bg-surface-variant transition-colors">
-                        <span class="material-symbols-outlined text-lg">chevron_left</span>
-                    </button>
-                    <button
-                        class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-white font-bold">1</button>
-                    <button
-                        class="w-10 h-10 flex items-center justify-center rounded-lg bg-white text-slate-600 hover:bg-surface-container transition-colors font-semibold">2</button>
-                    <button
-                        class="w-10 h-10 flex items-center justify-center rounded-lg bg-white text-slate-600 hover:bg-surface-container transition-colors font-semibold">3</button>
-                    <span class="px-2 text-slate-400">...</span>
-                    <button
-                        class="w-10 h-10 flex items-center justify-center rounded-lg bg-white text-slate-600 hover:bg-surface-container transition-colors font-semibold">12</button>
-                    <button
-                        class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container text-slate-600 hover:bg-surface-variant transition-colors">
-                        <span class="material-symbols-outlined text-lg">chevron_right</span>
-                    </button>
-                </div>
-            </section>
+        <div class="flex items-center gap-5">
+          <button
+            class="scale-95 active:scale-90 transition-transform text-[#00113a]"
+          >
+            <span class="material-symbols-outlined" data-icon="favorite"
+              >favorite</span
+            >
+          </button>
+          <div class="relative flex items-center">
+            <a
+              class="scale-95 active:scale-90 transition-transform text-[#00113a] inline-block"
+              href="cart.html"
+            >
+              <span class="material-symbols-outlined" data-icon="shopping_cart"
+                >shopping_cart</span
+              >
+            </a>
+            <span
+              class="absolute -top-2 -right-2 bg-secondary text-on-secondary text-[10px] w-4 h-4 flex items-center justify-center rounded-full pointer-events-none"
+              data-cart-count="true"
+              >3</span
+            >
+          </div>
+          <a
+            class="scale-95 active:scale-90 transition-transform text-[#00113a] inline-block"
+            href="login.html"
+          >
+            <span class="material-symbols-outlined" data-icon="person"
+              >person</span
+            >
+          </a>
+          <button
+            class="lg:hidden scale-95 active:scale-90 transition-transform text-[#00113a]"
+          >
+            <span class="material-symbols-outlined">menu</span>
+          </button>
         </div>
+      </div>
+    </header>
+
+    <div
+      class="fixed inset-0 bg-black/50 z-[60] opacity-0 pointer-events-none transition-opacity lg:hidden"
+      id="filter-backdrop"
+    ></div>
+
+    <aside
+      class="fixed top-0 right-0 h-full w-80 bg-white z-[70] translate-x-full transition-transform duration-300 ease-in-out lg:hidden shadow-2xl flex flex-col"
+      id="mobile-filter-drawer"
+    >
+      <div class="p-6 border-b flex justify-between items-center">
+        <h2 class="text-lg font-bold text-primary">Filters</h2>
+        <button
+          class="material-symbols-outlined"
+          onclick="
+            document
+              .getElementById('mobile-filter-drawer')
+              .classList.add('translate-x-full');
+            document
+              .getElementById('filter-backdrop')
+              .classList.add('opacity-0', 'pointer-events-none');
+          "
+        >
+          close
+        </button>
+      </div>
+      <div class="flex-1 overflow-y-auto p-6 space-y-8">
+        <div class="space-y-6">
+          <div class="space-y-3">
+            <label
+              class="flex items-center gap-2 text-primary font-semibold text-sm"
+              >Thương Hiệu</label
+            >
+            <div class="grid grid-cols-1 gap-2">
+              <label class="flex items-center gap-3 text-sm text-slate-600"
+                ><input
+                  class="rounded border-outline-variant text-primary"
+                  type="checkbox"
+                  data-filter="brand"
+                  value="Ray-Ban"
+                />
+                Ray-Ban</label
+              >
+              <label
+                class="flex items-center gap-3 text-sm text-slate-600 hover:translate-x-1 transition-transform cursor-pointer"
+              >
+                <input
+                  class="rounded border-outline-variant text-primary focus:ring-primary w-4 h-4"
+                  type="checkbox"
+                  data-filter="brand"
+                  value="Gucci"
+                />
+                Gucci
+              </label>
+              <label class="flex items-center gap-3 text-sm text-slate-600"
+                ><input
+                  class="rounded border-outline-variant text-primary"
+                  type="checkbox"
+                  data-filter="brand"
+                  value="Oakley"
+                />
+                Oakley</label
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-6 border-t">
+        <button
+          class="w-full py-3 bg-primary text-white font-bold rounded-xl"
+          data-filter-submit
+        >
+          Áp dụng
+        </button>
+      </div>
+    </aside>
+
+    <main class="max-w-[1440px] mx-auto px-8 pt-8">
+      <nav
+        class="flex items-center gap-2 text-sm mb-10 text-on-surface-variant font-label"
+      >
+        <a class="hover:text-primary transition-colors" href="index.html"
+          >Trang chủ</a
+        >
+        <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+        <span class="text-primary font-semibold">Mắt Kính Cận</span>
+      </nav>
+
+      <div class="flex gap-10 items-start">
+        <!-- Sidebar bộ lọc (Desktop) -->
+        <aside
+          class="hidden lg:flex flex-col w-72 h-auto p-6 gap-6 rounded-xl bg-[#f8f9fa] border-r-0 sticky top-24"
+          id="desktop-sidebar"
+        >
+          <div class="flex justify-between items-end mb-2">
+            <div>
+              <h2 class="text-lg font-bold text-[#191c1d] font-['Inter']">
+                Filters
+              </h2>
+              <p class="text-xs text-slate-500">Refine your selection</p>
+            </div>
+            <button
+              class="text-xs font-semibold text-primary underline underline-offset-4 cursor-pointer"
+              data-filter-reset
+            >
+              Clear All
+            </button>
+          </div>
+          <div class="space-y-6">
+            <!-- Thương hiệu -->
+            <div class="space-y-3">
+              <label
+                class="flex items-center gap-2 text-[#002366] font-semibold text-sm"
+              >
+                <span
+                  class="material-symbols-outlined text-[20px]"
+                  data-icon="filter_list"
+                  >filter_list</span
+                >
+                Thương Hiệu
+              </label>
+              <div class="grid grid-cols-1 gap-2">
+                <label
+                  class="flex items-center gap-3 text-sm text-slate-600 hover:translate-x-1 transition-transform cursor-pointer"
+                >
+                  <input
+                    class="rounded border-outline-variant text-primary focus:ring-primary w-4 h-4"
+                    type="checkbox"
+                    data-filter="brand"
+                    value="Ray-Ban"
+                  />
+                  Ray-Ban
+                </label>
+                <label
+                  class="flex items-center gap-3 text-sm text-slate-600 hover:translate-x-1 transition-transform cursor-pointer"
+                >
+                  <input
+                    class="rounded border-outline-variant text-primary focus:ring-primary w-4 h-4"
+                    type="checkbox"
+                    data-filter="brand"
+                    value="Oakley"
+                  />
+                  Oakley
+                </label>
+                <label
+                  class="flex items-center gap-3 text-sm text-slate-600 hover:translate-x-1 transition-transform cursor-pointer"
+                >
+                  <input
+                    class="rounded border-outline-variant text-primary focus:ring-primary w-4 h-4"
+                    type="checkbox"
+                    data-filter="brand"
+                    value="Gentle Monster"
+                  />
+                  Gentle Monster
+                </label>
+                <label
+                  class="flex items-center gap-3 text-sm text-slate-600 hover:translate-x-1 transition-transform cursor-pointer"
+                >
+                  <input
+                    class="rounded border-outline-variant text-primary focus:ring-primary w-4 h-4"
+                    type="checkbox"
+                    data-filter="brand"
+                    value="Prada"
+                  />
+                  Prada
+                </label>
+              </div>
+            </div>
+
+            <!-- Khoảng giá -->
+            <div class="space-y-3">
+              <label
+                class="flex items-center gap-2 text-[#002366] font-semibold text-sm"
+              >
+                <span
+                  class="material-symbols-outlined text-[20px]"
+                  data-icon="payments"
+                  >payments</span
+                >
+                Khoảng Giá
+              </label>
+              <input
+                class="w-full h-2 bg-surface-container rounded-lg appearance-none cursor-pointer accent-primary"
+                type="range"
+                min="0"
+                max="10000000"
+                step="500000"
+                data-max-price
+              />
+              <div
+                class="flex justify-between text-[11px] text-slate-500 font-label"
+                data-price-range-label
+              >
+                <span>0đ</span>
+                <span>5.000.000đ</span>
+              </div>
+            </div>
+
+            <!-- Giới tính -->
+            <div class="space-y-3">
+              <label
+                class="flex items-center gap-2 text-[#002366] font-semibold text-sm"
+              >
+                <span
+                  class="material-symbols-outlined text-[20px]"
+                  data-icon="wc"
+                  >wc</span
+                >
+                Giới Tính
+              </label>
+              <div class="flex flex-wrap gap-2">
+                <label class="flex items-center gap-1.5 cursor-pointer">
+                  <input
+                    class="rounded border-outline-variant text-primary focus:ring-primary w-4 h-4"
+                    type="checkbox"
+                    data-filter="gender"
+                    value="men"
+                  />
+                  <span
+                    class="px-2 py-1 rounded-lg text-xs font-semibold text-slate-600"
+                    >Nam</span
+                  >
+                </label>
+                <label class="flex items-center gap-1.5 cursor-pointer">
+                  <input
+                    class="rounded border-outline-variant text-primary focus:ring-primary w-4 h-4"
+                    type="checkbox"
+                    data-filter="gender"
+                    value="women"
+                  />
+                  <span
+                    class="px-2 py-1 rounded-lg text-xs font-semibold text-slate-600"
+                    >Nữ</span
+                  >
+                </label>
+                <label class="flex items-center gap-1.5 cursor-pointer">
+                  <input
+                    class="rounded border-outline-variant text-primary focus:ring-primary w-4 h-4"
+                    type="checkbox"
+                    data-filter="gender"
+                    value="unisex"
+                  />
+                  <span
+                    class="px-2 py-1 rounded-lg text-xs font-semibold text-slate-600"
+                    >Unisex</span
+                  >
+                </label>
+              </div>
+            </div>
+
+            <!-- Loại tròng -->
+            <div class="space-y-3">
+              <label
+                class="flex items-center gap-2 text-[#002366] font-semibold text-sm"
+              >
+                <span
+                  class="material-symbols-outlined text-[20px]"
+                  data-icon="lens"
+                  >lens</span
+                >
+                Loại Tròng
+              </label>
+              <div class="grid grid-cols-1 gap-2">
+                <label
+                  class="flex items-center gap-3 text-sm text-slate-600 hover:translate-x-1 transition-transform cursor-pointer"
+                >
+                  <input
+                    class="rounded border-outline-variant text-primary focus:ring-primary w-4 h-4"
+                    type="checkbox"
+                    data-filter="lens_type"
+                    value="UV400"
+                  />
+                  Chống tia UV
+                </label>
+                <label
+                  class="flex items-center gap-3 text-sm text-slate-600 hover:translate-x-1 transition-transform cursor-pointer"
+                >
+                  <input
+                    class="rounded border-outline-variant text-primary focus:ring-primary w-4 h-4"
+                    type="checkbox"
+                    data-filter="lens_type"
+                    value="Anti-blue light"
+                  />
+                  Chống ánh sáng xanh
+                </label>
+              </div>
+            </div>
+
+            <!-- Chất liệu -->
+            <div class="space-y-3">
+              <label
+                class="flex items-center gap-2 text-[#002366] font-semibold text-sm"
+              >
+                <span
+                  class="material-symbols-outlined text-[20px]"
+                  data-icon="architecture"
+                  >architecture</span
+                >
+                Chất Liệu
+              </label>
+              <div class="grid grid-cols-1 gap-2 text-slate-600 text-sm">
+                <label
+                  class="flex items-center gap-3 hover:translate-x-1 transition-transform cursor-pointer"
+                >
+                  <input
+                    class="rounded border-outline-variant text-primary focus:ring-primary w-4 h-4"
+                    type="checkbox"
+                    data-filter="material"
+                    value="Kim loại"
+                  />
+                  Kim loại
+                </label>
+                <label
+                  class="flex items-center gap-3 hover:translate-x-1 transition-transform cursor-pointer"
+                >
+                  <input
+                    class="rounded border-outline-variant text-primary focus:ring-primary w-4 h-4"
+                    type="checkbox"
+                    data-filter="material"
+                    value="Nhựa"
+                  />
+                  Nhựa cao cấp
+                </label>
+                <label
+                  class="flex items-center gap-3 hover:translate-x-1 transition-transform cursor-pointer"
+                >
+                  <input
+                    class="rounded border-outline-variant text-primary focus:ring-primary w-4 h-4"
+                    type="checkbox"
+                    data-filter="material"
+                    value="Titanium"
+                  />
+                  Titanium
+                </label>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Khu vực sản phẩm -->
+        <section class="flex-1" data-aos="fade-up">
+          <div
+            class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12"
+          >
+            <div>
+              <h1 class="text-3xl font-headline font-bold text-primary mb-1">
+                Mắt Kính Cận
+              </h1>
+              <p class="text-on-surface-variant font-label text-sm">
+                Khám phá mẫu kính thời thượng &amp; bảo vệ mắt
+              </p>
+              <div
+                class="flex items-center gap-2 text-[10px] font-bold text-slate-400 mt-1 uppercase tracking-wider py-1 px-2 bg-slate-50 rounded-lg w-fit"
+                id="filter-result-count"
+              >
+                <span class="material-symbols-outlined text-sm"
+                  >visibility</span
+                >
+                Đang tải sản phẩm...
+              </div>
+            </div>
+            <div class="flex flex-col sm:flex-row items-center gap-4">
+              <button
+                class="lg:hidden w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2.5 bg-surface-container-high rounded-xl text-sm font-semibold text-primary"
+                onclick="
+                  document
+                    .getElementById('mobile-filter-drawer')
+                    .classList.remove('translate-x-full');
+                  document
+                    .getElementById('filter-backdrop')
+                    .classList.remove('opacity-0', 'pointer-events-none');
+                "
+              >
+                <span class="material-symbols-outlined text-lg">tune</span>
+                Filters
+              </button>
+
+              <!-- Tìm kiếm — data-search-input -->
+              <div class="relative w-full sm:w-64">
+                <span
+                  class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg"
+                  >search</span
+                >
+                <input
+                  class="w-full pl-10 pr-4 py-2.5 bg-surface-container-high rounded-xl border-none focus:ring-2 focus:ring-primary/20 text-sm"
+                  type="text"
+                  placeholder="Tìm kiếm trong danh mục..."
+                  data-search-input
+                />
+              </div>
+
+              <!-- Sắp xếp — data-sort-select, value khớp với API -->
+              <div class="relative w-full sm:w-48">
+                <select
+                  class="w-full pl-4 pr-10 py-2.5 bg-surface-container-high rounded-xl border-none focus:ring-2 focus:ring-primary/20 text-sm appearance-none cursor-pointer"
+                  data-sort-select
+                >
+                  <option value="newest">Mới nhất</option>
+                  <option value="price_asc">Giá thấp đến cao</option>
+                  <option value="price_desc">Giá cao đến thấp</option>
+                  <option value="best_seller">Bán chạy nhất</option>
+                </select>
+                <span
+                  class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400"
+                  >expand_more</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Lưới sản phẩm — data-product-grid: JS render vào đây -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8"
+            data-product-grid
+          >
+            <!-- Card 1 -->
+            <div
+              class="group relative bg-surface-container-lowest rounded-xl p-4 transition-all duration-500 hover:shadow-xl hover:-translate-y-1"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+              data-brand="gentlemonster"
+              data-gender="unisex"
+              data-lens="antiblue,premium"
+              data-material="Titanium"
+              data-price="1200000"
+              data-slug="gentle-monster-milan-01-titanium"
+            >
+              <div
+                class="aspect-[4/3] bg-surface-variant rounded-xl mb-4 overflow-hidden relative"
+              >
+                <img
+                  alt="Kính Cận Milan"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  src="https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=800&q=80&fit=crop"
+                />
+                <div
+                  class="absolute top-3 left-3 bg-secondary-container text-on-secondary-fixed text-[10px] font-black px-2 py-1 rounded-full uppercase tracking-widest shadow-sm"
+                >
+                  -30%
+                </div>
+                <button
+                  class="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full bg-white/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >
+                  <span
+                    class="material-symbols-outlined text-primary text-[20px]"
+                    data-icon="favorite"
+                    >favorite</span
+                  >
+                </button>
+              </div>
+              <div class="space-y-1.5">
+                <p
+                  class="text-[10px] uppercase tracking-widest font-bold text-slate-400"
+                >
+                  Gentle Monster
+                </p>
+                <h3
+                  class="font-headline font-bold text-primary group-hover:text-secondary transition-colors"
+                >
+                  Milan 01 Titanium
+                </h3>
+                <div class="flex flex-wrap gap-1.5 py-1">
+                  <span
+                    class="px-2 py-0.5 bg-blue-50 text-blue-700 text-[10px] font-semibold rounded-full border border-blue-100"
+                    >Anti-blue light</span
+                  >
+                  <span
+                    class="px-2 py-0.5 bg-green-50 text-green-700 text-[10px] font-semibold rounded-full border border-green-100"
+                    >Lightweight</span
+                  >
+                  <span
+                    class="px-2 py-0.5 bg-purple-50 text-purple-700 text-[10px] font-semibold rounded-full border border-purple-100"
+                    >Premium Lens</span
+                  >
+                </div>
+                <p class="text-xs text-on-surface-variant">
+                  Gọng Titan siêu nhẹ, kháng khuẩn
+                </p>
+                <div class="flex items-center gap-1">
+                  <span
+                    class="material-symbols-outlined text-yellow-500 text-[14px] fill-icon"
+                    >star</span
+                  >
+                  <span class="text-[11px] font-semibold"
+                    >4.8 (124 đánh giá)</span
+                  >
+                </div>
+                <div class="flex items-baseline gap-3 pt-2">
+                  <span class="text-lg font-bold text-primary">1.200.000đ</span>
+                  <span class="text-xs text-slate-400 line-through"
+                    >1.500.000đ</span
+                  >
+                </div>
+                <button
+                  class="w-full mt-4 flex items-center justify-center gap-2 py-3 bg-secondary-container text-on-secondary-fixed font-bold rounded-xl transition-all active:scale-95 hover:shadow-lg"
+                  data-cart-action="add-to-cart"
+                >
+                  <span class="material-symbols-outlined text-[20px]"
+                    >shopping_cart</span
+                  >
+                  Thêm vào giỏ
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="group relative bg-surface-container-lowest rounded-xl p-4 transition-all duration-500 hover:shadow-xl hover:-translate-y-1"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+              data-brand="Ray-Ban"
+              data-gender="nam"
+              data-lens="uv,hmc"
+              data-material="Kim loại"
+              data-price="1850000"
+              data-slug="ray-ban-aviator-classic-gold"
+            >
+              <div
+                class="aspect-[4/3] bg-surface-variant rounded-xl mb-4 overflow-hidden relative"
+              >
+                <img
+                  alt="Kính Cận Aviator"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=800&q=80&fit=crop"
+                />
+                <div
+                  class="absolute top-3 left-3 bg-primary text-white text-[10px] font-black px-2 py-1 rounded-full uppercase tracking-widest shadow-sm"
+                >
+                  Bestseller
+                </div>
+                <button
+                  class="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full bg-white/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >
+                  <span
+                    class="material-symbols-outlined text-primary text-[20px]"
+                    data-icon="favorite"
+                    >favorite</span
+                  >
+                </button>
+              </div>
+              <div class="space-y-1.5">
+                <p
+                  class="text-[10px] uppercase tracking-widest font-bold text-slate-400"
+                >
+                  Ray-Ban
+                </p>
+                <h3
+                  class="font-headline font-bold text-primary group-hover:text-secondary transition-colors"
+                >
+                  Aviator Optics Gold
+                </h3>
+                <div class="flex flex-wrap gap-1.5 py-1">
+                  <span
+                    class="px-2 py-0.5 bg-yellow-50 text-yellow-700 text-[10px] font-semibold rounded-full border border-yellow-100"
+                    >UV400</span
+                  >
+                  <span
+                    class="px-2 py-0.5 bg-red-50 text-red-700 text-[10px] font-semibold rounded-full border border-red-100"
+                    >Trendy Style</span
+                  >
+                  <span
+                    class="px-2 py-0.5 bg-purple-50 text-purple-700 text-[10px] font-semibold rounded-full border border-purple-100"
+                    >Premium Lens</span
+                  >
+                </div>
+                <p class="text-xs text-on-surface-variant">
+                  Phủ lớp chống phản quang HMC
+                </p>
+                <div class="flex items-center gap-1">
+                  <span
+                    class="material-symbols-outlined text-yellow-500 text-[14px] fill-icon"
+                    >star</span
+                  >
+                  <span class="text-[11px] font-semibold"
+                    >4.9 (256 đánh giá)</span
+                  >
+                </div>
+                <div class="flex items-baseline gap-3 pt-2">
+                  <span class="text-lg font-bold text-primary">1.850.000đ</span>
+                </div>
+                <button
+                  class="w-full mt-4 flex items-center justify-center gap-2 py-3 bg-secondary-container text-on-secondary-fixed font-bold rounded-xl transition-all active:scale-95 hover:shadow-lg"
+                  data-cart-action="add-to-cart"
+                >
+                  <span class="material-symbols-outlined text-[20px]"
+                    >shopping_cart</span
+                  >
+                  Thêm vào giỏ
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="group relative bg-surface-container-lowest rounded-xl p-4 transition-all duration-500 hover:shadow-xl hover:-translate-y-1"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+              data-brand="Oakley"
+              data-gender="nu"
+              data-lens="uv,antiblue,acetate"
+              data-material="Nhựa"
+              data-price="1950000"
+              data-slug="oakley-round-classic-tortoise"
+            >
+              <div
+                class="aspect-[4/3] bg-surface-variant rounded-xl mb-4 overflow-hidden relative"
+              >
+                <img
+                  alt="Kính Cận Tròn"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  src="https://images.unsplash.com/photo-1508296695146-257a814070b4?w=800&q=80&fit=crop"
+                />
+                <div
+                  class="absolute top-3 left-3 bg-secondary-container text-on-secondary-fixed text-[10px] font-black px-2 py-1 rounded-full uppercase tracking-widest shadow-sm"
+                >
+                  -20%
+                </div>
+                <button
+                  class="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full bg-white/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >
+                  <span
+                    class="material-symbols-outlined text-primary text-[20px]"
+                    data-icon="favorite"
+                    >favorite</span
+                  >
+                </button>
+              </div>
+              <div class="space-y-1.5">
+                <p
+                  class="text-[10px] uppercase tracking-widest font-bold text-slate-400"
+                >
+                  Oakley
+                </p>
+                <h3
+                  class="font-headline font-bold text-primary group-hover:text-secondary transition-colors"
+                >
+                  Round Classic Tortoise
+                </h3>
+                <div class="flex flex-wrap gap-1.5 py-1">
+                  <span
+                    class="px-2 py-0.5 bg-blue-50 text-blue-700 text-[10px] font-semibold rounded-full border border-blue-100"
+                    >Anti-blue light</span
+                  >
+                  <span
+                    class="px-2 py-0.5 bg-red-50 text-red-700 text-[10px] font-semibold rounded-full border border-red-100"
+                    >Trendy Style</span
+                  >
+                  <span
+                    class="px-2 py-0.5 bg-yellow-50 text-yellow-700 text-[10px] font-semibold rounded-full border border-yellow-100"
+                    >UV400</span
+                  >
+                </div>
+                <p class="text-xs text-on-surface-variant">
+                  Chất liệu nhựa Acetate tự nhiên
+                </p>
+                <div class="flex items-center gap-1">
+                  <span
+                    class="material-symbols-outlined text-yellow-500 text-[14px] fill-icon"
+                    >star</span
+                  >
+                  <span class="text-[11px] font-semibold"
+                    >4.7 (89 đánh giá)</span
+                  >
+                </div>
+                <div class="flex items-baseline gap-3 pt-2">
+                  <span class="text-lg font-bold text-primary">1.950.000đ</span>
+                  <span class="text-xs text-slate-400 line-through"
+                    >2.450.000đ</span
+                  >
+                </div>
+                <button
+                  class="w-full mt-4 flex items-center justify-center gap-2 py-3 bg-secondary-container text-on-secondary-fixed font-bold rounded-xl transition-all active:scale-95 hover:shadow-lg"
+                  data-cart-action="add-to-cart"
+                >
+                  <span class="material-symbols-outlined text-[20px]"
+                    >shopping_cart</span
+                  >
+                  Thêm vào giỏ
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phân trang — data-pagination: JS render vào đây -->
+          <div data-pagination>
+            <div class="mt-20 flex justify-center items-center gap-2">
+              <button
+                class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container text-slate-600 hover:bg-surface-variant transition-colors"
+              >
+                <span class="material-symbols-outlined text-lg"
+                  >chevron_left</span
+                >
+              </button>
+              <button
+                class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-white font-bold"
+              >
+                1
+              </button>
+              <button
+                class="w-10 h-10 flex items-center justify-center rounded-lg bg-white text-slate-600 hover:bg-surface-container transition-colors font-semibold"
+              >
+                2
+              </button>
+              <button
+                class="w-10 h-10 flex items-center justify-center rounded-lg bg-white text-slate-600 hover:bg-surface-container transition-colors font-semibold"
+              >
+                3
+              </button>
+              <span class="px-2 text-slate-400">...</span>
+              <button
+                class="w-10 h-10 flex items-center justify-center rounded-lg bg-white text-slate-600 hover:bg-surface-container transition-colors font-semibold"
+              >
+                12
+              </button>
+              <button
+                class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container text-slate-600 hover:bg-surface-variant transition-colors"
+              >
+                <span class="material-symbols-outlined text-lg"
+                  >chevron_right</span
+                >
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
-    <!-- Chân trang (Footer) -->
+
     <footer class="bg-[#edeeef] full-width mt-20 border-t border-[#e1e3e4]">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-[1440px] mx-auto">
-            <div class="space-y-6">
-                <h2 class="text-xl font-extrabold text-[#002366] font-['Manrope']">Kính Xanh</h2>
-                <p class="text-slate-500 text-sm leading-relaxed">Chuỗi cửa hàng mắt kính uy tín hàng đầu, chuyên cung
-                    cấp các giải pháp thị lực toàn diện và phong cách thời trang kính mắt hiện đại.</p>
-                <div class="flex gap-4">
-                    <a class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-primary hover:bg-primary hover:text-white transition-all shadow-sm"
-                        href="https://www.facebook.com/" rel="noopener noreferrer" target="_blank">
-                        <span class="material-symbols-outlined text-lg">share</span>
-                    </a>
-                    <a class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-primary hover:bg-primary hover:text-white transition-all shadow-sm"
-                        href="support.html">
-                        <span class="material-symbols-outlined text-lg">mail</span>
-                    </a>
-                </div>
-            </div>
-            <div class="space-y-6">
-                <h4 class="font-bold text-[#00113a] text-sm uppercase tracking-wider">Khám Phá</h4>
-                <ul class="space-y-3">
-                    <li><a class="text-slate-500 hover:text-[#002366] hover:underline transition-all text-sm font-['Inter']"
-                            href="about.html">Về Kính Xanh</a></li>
-                    <li><a class="text-slate-500 hover:text-[#002366] hover:underline transition-all text-sm font-['Inter']"
-                            href="guide.html">Cẩm Nang Nhãn Khoa</a></li>
-                    <li><a class="text-slate-500 hover:text-[#002366] hover:underline transition-all text-sm font-['Inter']"
-                            href="stores.html">Hệ Thống Cửa Hàng</a></li>
-                </ul>
-            </div>
-            <div class="space-y-6">
-                <h4 class="font-bold text-[#00113a] text-sm uppercase tracking-wider">Hỗ Trợ</h4>
-                <ul class="space-y-3">
-                    <li><a class="text-slate-500 hover:text-[#002366] hover:underline transition-all text-sm font-['Inter']"
-                            href="terms.html">Điều Khoản Dịch Vụ</a></li>
-                    <li><a class="text-slate-500 hover:text-[#002366] hover:underline transition-all text-sm font-['Inter']"
-                            href="support.html">Liên Hệ Hỗ Trợ</a></li>
-                    <li><a class="text-slate-500 hover:text-[#002366] hover:underline transition-all text-sm font-['Inter']"
-                            href="privacy.html">Chính Sách Bảo Mật</a></li>
-                </ul>
-            </div>
-            <div class="space-y-6">
-                <h4 class="font-bold text-[#00113a] text-sm uppercase tracking-wider">Đăng Ký</h4>
-                <p class="text-slate-500 text-sm">Nhận thông tin ưu đãi mới nhất từ Kính Xanh.</p>
-                <div class="flex">
-                    <input class="flex-1 bg-white border-none rounded-l-xl px-4 text-sm focus:ring-1 focus:ring-primary"
-                        placeholder="Email của bạn" type="email" />
-                    <button class="bg-primary text-white px-4 py-3 rounded-r-xl transition-all active:scale-95">
-                        <span class="material-symbols-outlined">send</span>
-                    </button>
-                </div>
-            </div>
+      <div
+        class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-[1440px] mx-auto"
+      >
+        <div class="space-y-6">
+          <h2 class="text-xl font-extrabold text-[#002366] font-['Manrope']">
+            Kính Xanh
+          </h2>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            Chuỗi cửa hàng mắt kính uy tín hàng đầu, chuyên cung cấp các giải
+            pháp thị lực toàn diện và phong cách thời trang kính mắt hiện đại.
+          </p>
+          <div class="flex gap-4">
+            <a
+              class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-primary hover:bg-primary hover:text-white transition-all shadow-sm"
+              href="https://www.facebook.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span class="material-symbols-outlined text-lg">share</span>
+            </a>
+            <a
+              class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-primary hover:bg-primary hover:text-white transition-all shadow-sm"
+              href="support.html"
+            >
+              <span class="material-symbols-outlined text-lg">mail</span>
+            </a>
+          </div>
         </div>
-        <div class="border-t border-slate-200 py-6 text-center text-slate-400 text-[0.875rem] font-['Inter']">
-            © 2026 Kính Xanh Optical. See the world in detail.
+        <div class="space-y-6">
+          <h4 class="font-bold text-[#00113a] text-sm uppercase tracking-wider">
+            Khám Phá
+          </h4>
+          <ul class="space-y-3">
+            <li>
+              <a
+                class="text-slate-500 hover:text-[#002366] hover:underline transition-all text-sm font-['Inter']"
+                href="about.html"
+                >Về Kính Xanh</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 hover:text-[#002366] hover:underline transition-all text-sm font-['Inter']"
+                href="guide.html"
+                >Cẩm Nang Nhãn Khoa</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 hover:text-[#002366] hover:underline transition-all text-sm font-['Inter']"
+                href="stores.html"
+                >Hệ Thống Cửa Hàng</a
+              >
+            </li>
+          </ul>
         </div>
+        <div class="space-y-6">
+          <h4 class="font-bold text-[#00113a] text-sm uppercase tracking-wider">
+            Hỗ Trợ
+          </h4>
+          <ul class="space-y-3">
+            <li>
+              <a
+                class="text-slate-500 hover:text-[#002366] hover:underline transition-all text-sm font-['Inter']"
+                href="terms.html"
+                >Điều Khoản Dịch Vụ</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 hover:text-[#002366] hover:underline transition-all text-sm font-['Inter']"
+                href="support.html"
+                >Liên Hệ Hỗ Trợ</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 hover:text-[#002366] hover:underline transition-all text-sm font-['Inter']"
+                href="privacy.html"
+                >Chính Sách Bảo Mật</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="space-y-6">
+          <h4 class="font-bold text-[#00113a] text-sm uppercase tracking-wider">
+            Đăng Ký
+          </h4>
+          <p class="text-slate-500 text-sm">
+            Nhận thông tin ưu đãi mới nhất từ Kính Xanh.
+          </p>
+          <div class="flex">
+            <input
+              class="flex-1 bg-white border-none rounded-l-xl px-4 text-sm focus:ring-1 focus:ring-primary"
+              placeholder="Email của bạn"
+              type="email"
+            />
+            <button
+              class="bg-primary text-white px-4 py-3 rounded-r-xl transition-all active:scale-95"
+            >
+              <span class="material-symbols-outlined">send</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="border-t border-slate-200 py-6 text-center text-slate-400 text-[0.875rem] font-['Inter']"
+      >
+        © 2026 Kính Xanh Optical. See the world in detail.
+      </div>
     </footer>
+
     <script src="js/main.js"></script>
     <script src="js/product-api.js"></script>
     <script src="js/add-to-cart.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init({ duration: 800, once: true, offset: 50 });</script>
-</body>
-
+    <script>
+      AOS.init({ duration: 800, once: true, offset: 50 });
+    </script>
+  </body>
 </html>

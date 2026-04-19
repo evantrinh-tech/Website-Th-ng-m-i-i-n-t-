@@ -1,5 +1,6 @@
 <?php
 declare(strict_types=1);
+error_reporting(E_ERROR | E_PARSE);
 
 function jsonResponse(array $payload, int $statusCode = 200): void
 {

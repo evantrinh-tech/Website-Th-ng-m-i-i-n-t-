@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+error_reporting(E_ERROR | E_PARSE);
+
 /**
  * Kết nối CSDL cho module API sản phẩm.
  * Công nghệ: PHP thuần + MongoDB PHP Driver (mongodb/mongodb).

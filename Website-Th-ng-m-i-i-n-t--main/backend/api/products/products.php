@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-require_once __DIR__ . '/../config/database.php';
-require_once __DIR__ . '/../lib/response.php';
-require_once __DIR__ . '/../lib/security.php';
+require_once __DIR__ . '/../../config/database.php';
+require_once __DIR__ . '/../../lib/response.php';
+require_once __DIR__ . '/../../lib/security.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     jsonResponse(['success' => true, 'message' => 'Preflight OK']);
@@ -85,7 +85,7 @@ try {
     $totalItems = $products->countDocuments($filter);
 
     $projection = [
-        'id'                => 0, // MongoDB _id sẽ được map bởi docToArray
+        '_id'                => 0, // MongoDB _id sẽ được map bởi docToArray
         'sku'               => 1,
         'slug'              => 1,
         'name'              => 1,

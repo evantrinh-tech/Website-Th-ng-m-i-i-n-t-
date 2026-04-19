@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
 
-require_once __DIR__ . '/../config/database.php';
-require_once __DIR__ . '/../lib/response.php';
+require_once __DIR__ . '/../../config/database.php';
+require_once __DIR__ . '/../../lib/response.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     jsonResponse(['success' => true, 'message' => 'Preflight OK']);
