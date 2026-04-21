@@ -2,7 +2,7 @@
 
 > *"See the world in detail."* — Kính Xanh Optical
 
-**Kính Xanh** là một dự án website thương mại điện tử chuyên nghiệp dành riêng cho ngành kính mắt thời trang cao cấp. Dự án được xây dựng hoàn toàn bằng HTML5, Vanilla JavaScript và Tailwind CSS — không cần framework backend hay build step phức tạp. Mục tiêu là cung cấp trải nghiệm mua sắm kính mắt tinh tế, đồng bộ giao diện và sẵn sàng tích hợp API.
+**Kính Xanh** là một dự án website thương mại điện tử chuyên nghiệp dành riêng cho ngành kính mắt thời trang cao cấp. 
 
 ---
 
